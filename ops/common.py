@@ -80,6 +80,15 @@ def media_url(rel):
     base = os.environ.get("MEDIA_BASE", "").rstrip("/")
     if not base:
         repo = os.environ.get("GITHUB_REPOSITORY", "dhruvshahi10/pawveda-ops")
-        sha = os.environ.get("GITHUB_SHA", "main")
+        sha = os.environ.get("MEDIA_SHA", "")
+        if not sha:
+            # pin to the last commit that touched media/: it is old enough for jsDelivr to have cached it,
+            # and the files never change after that commit. A brand-new commit SHA 404s for a while.
+            try:
+                import subprocess
+                sha = subprocess.check_output(["git", "log", "-1", "--format=%H", "--", "media"], text=True, timeout=20).strip()
+            except Exception:
+                sha = ""
+        sha = sha or os.environ.get("GITHUB_SHA", "main")
         base = f"https://cdn.jsdelivr.net/gh/{repo}@{sha}"
     return f"{base}/{rel.lstrip('/')}"
