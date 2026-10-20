@@ -1,0 +1,47 @@
+name: house
+# Every 5 minutes: publish anything due, then answer safe comments and send replies Dhruv approved.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Log what would happen without posting"
+        type: boolean
+        default: false
+concurrency:
+  group: house
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.32.3
+      - name: Publish what is due
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          DRY_RUN: ${{ inputs.dry_run && 'true' || '' }}
+        run: python ops/publish.py
+      - name: Comment desk
+        if: always()
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run && 'true' || '' }}
+        run: python ops/comments.py
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "pawveda-house"
+          git config user.email "house@users.noreply.github.com"
+          git add state queue
+          git diff --cached --quiet || (git commit -m "house: state $(date -u +%FT%TZ)" && git pull --rebase -X ours && git push)
