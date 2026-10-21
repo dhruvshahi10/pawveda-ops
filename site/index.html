@@ -52,8 +52,15 @@ h2{font:600 44px/1.15 var(--body);margin:0 0 24px}
 .lead p,.small p{margin:0}
 .pair{display:grid;gap:16px}
 .small{border-top:2px solid var(--stone);padding:16px 4px 0}
-.soon{padding:0 0 64px}
-.soon p{margin:0 0 16px}
+.join{padding:0 0 64px}
+form{display:grid;gap:16px;max-width:460px}
+label{font-weight:500}
+input[type=email]{font:400 20px var(--body);padding:16px 18px;border:2px solid var(--cocoa);border-radius:16px 16px 16px 6px;background:var(--cream-hero);color:var(--ink);width:100%}
+input:focus-visible,button:focus-visible{outline:3px solid var(--cocoa);outline-offset:3px}
+button.ig{border:0;cursor:pointer;justify-self:start}
+#msg{margin:0;font-weight:500;min-height:1.5em}
+.consent{margin:0;color:var(--cocoa)}
+.beta{margin:12px 0 0;color:var(--cocoa)}
 .ig{display:inline-block;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);padding:16px 28px;border-radius:18px 18px 18px 6px;text-decoration:none}
 a:focus-visible{outline:3px solid var(--cocoa);outline-offset:3px}
 .vet{background:var(--cocoa-dark);color:var(--cream-hero);padding:48px 0;border-radius:36px 36px 0 0}
@@ -74,7 +81,8 @@ footer{padding:24px 0 40px;font-size:20px;color:var(--cocoa)}
     <p class="eyebrow">For Indian dog &amp; cat parents</p>
     <h1>Stop Googling<br>at <em>2am.</em></h1>
     <p class="lede">It's 2am. Your dog hasn't eaten since morning, and the search results disagree. PawVeda blocks Crocin, Dolo and Combiflam by name, and helps you decide when to see a vet.</p>
-    <span class="pill">PawVeda is in beta.</span>
+    <a class="ig" href="#join">Join the beta waitlist</a>
+    <p class="beta">PawVeda is in beta.</p>
   </div>
   <figure class="fig"><img class="dog" src="img/indie-dog.webp" width="340" height="437" alt="Gouache illustration of a brown and tan indie dog sitting, looking back over its shoulder."><figcaption>AI-generated illustration</figcaption></figure>
 </div></section>
@@ -103,10 +111,15 @@ footer{padding:24px 0 40px;font-size:20px;color:var(--cocoa)}
   </div>
 </div></section>
 
-<section class="soon"><div class="wrap">
-  <h2>The waitlist opens soon.</h2>
-  <p>We'll announce it on Instagram first.</p>
-  <a class="ig" href="https://www.instagram.com/pawveda.in/" rel="noopener">Follow @pawveda.in</a>
+<section class="join" id="join"><div class="wrap">
+  <h2>Join the beta waitlist.</h2>
+  <form id="wl" novalidate>
+    <label for="email">Your email</label>
+    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+    <button class="ig" type="submit">Join the waitlist</button>
+    <p id="msg" role="status"></p>
+    <p class="consent">We'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Signups are collected with Google Forms.</p>
+  </form>
 </div></section>
 
 <section class="vet"><div class="wrap">
@@ -114,5 +127,18 @@ footer{padding:24px 0 40px;font-size:20px;color:var(--cocoa)}
 </div></section>
 
 <footer><div class="wrap">PawVeda · The illustration on this page is AI-generated.</div></footer>
+<script>
+var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdCdn3r9wYAN5arMo66Kf_jUoxmTe8H7JX83lrx-Eod5Q1oaA/formResponse";
+var f = document.getElementById("wl"), msg = document.getElementById("msg");
+f.addEventListener("submit", function(e){
+  e.preventDefault();
+  var v = f.email.value.trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
+  var b = new URLSearchParams(); b.append("entry.1059010946", v);
+  fetch(FORM, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:b})
+    .then(function(){ f.reset(); msg.textContent = "You're on the list. We'll email you when beta access opens."; })
+    .catch(function(){ msg.textContent = "That didn't go through. Please try again in a moment."; });
+});
+</script>
 </body>
 </html>
