@@ -1,13 +1,29 @@
 {
- "read_at": "2026-10-20T21:50:11.574357+00:00",
+ "read_at": "2026-10-21T21:57:32.212596+00:00",
  "account": {
   "username": "pawveda.in",
   "followers_count": 3,
   "follows_count": 7,
-  "media_count": 15,
+  "media_count": 16,
   "id": "28691801940449061"
  },
  "posts": [
+  {
+   "media_id": "18200484886381246",
+   "permalink": "https://www.instagram.com/reel/DexA2iQjMGH/",
+   "timestamp": "2026-10-21T18:07:14+0000",
+   "type": "reel",
+   "hook": "Last night told you something about your dog.",
+   "reach": 13,
+   "views": 15,
+   "likes": 1,
+   "comments": 1,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 2,
+   "ig_reels_avg_watch_time": 4254,
+   "ig_reels_video_view_total_time": 55314
+  },
   {
    "media_id": "18118794271785570",
    "permalink": "https://www.instagram.com/p/DetxRqPG6qG/",
@@ -171,8 +187,8 @@
    "shares": 0,
    "saved": 0,
    "total_interactions": 2,
-   "ig_reels_avg_watch_time": 13343,
-   "ig_reels_video_view_total_time": 787247
+   "ig_reels_avg_watch_time": 13208,
+   "ig_reels_video_view_total_time": 792532
   },
   {
    "media_id": "18215085310350133",
