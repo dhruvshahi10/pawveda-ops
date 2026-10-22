@@ -126,14 +126,13 @@
   ],
   "first_comment": "If his gums are pale, white, blue, grey, purple, very red or yellow, go to a vet now. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": false,
-  "status": "hold",
-  "hold_reason": "Dhruv asked for an edit: (no note)",
+  "status": "scheduled",
+  "hold_reason": null,
   "critique": "PASS",
   "hook": "His nose is wet. Lift his lip anyway.",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/05-Sat-24-Oct-lift-his-lip",
-  "edit_note": "",
-  "edit_requested_at": null
+  "released": "2026-10-22: Dhruv in chat, post as built"
  },
  {
   "id": "2026-10-25-cat-goes-under",
