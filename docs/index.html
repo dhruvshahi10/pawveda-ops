@@ -7,6 +7,8 @@
 <meta name="description" content="PawVeda blocks Crocin, Dolo and Combiflam by name, and its Emergency verdict can't be argued down. In beta, for Indian dog and cat parents.">
 <meta property="og:title" content="PawVeda · Stop Googling at 2am">
 <meta property="og:description" content="Pet health intelligence for Indian dog and cat parents. It helps you decide when to see a vet.">
+<meta name="theme-color" content="#311D0E">
+<script>document.documentElement.className="js"</script>
 <style>
 @font-face{font-family:"Fraunces";font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:"Lexend";font-weight:400;font-display:swap;src:url(fonts/lexend-latin-400-normal.woff2) format("woff2")}
@@ -15,129 +17,272 @@
 @font-face{font-family:"JetBrains Mono";font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
 :root{
   --terracotta:#CC785C; --terracotta-deep:#B86347; --cocoa:#523117; --cocoa-dark:#311D0E;
-  --cream:#FAF8F2; --cream-hero:#FDF6E3; --sage:#8EB89B; --ink:#1A1C1E;
-  --sand:#EDE5D8; --stone:#B9A895;
+  --cream:#FAF8F2; --cream-hero:#FDF6E3; --ink:#1A1C1E; --sand:#EDE5D8; --stone:#B9A895;
   --ok:#2E7D32; --warn:#ED6C02; --danger:#D32F2F;
   --display:"Fraunces",Georgia,serif; --body:"Lexend",system-ui,sans-serif; --data:"JetBrains Mono",ui-monospace,monospace;
+  --calm:cubic-bezier(.4,0,.2,1);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font:400 20px/1.5 var(--body)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-.dot{display:inline-block;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--terracotta),var(--terracotta-deep));vertical-align:middle;margin-right:10px}
-header{padding:28px 0 0;font-weight:600;font-size:24px}
-.hero{padding:40px 0 64px}
-.hero .wrap{display:grid;gap:24px}
-.eyebrow{font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:var(--cocoa);margin:0 0 16px}
-h1{font:600 44px/1.15 var(--display);margin:0 0 24px}
-h1 em{font-style:normal;color:var(--terracotta-deep)}
-.lede{font-size:24px;margin:0 0 24px}
-.pill{display:inline-block;background:var(--sand);color:var(--cocoa);font-weight:500;padding:14px 24px;border-radius:18px 18px 18px 6px}
-.fig{margin:0;justify-self:center;max-width:340px}.fig figcaption{font-size:20px;color:var(--cocoa);margin-top:8px}
-.dog{width:100%;height:auto;mix-blend-mode:multiply;border-radius:28px;display:block}
-h2{font:600 44px/1.15 var(--body);margin:0 0 24px}
-.ai{background:var(--cocoa-dark);color:var(--cream-hero);padding:64px 0;border-radius:36px}
-.ai p{margin:0 0 24px}
-.card{border-left:4px solid var(--terracotta);padding:4px 0 4px 24px}
-.card .subject{font-size:24px;font-weight:500;margin:0 0 20px}
-.bands{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
-.band{font:500 20px var(--data);padding:8px 16px;border-radius:999px;border:2px solid}
-.band.e{color:var(--cream-hero);background:var(--danger);border-color:var(--danger)}
-.band.v{color:var(--ink);background:var(--warn);border-color:var(--warn)}
-.band.m{color:var(--cream-hero);background:var(--ok);border-color:var(--ok)}
-.card ul{margin:0;padding:0 0 0 22px} .card li{margin:8px 0}
-.vet-short{margin:20px 0 0;color:var(--cream-hero);font-weight:500}
-.proof{padding:40px 0 64px}
-.lead{background:var(--sand);border-radius:28px 28px 28px 8px;padding:28px;margin:0 0 16px}
-.lead h3,.small h3{font:600 24px/1.3 var(--body);margin:0 0 8px}
-.lead p,.small p{margin:0}
-.pair{display:grid;gap:16px}
-.small{border-top:2px solid var(--stone);padding:16px 4px 0}
-.join{padding:0 0 64px}
-form{display:grid;gap:16px;max-width:460px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cocoa-dark);color:var(--cream-hero);font:400 20px/1.5 var(--body);overflow-x:hidden}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--cream-hero);outline-offset:3px}
+.light :focus-visible,.sandbg :focus-visible{outline-color:var(--cocoa-dark)}
+
+#bar{position:fixed;inset:0 auto auto 0;height:4px;width:100%;background:var(--terracotta);transform-origin:0 50%;transform:scaleX(0);z-index:9}
+
+header{position:absolute;inset:0 0 auto 0;z-index:3}
+header .wrap{display:flex;align-items:center;gap:10px;padding-top:26px;font-weight:600;font-size:24px}
+.dot{width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--terracotta),var(--terracotta-deep))}
+
+/* HERO: night, three warm orbs on slow orbits (the brand's own motion reference) */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px 0 80px;overflow:hidden;background:var(--cocoa-dark)}
+.orb{position:absolute;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(204,120,92,.34),rgba(204,120,92,0) 68%)}
+.o1{width:640px;height:640px;left:52%;top:-8%;animation:orbit1 11s linear infinite}
+.o2{width:520px;height:520px;left:68%;top:38%;animation:orbit2 15s linear infinite}
+.o3{width:460px;height:460px;left:-6%;top:55%;animation:orbit3 19s linear infinite}
+.hero .wrap{position:relative;display:grid;gap:48px;align-items:center;width:100%}
+.clock{display:inline-flex;align-items:baseline;gap:10px;font:500 22px var(--data);color:var(--cream-hero);margin:0 0 20px;letter-spacing:.04em}
+.clock b{font-weight:500;font-size:34px}
+.clock .m{transition:opacity .6s var(--calm)}
+.clock .m.off{opacity:0}
+h1{font:600 clamp(48px,7.4vw,96px)/1 var(--display);margin:0 0 28px;letter-spacing:-.01em}
+h1 .ln{display:block;padding-bottom:.12em}
+h1 em{font-style:normal;color:var(--terracotta)}
+.sub{font-size:24px;max-width:21em;margin:0 0 32px}
+.btn{display:inline-block;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);padding:16px 28px;border:2px solid var(--terracotta-deep);border-radius:18px 18px 18px 6px;text-decoration:none;cursor:pointer;transition:background .4s var(--calm)}
+.btn:hover{background:var(--cocoa)}
+.beta{font-size:18px;margin:16px 0 0;color:var(--cream-hero)}
+
+/* demo: a triage result card, not a chat */
+.demo{justify-self:center;width:100%;max-width:440px}
+.fig{margin:0 0 0 auto;width:210px;position:relative;z-index:1}
+.fig .frame{background:var(--cream);border-radius:28px;overflow:hidden;aspect-ratio:1/1}
+.fig img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block;mix-blend-mode:multiply}
+.fig figcaption{font-size:18px;margin:8px 0 8px;text-align:right}
+.card{position:relative;z-index:2;background:var(--cocoa);border:2px solid var(--terracotta);border-radius:22px 22px 22px 6px;padding:22px;margin-top:-6px}
+.card .top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 14px}
+.card .who{font-weight:600;font-size:18px;margin:0}
+.badge{font:500 18px var(--data);border:2px solid var(--cream-hero);border-radius:999px;padding:3px 14px}
+.in-q{background:var(--sand);color:var(--ink);padding:14px 18px;border-radius:16px 16px 16px 6px;margin:0 0 16px;font-size:20px}
+.bands{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.band{font:500 18px var(--data);padding:6px 11px;border-radius:999px;border:2px solid;background:transparent;color:var(--cream-hero)}
+.band.e{border-color:var(--danger)}.band.v{border-color:var(--warn)}.band.m{border-color:var(--ok)}
+.band.v{animation:lightv 1.2s 1.6s var(--calm) forwards}
+.demo .note{margin:0;font-size:18px}
+.work{font:500 18px/1.5 var(--data);margin:0 0 14px;padding:10px 14px;border-left:3px solid var(--terracotta)}
+.vet-echo{margin:14px 0 0;font-size:18px}
+@keyframes lightv{to{background:var(--warn);color:var(--ink)}}
+
+/* sections */
+section.s{padding:clamp(90px,15vw,160px) 0;position:relative}
+.light{background:var(--cream);color:var(--ink)}
+.dark{background:var(--cocoa-dark);color:var(--cream-hero)}
+.sandbg{background:var(--sand);color:var(--ink)}
+.kick{font:500 18px var(--body);letter-spacing:.1em;text-transform:uppercase;margin:0 0 18px;color:var(--cocoa)}
+.dark .kick{color:var(--cream-hero)}
+h2{font:600 clamp(38px,5.6vw,72px)/1.05 var(--display);margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;max-width:24em;margin:0}
+
+/* calm reveals: wipe + opacity only, JS-gated (default is visible) */
+.js .rv{opacity:0;transition:opacity 1s var(--calm)}
+.js .in .rv{opacity:1}
+
+/* BLOCKED: names wiped in, struck through, stamped */
+.stamps{display:flex;flex-wrap:wrap;gap:clamp(14px,3vw,34px);margin:56px 0 0}
+.pill{position:relative;font:600 clamp(36px,7vw,84px)/1 var(--display);padding:.18em .42em .22em;border:3px solid var(--ink);border-radius:20px 20px 20px 6px;background:var(--sand)}
+.pill::after{content:"";position:absolute;left:-3%;top:54%;height:.08em;width:106%;background:var(--ink);border-radius:4px;transform:rotate(-2deg);transform-origin:left center}
+.pill small{position:absolute;right:-10px;top:-20px;font:500 18px var(--data);letter-spacing:.1em;color:var(--cream-hero);background:var(--cocoa-dark);padding:4px 12px;border-radius:8px}
+.js .pill{clip-path:inset(0 100% 0 0);transition:clip-path .9s var(--calm)}
+.js .pill::after{transform:rotate(-2deg) scaleX(0);transition:transform .7s var(--calm) .9s}
+.js .pill small{opacity:0;transition:opacity .6s var(--calm) 1.5s}
+.js .in .pill{clip-path:inset(-30px -30px -30px -30px)}
+.js .in .pill::after{transform:rotate(-2deg) scaleX(1)}
+.js .in .pill small{opacity:1}
+.js .in .pill:nth-child(2){transition-delay:.35s}.js .in .pill:nth-child(2)::after{transition-delay:1.25s}.js .in .pill:nth-child(2) small{transition-delay:1.85s}
+.js .in .pill:nth-child(3){transition-delay:.7s}.js .in .pill:nth-child(3)::after{transition-delay:1.6s}.js .in .pill:nth-child(3) small{transition-delay:2.2s}
+
+/* THE FLOOR: one slow argument, then it rests */
+.floor-wrap{display:grid;gap:48px;align-items:center}
+.gauge{position:relative;height:340px;max-width:440px;width:100%;justify-self:center}
+.zone{position:absolute;left:0;right:0;display:flex;align-items:center;padding:0 22px;font:500 20px var(--data);border-radius:18px;height:108px;border:2px solid;color:var(--cream-hero)}
+.zone.e{top:0;background:var(--danger);border-color:var(--danger)}
+.zone.v{top:116px;border-color:var(--warn)}
+.zone.m{top:232px;border-color:var(--ok)}
+.line{position:absolute;left:-10px;right:-10px;top:111px;height:0;border-top:4px dashed var(--cream-hero);z-index:2}
+.tag{position:absolute;right:0;top:122px;z-index:3;font:500 18px var(--data);background:var(--cream-hero);color:var(--cocoa-dark);padding:4px 12px;border-radius:8px}
+.ai{position:absolute;left:60%;top:14px;z-index:4;width:62px;height:62px;border-radius:50%;border:3px solid var(--cream-hero);background:radial-gradient(circle at 35% 30%,var(--terracotta),var(--terracotta-deep));transform:translateY(36px)}
+.js .ai{transform:none}
+.js .tag{opacity:0}
+.js .in .ai{animation:argue 9s 1s var(--calm) forwards}
+.js .in .tag{animation:hold 9s 1s var(--calm) forwards}
+.gcap{font-size:18px;margin:18px 0 0}
+
+/* WORKING */
+.badges{display:flex;flex-wrap:wrap;gap:14px;margin:48px 0 0}
+.bd{font:500 clamp(18px,3vw,28px) var(--data);padding:.55em 1em;border:2.5px solid var(--cocoa-dark);border-radius:999px;background:var(--cream)}
+.js .bd{opacity:0;transition:opacity .8s var(--calm)}
+.js .in .bd{opacity:1}
+.js .in .bd:nth-child(2){transition-delay:.25s}.js .in .bd:nth-child(3){transition-delay:.5s}.js .in .bd:nth-child(4){transition-delay:.75s}
+.note2{font-size:20px;margin:36px 0 0;max-width:30em}
+
+/* JOIN */
+.join .wrap{max-width:640px}
+form{display:grid;gap:16px;max-width:520px}
 label{font-weight:500}
-input[type=email]{font:400 20px var(--body);padding:16px 18px;border:2px solid var(--cocoa);border-radius:16px 16px 16px 6px;background:var(--cream-hero);color:var(--ink);width:100%}
-input:focus-visible,button:focus-visible{outline:3px solid var(--cocoa);outline-offset:3px}
-button.ig{border:0;cursor:pointer;justify-self:start}
+input[type=email]{font:400 20px var(--body);padding:18px 20px;border:2px solid var(--cocoa);border-radius:16px 16px 16px 6px;background:var(--cream-hero);color:var(--ink);width:100%}
+input::placeholder{color:var(--cocoa);opacity:1}
+input[aria-invalid=true]{border-color:var(--danger)}
+button.btn{justify-self:start}
 #msg{margin:0;font-weight:500;min-height:1.5em}
-.consent{margin:0;color:var(--cocoa)}
-.beta{margin:12px 0 0;color:var(--cocoa)}
-.ig{display:inline-block;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);padding:16px 28px;border-radius:18px 18px 18px 6px;text-decoration:none}
-a:focus-visible{outline:3px solid var(--cocoa);outline-offset:3px}
-.vet{background:var(--cocoa-dark);color:var(--cream-hero);padding:48px 0;border-radius:36px 36px 0 0}
+.consent{margin:0;font-size:20px}
+.vet{background:var(--cocoa-dark);color:var(--cream-hero);padding:64px 0 28px}
 .vet p{margin:0;font:500 24px/1.4 var(--body);max-width:26em}
-footer{padding:24px 0 40px;font-size:20px;color:var(--cocoa)}
-@media (min-width:760px){
-  h1{font-size:72px}
-  .hero .wrap{grid-template-columns:1.3fr 1fr;align-items:center}
-  .pair{grid-template-columns:1fr 1fr}
+footer{background:var(--cocoa-dark);color:var(--cream-hero);padding:0 0 44px;font-size:18px}
+#pause{position:absolute;right:14px;top:18px;z-index:4;font:500 18px var(--body);background:var(--cocoa-dark);color:var(--cream-hero);border:2px solid var(--cream-hero);border-radius:999px;padding:8px 16px;cursor:pointer}
+
+@keyframes orbit1{from{transform:rotate(0) translateX(60px) rotate(0)}to{transform:rotate(360deg) translateX(60px) rotate(-360deg)}}
+@keyframes orbit2{from{transform:rotate(120deg) translateX(80px) rotate(-120deg)}to{transform:rotate(480deg) translateX(80px) rotate(-480deg)}}
+@keyframes orbit3{from{transform:rotate(240deg) translateX(70px) rotate(-240deg)}to{transform:rotate(600deg) translateX(70px) rotate(-600deg)}}
+@keyframes argue{0%{transform:translateY(0)}22%,34%{transform:translateY(36px)}56%{transform:translateY(6px)}78%,100%{transform:translateY(36px)}}
+@keyframes hold{0%,18%{opacity:0}24%,34%{opacity:1}42%,66%{opacity:0}78%,100%{opacity:1}}
+.paused .orb,.paused .ai,.paused .tag{animation-play-state:paused}
+
+@media (min-width:860px){
+  .hero .wrap{grid-template-columns:1.15fr 1fr}
+  .floor-wrap{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .bd,.js .pill small,.js .tag{opacity:1}
+  .js .pill{clip-path:none}
+  .js .pill::after{transform:rotate(-2deg)}
+  .band.v{background:var(--warn);color:var(--ink)}
+  .js .ai{transform:translateY(36px)}
+  #pause{display:none}
 }
 </style>
+<noscript><style>.js .rv,.js .bd,.js .pill small,.js .tag{opacity:1}.js .pill{clip-path:none}.js .pill::after{transform:rotate(-2deg)}.js .ai{transform:translateY(36px)}#pause{display:none}</style></noscript>
 </head>
 <body>
+<div id="bar" aria-hidden="true"></div>
 <header><div class="wrap"><span class="dot"></span>PawVeda</div></header>
+<main>
 
-<section class="hero"><div class="wrap">
+<section class="hero"><button id="pause" type="button" aria-pressed="false">Pause motion</button><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div><div class="orb o3" aria-hidden="true"></div>
+<div class="wrap">
   <div>
-    <p class="eyebrow">For Indian dog &amp; cat parents</p>
-    <h1>Stop Googling<br>at <em>2am.</em></h1>
-    <p class="lede">It's 2am. Your dog hasn't eaten since morning, and the search results disagree. PawVeda blocks Crocin, Dolo and Combiflam by name, and helps you decide when to see a vet.</p>
-    <a class="ig" href="#join">Join the beta waitlist</a>
-    <p class="beta">PawVeda is in beta.</p>
+    <p class="clock" aria-hidden="true"><b><span>2</span>:<span class="m" id="mm">07</span></b><span>AM</span></p>
+    <h1><span class="ln">Stop Googling</span><span class="ln">at <em>2am.</em></span></h1>
+    <p class="sub">It blocks Crocin, Dolo and Combiflam by name. For Indian dog and cat parents.</p>
+    <a class="btn" href="#join">Join the beta waitlist</a>
+    <p class="beta">PawVeda is in beta. Access is by waitlist.</p>
   </div>
-  <figure class="fig"><img class="dog" src="img/indie-dog.webp" width="340" height="437" alt="Gouache illustration of a brown and tan indie dog sitting, looking back over its shoulder."><figcaption>AI-generated illustration</figcaption></figure>
+  <div class="demo">
+    <figure class="fig"><div class="frame"><img src="img/indie-dog.webp" width="340" height="437" alt="AI-generated gouache illustration of a brown and tan indie dog sitting, sitting in profile, facing left."></div><figcaption>AI-generated illustration</figcaption></figure>
+    <div class="card" role="group" aria-label="Demo of a triage result: the symptom 'Misha hasn't eaten since morning' gets the band Visit soon. The example is made up.">
+      <div class="top"><p class="who">Pawzitiv, PawVeda's AI</p><span class="badge">DEMO</span></div>
+      <p class="in-q">Misha hasn't eaten since morning.</p>
+      <div class="bands"><span class="band e">Emergency</span><span class="band v">Visit soon</span><span class="band m">Monitor</span></div>
+      <p class="work">Rules engine on your device: Visit soon.<br>AI: Monitor.<br>Shown: the more cautious one.</p>
+      <p class="note">A made-up example. Real results are conditioned on your pet's record.</p>
+    </div>
+    <p class="vet-echo">PawVeda helps you decide when to see a vet. It doesn't replace one.</p>
+  </div>
 </div></section>
 
-<section class="ai"><div class="wrap">
+<section class="s light" id="blocked"><div class="wrap">
+  <div class="rv"><p class="kick">Blocked by name</p>
+  <h2>The pill that ends up in the bowl.</h2>
+  <p class="lead">Crocin, Dolo and Combiflam are human medicines. PawVeda won't suggest them for your pet.</p></div>
+  <div class="stamps" role="group" aria-label="Crocin, Dolo and Combiflam: all blocked">
+    <span class="pill" aria-hidden="true">Crocin<small>BLOCKED</small></span>
+    <span class="pill" aria-hidden="true">Dolo<small>BLOCKED</small></span>
+    <span class="pill" aria-hidden="true">Combiflam<small>BLOCKED</small></span>
+  </div>
+</div></section>
+
+<section class="s dark" id="floor"><div class="wrap floor-wrap">
+  <div class="rv"><p class="kick">The floor</p>
   <h2>The Emergency verdict can't be argued down.</h2>
-  <p>Pawzitiv is PawVeda's AI. It sorts a symptom into Emergency, Visit soon or Monitor. A rules engine on your device sets a floor the AI can't go below. It also won't suggest Crocin, Dolo or Combiflam for your pet.</p>
-  <section class="card" aria-labelledby="bands-h">
-    <p class="subject" id="bands-h">The three bands</p>
-    <div class="bands"><span class="band e">Emergency</span><span class="band v">Visit soon</span><span class="band m">Monitor</span></div>
-    <ul>
-      <li>Emergency: the floor holds, whatever the AI says.</li>
-      <li>Visit soon: worth a vet, not a sprint.</li>
-      <li>Monitor: keep watching, and know what to watch for.</li>
-    </ul>
-  </section>
-  <p class="vet-short">PawVeda helps you decide when to see a vet. It doesn't replace one.</p>
-</div></section>
-
-<section class="proof"><div class="wrap">
-  <h2>It shows its working.</h2>
-  <div class="lead"><h3>Truth badges that can't be hidden</h3><p>REAL DATA, ON YOUR DEVICE, BETA, DEMO. The badges can't be hidden, so you always know what you're looking at.</p></div>
-  <div class="pair">
-    <div class="small"><h3>Deletion that reaches the AI</h3><p>Delete your pet's record and the deletion cascades, recorded in a signed ledger.</p></div>
-    <div class="small"><h3>Tested before every release</h3><p>Emergency escalation is tested in English, Hinglish and Hindi. A failure blocks the release. It also knows 112 is a human emergency number.</p></div>
+  <p class="lead">A rules engine on your device sets a floor. The AI can't go below it.</p></div>
+  <div class="rv">
+    <div class="gauge" role="img" aria-label="Illustration: the AI dot tries to move a verdict down from Emergency, and a floor line stops it.">
+      <div class="zone e">Emergency</div><div class="zone v">Visit soon</div><div class="zone m">Monitor</div>
+      <div class="line"></div><span class="tag">FLOOR HOLDS</span>
+      <div class="ai" aria-hidden="true"></div>
+    </div>
+    <p class="gcap">Illustration of how the floor works.</p>
   </div>
 </div></section>
 
-<section class="join" id="join"><div class="wrap">
-  <h2>Join the beta waitlist.</h2>
+<section class="s sandbg" id="working"><div class="wrap">
+  <div class="rv"><p class="kick">It shows its working</p>
+  <h2>You always know what you're looking at.</h2>
+  <p class="lead">Truth badges that can't be hidden.</p></div>
+  <div class="badges">
+    <span class="bd">REAL DATA</span><span class="bd">ON YOUR DEVICE</span><span class="bd">BETA</span><span class="bd">DEMO</span>
+  </div>
+  <p class="note2">The badges in the beta app. Emergency escalation is tested in English, Hinglish and Hindi. A failure blocks the release.</p>
+</div></section>
+
+<section class="s join light" id="join"><div class="wrap">
+  <h2>Get told when beta access opens.</h2>
   <form id="wl" novalidate>
     <label for="email">Your email</label>
-    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
-    <button class="ig" type="submit">Join the waitlist</button>
+    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="msg">
+    <p class="consent">By joining, you agree we'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Signups are collected with Google Forms.</p>
+    <button class="btn" type="submit">Join the waitlist</button>
     <p id="msg" role="status"></p>
-    <p class="consent">We'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Signups are collected with Google Forms.</p>
   </form>
 </div></section>
 
-<section class="vet"><div class="wrap">
+<div class="vet"><div class="wrap">
   <p>PawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your pet right now, a vet is the right call.</p>
-</div></section>
-
+</div></div>
+</main>
 <footer><div class="wrap">PawVeda · The illustration on this page is AI-generated.</div></footer>
+
 <script>
 var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdCdn3r9wYAN5arMo66Kf_jUoxmTe8H7JX83lrx-Eod5Q1oaA/formResponse";
 var f = document.getElementById("wl"), msg = document.getElementById("msg");
 f.addEventListener("submit", function(e){
   e.preventDefault();
   var v = f.email.value.trim();
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { f.email.setAttribute("aria-invalid","true"); msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
+  f.email.removeAttribute("aria-invalid");
   var b = new URLSearchParams(); b.append("entry.1059010946", v);
   fetch(FORM, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:b})
-    .then(function(){ f.reset(); msg.textContent = "You're on the list. We'll email you when beta access opens."; })
+    .then(function(){ f.reset(); msg.textContent = "Thanks. We'll email you when beta access opens."; })
     .catch(function(){ msg.textContent = "That didn't go through. Please try again in a moment."; });
+});
+
+var bar = document.getElementById("bar");
+function prog(){ var h = document.documentElement; var p = h.scrollTop/(h.scrollHeight-h.clientHeight||1); bar.style.transform = "scaleX("+Math.min(1,Math.max(0,p))+")"; }
+addEventListener("scroll", prog, {passive:true}); prog();
+
+var secs = document.querySelectorAll(".s");
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.25});
+  secs.forEach(function(s){ io.observe(s); });
+} else { secs.forEach(function(s){ s.classList.add("in"); }); }
+
+// the 2am clock: a few calm minute changes, then it rests
+var mm = document.getElementById("mm"), m = 7, n = 0;
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  var t = setInterval(function(){
+    mm.classList.add("off");
+    setTimeout(function(){ m++; mm.textContent = (m < 10 ? "0" : "") + m; mm.classList.remove("off"); }, 600);
+    if (++n >= 4) clearInterval(t);
+  }, 4000);
+}
+
+var pb = document.getElementById("pause");
+pb.addEventListener("click", function(){
+  var on = document.documentElement.classList.toggle("paused");
+  pb.setAttribute("aria-pressed", on ? "true" : "false");
+  pb.textContent = on ? "Play motion" : "Pause motion";
 });
 </script>
 </body>
