@@ -70,7 +70,7 @@
   ],
   "first_comment": "If your dog has eaten grapes or raisins, call your vet now, before any signs. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS",
   "hook": "Ek kishmish se kya hoga?",
