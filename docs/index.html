@@ -2,11 +2,15 @@
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PawVeda · Is it serious, or can it wait till morning?</title>
-<meta name="description" content="PawVeda is an app for Indian dog and cat parents. Describe what's happening and it tells you Emergency, Visit soon or Monitor, with what to do now. In beta, by waitlist.">
-<meta property="og:title" content="PawVeda · Is it serious, or can it wait till morning?">
-<meta property="og:description" content="One clear answer at 2am, for your pet. It helps you decide when to see a vet.">
+<meta name="description" content="PawVeda is an app for Indian dog and cat parents. Describe what's happening and it tells you Emergency, Visit soon or Monitor, for your pet. Join the beta waitlist.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Is it serious, or can it wait till morning?">
+<meta property="og:description" content="PawVeda tells Indian dog and cat parents Emergency, Visit soon or Monitor. Join the beta waitlist.">
+<meta property="og:image" content="https://dhruvshahi10.github.io/pawveda-ops/img/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF8F2">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="img/app/bruno.webp" as="image">
@@ -18,37 +22,21 @@
 @font-face{font-family:"Lexend";font-weight:600;font-display:swap;src:url(fonts/lexend-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:"JetBrains Mono";font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
 :root{
-  /* site palette (closed) */
   --terracotta:#CC785C; --terracotta-deep:#B86347; --cocoa:#523117; --cocoa-dark:#311D0E;
   --cream:#FAF8F2; --cream-hero:#FDF6E3; --ink:#1A1C1E; --sand:#EDE5D8; --stone:#B9A895;
   --ok:#2E7D32; --warn:#ED6C02; --danger:#D32F2F;
-  /* inside the phone: the app's own theme tokens (apps/mobile/src/theme.ts), so the demo matches the product */
   --app-danger:#B23B2C; --app-danger-bg:#F7E4DF; --app-caution:#B8791F; --app-caution-bg:#FBF0DC; --app-caution-ink:#8A5A12;
   --app-success-bg:#E8F1E9; --app-success-ink:#2F5F3F; --app-surface:#FFFFFF; --app-alt:#F5F2EA; --app-line:#E9E2D6;
   --display:"Fraunces",Georgia,serif; --body:"Lexend",system-ui,sans-serif; --data:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font:400 20px/1.5 var(--body);overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 :focus-visible{outline:3px solid var(--cocoa-dark);outline-offset:3px}
-.dark :focus-visible{outline-color:var(--cream-hero)}
-h1,h2,h3{font-family:var(--body);font-weight:600;letter-spacing:-.02em;margin:0}
 p{margin:0}
-.serif{font-family:var(--display);letter-spacing:-.01em}
-.btn{display:inline-block;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);padding:18px 30px;border:0;border-radius:20px 20px 20px 6px;text-decoration:none;cursor:pointer;transition:background .4s}
-.btn:hover{background:var(--cocoa)}
-.k{font:600 18px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--cocoa);margin:0 0 18px}
-.dark .k{color:var(--cream-hero)}
-.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
-.ln>span{display:block}
-
-/* ---------- top bar ---------- */
-.top{position:fixed;inset:0 0 auto;z-index:20;transition:background .4s,box-shadow .4s}
-.top.solid{background:rgba(250,248,242,.94);box-shadow:0 1px 0 var(--sand)}
-.top .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
-.top img{width:140px}
-.hbtn{font:600 18px var(--body);color:var(--cream-hero);background:var(--cocoa-dark);border-radius:16px 16px 16px 6px;padding:11px 18px;text-decoration:none}
+h1,h2,h3{margin:0}
 
 /* ---------- PHONE ---------- */
 .phone{position:relative;width:300px;aspect-ratio:9/19.4;border-radius:46px;background:var(--cocoa-dark);padding:10px;box-shadow:0 40px 80px -30px rgba(49,29,14,.55),0 0 0 2px #4a2e18 inset}
@@ -108,165 +96,153 @@ p{margin:0}
 .tv{padding:6px 0;border-top:1px solid var(--app-line);font-size:11.5px}.tv:first-of-type{border-top:0}.tv b{font-weight:500}
 .chipdev{white-space:nowrap;flex:none;font:600 9px var(--body);letter-spacing:.08em;background:var(--app-alt);color:var(--cocoa);border-radius:999px;padding:3px 7px}
 
-/* ---------- HERO ---------- */
-.hero-s{position:relative;padding:130px 0 70px;overflow:hidden}
-.hero-s .grid{display:grid;gap:48px;align-items:center}
-.clock{font:500 24px var(--data);color:var(--cocoa);display:flex;align-items:center;gap:12px;margin:0 0 22px}
-.moon{width:14px;height:14px;border-radius:50%;background:var(--cocoa-dark);box-shadow:inset -4px -1px 0 0 var(--terracotta)}
-.hero-s h1{font-family:var(--display);font-size:clamp(44px,6.4vw,92px);line-height:1.02;letter-spacing:-.015em;margin:0 0 26px}
-.hero-s h1 em{font-style:normal;color:var(--terracotta-deep)}
-.hero-s .sub{font-size:24px;line-height:1.45;max-width:24em;margin:0 0 34px;color:var(--cocoa-dark)}
-.hero-s .meta{font-size:20px;color:var(--cocoa);margin:18px 0 0;max-width:28em}
-.stage{position:relative;display:grid;place-items:center;min-height:660px}
-.glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(204,120,92,.30),rgba(204,120,92,0) 66%);top:50%;left:50%;margin:-280px 0 0 -280px}
+
+
+/* ---------- top ---------- */
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.top img{width:132px}
+.tlink{font:500 18px var(--body);color:var(--cocoa-dark);text-decoration:none;border-bottom:2px solid var(--terracotta);padding-bottom:2px}
+
+/* ---------- hero ---------- */
+.intro{position:relative;padding:8px 0 40px;overflow:hidden}
+.intro .grid{display:grid;gap:36px;align-items:center}
+.clock{font:500 20px var(--data);color:var(--cocoa);display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.moon{width:12px;height:12px;border-radius:50%;background:var(--cocoa-dark);box-shadow:inset -3px -1px 0 0 var(--terracotta)}
+h1{font:600 clamp(40px,6vw,84px)/1.02 var(--display);letter-spacing:-.015em;margin:0 0 18px}
+h1 em{font-style:normal;color:var(--terracotta-deep)}
+.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}.ln>span{display:block}
+.sub{font-size:clamp(20px,1.8vw,24px);line-height:1.45;color:var(--cocoa-dark);max-width:25em;margin:0 0 24px}
+
+/* ---------- the form ---------- */
+.join{position:relative;max-width:560px}
+.field{position:relative;display:flex;gap:8px;background:var(--cream-hero);border:2px solid var(--cocoa-dark);border-radius:20px 20px 20px 8px;padding:6px;transition:box-shadow .35s,border-color .35s}
+.field:focus-within{box-shadow:0 0 0 6px rgba(204,120,92,.28);border-color:var(--terracotta-deep)}
+.field.bad{border-color:var(--cocoa-dark);box-shadow:0 0 0 6px rgba(49,29,14,.18)}
+.field input{flex:1;min-width:0;border:0;background:transparent;font:400 20px var(--body);color:var(--ink);padding:12px 12px;outline:none}
+.field input::placeholder{color:var(--cocoa);opacity:1}
+.go{position:relative;flex:none;border:0;cursor:pointer;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);border-radius:14px 14px 14px 6px;padding:0 22px;min-height:54px;min-width:150px;overflow:hidden;transition:background .3s,min-width .45s cubic-bezier(.4,0,.2,1)}
+.go:hover{background:var(--cocoa)}
+.go .lbl2,.go .spin,.go .tick{transition:opacity .25s}
+.go .spin,.go .tick{position:absolute;inset:0;display:grid;place-items:center;opacity:0}
+.go .spin i{width:22px;height:22px;border-radius:50%;border:3px solid rgba(253,246,227,.35);border-top-color:var(--cream-hero);animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.go.loading .lbl2{opacity:0}.go.loading .spin{opacity:1}
+.go.done{background:var(--cocoa-dark);min-width:54px}
+.go.done .lbl2,.go.done .spin{opacity:0}.go.done .tick{opacity:1}
+.tick path{stroke-dasharray:30;stroke-dashoffset:30;transition:stroke-dashoffset .5s .15s}
+.go.done .tick path{stroke-dashoffset:0}
+.form-note{font-size:18px;color:var(--cocoa);margin:12px 0 0;line-height:1.45}
+#msg{font:500 20px var(--body);color:var(--cocoa-dark);margin:12px 0 0}
+#msg:empty{display:none}
+.meta{font-size:18px;color:var(--cocoa);margin:14px 0 0}
+.paws{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.paw{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--terracotta);opacity:0}
+
+/* ---------- stage ---------- */
+.stage{position:relative;display:grid;place-items:center;min-height:620px}
+.glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(204,120,92,.30),rgba(204,120,92,0) 66%);top:50%;left:50%;margin:-260px 0 0 -260px}
 .stage .phone{z-index:2}
-.stage .doglie{position:absolute;z-index:3;width:300px;left:-150px;bottom:30px;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent 96%);mask-image:linear-gradient(90deg,#000 55%,transparent 96%)}
-.badge-demo{position:absolute;z-index:4;right:0;top:56px;font:500 18px var(--data);background:var(--cream-hero);border:2px solid var(--cocoa-dark);border-radius:999px;padding:4px 14px}
+.badge-demo{position:absolute;z-index:4;right:2%;top:40px;font:500 18px var(--data);background:var(--cream-hero);border:2px solid var(--cocoa-dark);border-radius:999px;padding:4px 14px}
 .cap{font-size:18px;color:var(--cocoa);text-align:center;margin-top:14px;position:relative;z-index:4}
+.pz{font:600 18px var(--body);color:var(--cocoa-dark);background:none;border:0;border-bottom:2px solid var(--terracotta);padding:0 0 1px;margin-left:8px;cursor:pointer}
 
-/* ---------- chatter ---------- */
-.chatter{position:relative;overflow:hidden;background:var(--sand);padding:clamp(96px,13vw,160px) 0}
-.chatter .wrap{position:relative;z-index:1}
-.sad{position:absolute;right:-60px;top:90px;width:min(560px,50vw);opacity:.95;-webkit-mask-image:linear-gradient(90deg,#000 60%,transparent 98%);mask-image:linear-gradient(90deg,#000 60%,transparent 98%)}
-@media (max-width:959px){.sad{position:relative;right:auto;top:auto;width:90%;margin:0 0 24px -24px}}
-.chatter h2{font-size:clamp(40px,5.4vw,72px);line-height:1.05;max-width:13em;margin:0 0 56px}
-.board{display:grid;gap:18px;max-width:760px}
-.cap2{font-size:18px;color:var(--cocoa);margin-top:40px}
-.bub{background:var(--cream);border-radius:22px 22px 22px 6px;padding:16px 22px;max-width:30em}
-.bub b{display:block;font:600 18px var(--body);letter-spacing:.08em;color:var(--cocoa);margin:0 0 4px}
-.bub:nth-child(even){justify-self:end;border-radius:22px 22px 6px 22px}
-.one{margin:72px 0 0;display:flex;flex-wrap:wrap;gap:20px 28px;align-items:baseline}
-.one h3{font-family:var(--display);font-size:clamp(40px,5vw,72px);line-height:1.05}
-.one h3 em{font-style:normal;color:var(--terracotta-deep)}
-.one p{font-size:24px;color:var(--cocoa-dark);max-width:22em}
+/* ---------- proof rail ---------- */
+.proof{padding:24px 0 72px}
+.proof .head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 20px}
+.proof h2{font:600 clamp(30px,3.6vw,44px)/1.1 var(--body);letter-spacing:-.02em}
+.arrows{display:none;gap:8px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:2px solid var(--cocoa-dark);background:var(--cream);font:600 20px var(--body);cursor:pointer;color:var(--cocoa-dark)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(86%,400px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 18px;margin:0 -20px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.pc{scroll-snap-align:start;border-radius:28px 28px 28px 10px;padding:24px;height:460px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.pc h3{font:600 26px/1.15 var(--body);letter-spacing:-.01em}
+.pc p{font-size:20px}
+.pc .viz{margin-top:auto}
+.p1{background:var(--sand)}
+.p2{background:var(--cocoa-dark);color:var(--cream-hero)}
+.p3{background:var(--sand)}
+.p4{background:var(--cream);border:2px solid var(--sand)}
+.names{display:grid;gap:4px}
+.names s{font:600 34px/1.1 var(--display);text-decoration:none;position:relative;justify-self:start;color:var(--ink)}
+.names s::after{content:"";position:absolute;left:-4%;top:55%;height:4px;width:108%;background:var(--cocoa-dark);border-radius:4px;transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.on .names s::after{transform:scaleX(1)}
+.on .names s:nth-child(2)::after{transition-delay:.25s}.on .names s:nth-child(3)::after{transition-delay:.5s}
+.on .names s:nth-child(4)::after{transition-delay:.75s}.on .names s:nth-child(5)::after{transition-delay:1s}.on .names s:nth-child(6)::after{transition-delay:1.25s}
+.duel{display:grid;gap:10px}
+.lane{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:center;font-size:18px}
+.track{height:38px;border-radius:12px;background:rgba(253,246,227,.12);position:relative;overflow:hidden}
+.bar{position:absolute;inset:0 auto 0 0;border-radius:12px;display:flex;align-items:center;padding:0 12px;font:500 18px var(--data);white-space:nowrap;width:0;transition:width 1s cubic-bezier(.4,0,.2,1)}
+.bar.v{background:var(--warn);color:var(--ink)}.bar.m{background:var(--ok);color:var(--cream-hero)}
+.on .bar.v{width:72%}.on .bar.m{width:44%;transition-delay:.3s}
+.win{font:500 18px var(--data);display:flex;align-items:center;gap:8px;opacity:0;transition:opacity .6s 1.3s}
+.on .win{opacity:1}
+.win i{width:12px;height:12px;border-radius:50%;background:var(--warn)}
+.shot{border-radius:22px;overflow:hidden;border:8px solid var(--cocoa-dark);max-width:240px;align-self:center;transform:rotate(-3deg);opacity:0;transition:opacity .9s}
+.on .shot{transform:rotate(-3deg);opacity:1}
+.shot img{width:100%}
+.p3 .shot{margin-bottom:0;max-width:300px}
+.p4 .shot{margin-bottom:-90px;transform:rotate(3deg)}
+.on.p4 .shot{transform:rotate(3deg)}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.dots i{width:8px;height:8px;border-radius:99px;background:var(--stone);transition:width .3s,background .3s}
+.dots i.on{width:26px;background:var(--cocoa-dark)}
+.more{display:inline-block;margin-top:22px;font:600 20px var(--body);color:var(--cocoa-dark)}
 
-/* ---------- sticky how ---------- */
-.how{position:relative;padding:clamp(96px,13vw,150px) 0 0}
-.how .head{font-size:clamp(40px,5.4vw,72px);line-height:1.05;max-width:14em;margin:0 0 40px}
-.how-grid{display:grid;gap:40px}
-.pinbox{display:none}
-.chap{padding:0 0 64px}
-.chap .n{font:600 20px var(--body);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--terracotta);margin:0 0 18px;background:var(--cream)}
-.chap>h3{font-size:clamp(30px,3.4vw,44px);line-height:1.1;margin:0 0 14px}
-.chap>p{font-size:24px;color:var(--cocoa-dark);max-width:24em}
-.chap .mini{margin:26px 0 0}
-.chap .mini .phone{width:250px}
-.bands3{display:grid;gap:12px;margin:24px 0 0;max-width:560px}
-.b3{display:grid;gap:8px;border:2px solid;border-radius:20px 20px 20px 6px;padding:16px 18px;background:var(--cream)}
-.b3 .m{font:500 20px var(--data);justify-self:start;padding:4px 14px;border-radius:999px}
-.b3.e{border-color:var(--danger)}.b3.e .m{background:var(--danger);color:var(--cream-hero)}
-.b3.v{border-color:var(--warn)}.b3.v .m{background:var(--warn);color:var(--ink)}
-.b3.mo{border-color:var(--ok)}.b3.mo .m{background:var(--ok);color:var(--cream-hero)}
-.b3>p{font-size:20px;color:var(--ink)}
-.engine{margin:26px 0 0;background:var(--cocoa-dark);color:var(--cream-hero);border-radius:26px 26px 26px 8px;padding:24px;max-width:560px}
-.engine .eng-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px 0;border-top:1px solid rgba(253,246,227,.18);font-size:20px}
-.engine .eng-row:first-of-type{border-top:0}
-.engine .eng-row span:last-child{font-family:var(--data)}
-.engine .win{color:var(--terracotta)}
-.engine small{display:block;font-size:20px;margin-top:10px}
+/* ---------- vet + foot ---------- */
+.vet{background:var(--cocoa-dark);color:var(--cream-hero);padding:44px 0 30px}
+.vet p{font:500 22px/1.45 var(--body);max-width:32em}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;font-size:18px;margin-top:30px;padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+.foot img{width:120px}
+.foot a{color:var(--cream-hero)}
 
-/* ---------- nutrilens ---------- */
-.nl{background:var(--cocoa-dark);color:var(--cream-hero);padding:clamp(96px,13vw,160px) 0;overflow:hidden}
-.nl .grid{display:grid;gap:56px;align-items:center}
-.nl h2{font-size:clamp(40px,5.4vw,72px);line-height:1.05;margin:0 0 24px}
-.nl p{font-size:24px;max-width:22em;margin:0 0 18px}
-.nl .stage2{display:grid;place-items:center;position:relative}
-.laser{position:absolute;left:12%;right:12%;top:24%;height:3px;background:var(--terracotta);box-shadow:0 0 18px 4px rgba(204,120,92,.7);z-index:6;opacity:0;border-radius:3px}
-.resulttop{position:absolute;inset:0;background:var(--cream)}
-.resulttop img{width:100%}
-.resulttop .rest{padding:14px 16px;font-size:12px;color:#4a4038}
-.ticks{display:grid;gap:8px;margin:28px 0 0}
-.ticks li{list-style:none;font-size:20px;display:flex;gap:12px;align-items:center}
-.ticks li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--terracotta);flex:none}
-.ticks{padding:0}
+/* ---------- sticky mobile CTA ---------- */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--cocoa-dark);color:var(--cream-hero);border-radius:20px 20px 20px 8px;padding:10px 10px 10px 18px;font-size:18px;transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.8,.2,1);box-shadow:0 18px 40px -16px rgba(49,29,14,.6)}
+.dock.show{transform:none}
+.dock a{background:var(--terracotta-deep);color:var(--cream-hero);text-decoration:none;font-weight:600;font-size:20px;border-radius:14px 14px 14px 6px;padding:12px 18px;white-space:nowrap}
 
-/* ---------- never ---------- */
-.never{padding:clamp(96px,13vw,160px) 0 0;overflow:hidden}
-.never .grid{display:grid;gap:40px;align-items:center}
-.never h2{font-size:clamp(40px,5.4vw,72px);line-height:1.05;margin:0 0 24px}
-.never p{font-size:24px;color:var(--cocoa-dark);max-width:24em;margin:0 0 16px}
-.strip{position:relative;max-width:440px;justify-self:center}
-.stamp{position:absolute;right:4%;top:14%;font:500 22px var(--data);letter-spacing:.12em;color:var(--cream-hero);background:var(--cocoa-dark);padding:8px 16px;border-radius:10px;transform:rotate(-6deg)}
-.marq{margin:clamp(56px,8vw,100px) 0 0;border-top:2px solid var(--sand);border-bottom:2px solid var(--sand);padding:22px 0;white-space:nowrap;overflow:hidden}
-.marq .track{display:inline-flex;gap:56px;will-change:transform}
-.marq s{font:600 clamp(44px,6vw,92px)/1 var(--display);color:var(--ink);text-decoration-thickness:.06em;text-decoration-color:var(--cocoa-dark)}
-.marq .dotsep{align-self:center;width:14px;height:14px;border-radius:50%;background:var(--terracotta)}
-
-/* ---------- numbers ---------- */
-.nums{padding:clamp(80px,11vw,130px) 0}
-.nums .grid{display:grid;gap:22px}
-.num{background:var(--sand);border-radius:28px 28px 28px 8px;padding:28px}
-.num .v{font:600 clamp(72px,8vw,104px)/1 var(--display);color:var(--cocoa-dark)}
-.num p{font-size:20px;margin-top:10px;color:var(--cocoa-dark)}
-
-/* ---------- every day ---------- */
-.every{background:var(--sand);padding:clamp(96px,13vw,160px) 0;overflow:hidden}
-.every .grid{display:grid;gap:48px;align-items:center}
-.every h2{font-size:clamp(40px,5.4vw,72px);line-height:1.05;margin:0 0 30px}
-.feat{display:grid;gap:16px}
-.f{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;background:var(--cream);border-radius:24px 24px 24px 8px;padding:16px 20px 16px 12px}
-.f img{width:96px}
-.f h3{font-size:24px;line-height:1.2;margin:0 0 4px}
-.f p{font-size:20px;color:var(--cocoa-dark)}
-.today{position:relative;display:grid;place-items:center}
-.callout{position:absolute;z-index:5;background:var(--cream-hero);border:2px solid var(--cocoa-dark);border-radius:16px 16px 16px 6px;padding:8px 14px;font-size:18px;font-weight:500;max-width:220px}
-.c1{left:-12%;top:8%}.c2{right:-10%;top:46%}.c3{left:-12%;bottom:10%}
-
-/* ---------- join ---------- */
-.join{background:var(--cocoa-dark);color:var(--cream-hero);padding:clamp(96px,13vw,150px) 0 0}
-.join .grid{display:grid;gap:40px;align-items:center}
-.join h2{font-family:var(--display);font-size:clamp(44px,6vw,92px);line-height:1.02;letter-spacing:-.01em}
-.join h2 em{font-style:normal;color:var(--terracotta)}
-.join .lede{font-size:24px;margin:22px 0 0;max-width:22em}
-form{background:var(--cream);color:var(--ink);border-radius:30px 30px 30px 10px;padding:30px;display:grid;gap:16px}
-label{font-weight:500}
-input[type=email]{font:400 20px var(--body);padding:18px 20px;border:2px solid var(--cocoa);border-radius:16px 16px 16px 6px;background:var(--cream-hero);color:var(--ink);width:100%}
-input::placeholder{color:var(--cocoa);opacity:1}
-input[aria-invalid=true]{border-color:var(--cocoa-dark);border-width:3px}
-form .btn{text-align:center}
-#msg{font-weight:500;min-height:1.5em;color:var(--cocoa-dark)}
-.consent{font-size:20px;color:var(--cocoa)}
-.vet{border-top:2px solid var(--cocoa);margin-top:clamp(64px,10vw,110px);padding-top:36px}
-.vet p{font:500 24px/1.45 var(--body);max-width:30em}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:20px;margin-top:40px;padding-bottom:40px}
-.foot img{width:130px}
-
+@media (max-width:959px){body{padding-bottom:96px}}
 @media (min-width:960px){
-  .hero-s .grid{grid-template-columns:1.1fr .9fr}
-  .nl .grid{grid-template-columns:1fr 1fr}
-  .never .grid{grid-template-columns:.8fr 1.2fr}
-  .nums .grid{grid-template-columns:repeat(4,1fr)}
-  .every .grid{grid-template-columns:1fr 1fr}
-  .join .grid{grid-template-columns:1.1fr .9fr}
-  .how-grid{grid-template-columns:1fr 1fr;gap:64px}
-  .pinbox{display:block;position:relative}
-  .pinphone{position:sticky;top:110px;height:calc(100vh - 140px);display:grid;place-items:center}
-  .chap{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:0}
-  .chap .mini{display:none}
+  .intro{padding:24px 0 30px}
+  .intro .grid{grid-template-columns:1.1fr .9fr;min-height:calc(100svh - 110px)}
+  .arrows{display:flex}
+  .rail{grid-auto-columns:380px;padding:4px 0 18px;margin:0}
+  .dock{display:none}
 }
-@media (max-width:959px){.stage .doglie{left:-30px;bottom:10px;width:220px}}
-@media (max-width:520px){
-  .badge-demo{display:none}.cap{margin-top:34px}
-  .stage{min-height:600px}.phone{width:270px}.stage .doglie{width:180px;left:-20px}
-  .callout{font-size:16px;max-width:170px}.c1{left:0}.c2{right:0}
+@media (max-width:959px){
+  .stage{min-height:auto;padding:10px 0 0}
+  .stage .phone{width:250px}
+  .badge-demo{top:-4px;right:4px}
+}
+@media (max-width:420px){
+  .field{flex-direction:column}
+  .go{min-height:56px}
+  .go.done{min-width:100%}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
+<noscript><style>.shot{opacity:1;transform:none}.names s::after{transform:scaleX(1)}.bar.v{width:72%}.bar.m{width:44%}.win{opacity:1}</style></noscript>
 </head>
 <body>
-<header class="top" id="top"><div class="wrap">
-  <img src="img/wordmark.svg" width="140" height="29" alt="PawVeda">
-  <a class="hbtn" href="#join">Join the waitlist</a>
+<header class="top"><div class="wrap">
+  <img src="img/wordmark.svg" width="132" height="27" alt="PawVeda">
+  <a class="tlink" href="tour.html">See how it works</a>
 </div></header>
 <main>
-
-<!-- HERO: the real symptom check, playing -->
-<section class="hero-s"><div class="wrap grid">
+<section class="intro"><div class="wrap grid">
   <div>
     <p class="clock" aria-hidden="true"><span class="moon"></span><span>2:<span id="mm">07</span> AM</span></p>
     <h1><span class="ln"><span>Is it serious,</span></span><span class="ln"><span>or can it wait</span></span><span class="ln"><span>till <em>morning?</em></span></span></h1>
-    <p class="sub fx">PawVeda is an app for Indian dog and cat parents. Describe what's happening, and it tells you Emergency, Visit soon or Monitor, with what to do now.</p>
-    <a class="btn fx" href="#join">Join the beta waitlist</a>
+    <p class="sub fx">Describe what's happening. PawVeda tells you Emergency, Visit soon or Monitor, for your dog or cat, with what to do now.</p>
+    <form id="wl" class="join fx" novalidate>
+      <label for="email" class="vh" style="position:absolute;left:-9999px">Your email</label>
+      <div class="field" id="field">
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="Your email" aria-describedby="msg note">
+        <button class="go" id="go" type="submit"><span class="lbl2">Join the waitlist</span><span class="spin" aria-hidden="true"><i></i></span><span class="tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8" fill="none" stroke="#FDF6E3" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      </div>
+      <div class="paws" id="paws" aria-hidden="true"></div>
+      <p id="msg" role="status"></p>
+      <p class="form-note" id="note">By joining, you agree we'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Collected with Google Forms.</p>
+    </form>
     <p class="meta fx">In beta, by waitlist. If this is happening right now, a vet is the right call.</p>
   </div>
   <div class="stage">
@@ -316,226 +292,127 @@ form .btn{text-align:center}
         <span class="tap" id="tap"></span>
       </div>
     </div>
-    <p class="cap">Recreated from the app's screens, with sample data.</p>
+    
+    <p class="cap">Recreated from the app's screens, with sample data. <button type="button" id="pauseDemo" class="pz">Pause demo</button></p>
   </div>
 </div></section>
 
-<!-- CHATTER -->
-<section class="chatter" id="chatter"><img class="sad" src="img/dog-low.webp" width="1344" height="900" alt="AI-generated gouache illustration of a dog lying flat on the floor, chin on its paws."><div class="wrap">
-  <h2 class="rv">At 2am, everyone has an answer.</h2>
-  <div class="board" aria-label="Four conflicting answers a worried pet parent might get">
-    <p class="bub"><b>SEARCH RESULTS</b>12 possible causes. Three of them sound terrifying.</p>
-    <p class="bub"><b>FAMILY GROUP</b>Give him some curd rice, he'll be fine.</p>
-    <p class="bub"><b>NEIGHBOUR</b>My cousin's dog did exactly this. It was tick fever.</p>
-    <p class="bub"><b>A FORUM FROM 2014</b>Mine did this once. It was nothing.</p>
-  </div>
-  <div class="one"><h3>PawVeda gives you <em>one.</em></h3><p class="rv">For your pet, from your pet's record, with the reasoning.</p></div>
-  <p class="cap2">Illustrations on this page are AI-generated.</p>
-</div></section>
-
-<!-- HOW: sticky phone that follows the story -->
-<section class="how" id="how"><div class="wrap">
-  <h2 class="head rv">How it works, in the middle of the night.</h2>
-  <div class="how-grid">
-    <div class="pinbox"><div class="pinphone">
-      <div class="phone" id="pinPhone" aria-hidden="true"><div class="scr">
-        <div class="sb"><span>2:09</span><span>●●●</span></div>
-        <div class="s p-entry"></div>
-        <img class="s p-today" src="img/app/today.webp" width="540" height="1212" alt="">
-        <div class="s p-res"></div>
-      </div></div>
-    </div></div>
-    <div>
-      <article class="chap" data-screen="p-entry">
-        <span class="n">1</span>
-        <h3>Describe what you're seeing.</h3>
-        <p>Off his food, limping, ate something off the street. Pick what you see and since when.</p>
-        <div class="mini"><div class="phone" aria-hidden="true"><div class="scr" data-clone="sc-entry"></div></div></div>
-      </article>
-      <article class="chap" data-screen="p-today">
-        <span class="n">2</span>
-        <h3>It reads your pet's record.</h3>
-        <p>Age, weight, meds, allergies, vaccines. Every answer is for your pet, not a generic pet.</p>
-        <div class="mini"><div class="phone"><div class="scr"><img class="s" src="img/app/today.webp" width="540" height="1212" alt="Screenshot of PawVeda's Today screen for Bruno, with demo data."></div></div></div>
-      </article>
-      <article class="chap" data-screen="p-res">
-        <span class="n">3</span>
-        <h3>You get one of three answers.</h3>
-        <div class="bands3">
-          <div class="b3 e"><span class="m">Emergency</span><p>Go to a vet now. You get the immediate steps.</p></div>
-          <div class="b3 v"><span class="m">Visit soon</span><p>Book the vet. You get what to watch until then.</p></div>
-          <div class="b3 mo"><span class="m">Monitor</span><p>Keep an eye on it. You get what to watch, and the reasoning.</p></div>
-        </div>
-        <div class="engine">
-          <div class="eng-row"><span>On your phone</span><span>Rules engine</span></div>
-          <div class="eng-row"><span>Alongside it</span><span>Pawzitiv AI</span></div>
-          <div class="eng-row"><span>If they disagree</span><span class="win">The more cautious answer wins</span></div>
-          <small>No signal? Triage still works offline, and says so.</small>
-        </div>
-        <div class="mini"><div class="phone" aria-hidden="true"><div class="scr" data-clone="sc-res"></div></div></div>
-      </article>
-    </div>
-  </div>
-</div></section>
-
-<!-- NUTRILENS: real screens, scanned -->
-<section class="nl dark" id="nutrilens"><div class="wrap grid">
-  <div>
-    <p class="k">NutriLens</p>
-    <h2 class="rv">Photograph a food label. It reads it for your pet.</h2>
-    <p class="rv">Red flags checked against your pet's record, not a generic pet.</p>
-    <ul class="ticks">
-      <li class="rv">Rejects a blurry photo before it analyses, and tells you why</li>
-      <li class="rv">Compare two foods, side by side</li>
-      <li class="rv">Scans cached for 30 days</li>
-    </ul>
-  </div>
-  <div class="stage2">
-    <div class="phone" id="nlPhone" role="img" aria-label="Real screenshots of NutriLens with demo data: the camera frames a food pack, reads the label for Bruno, and shows Good fit for Bruno.">
-      <div class="scr" aria-hidden="true">
-        <img class="s n1" src="img/app/scan-camera.webp" width="540" height="1212" alt="">
-        <img class="s n2" src="img/app/scan-reading.webp" width="540" height="1212" alt="">
-        <div class="s n3 resulttop" style="padding:0"><img src="img/app/scan-result-top.webp" width="540" height="500" alt=""><div class="rest">Real screens from the beta, with demo data.</div></div>
-        <span class="laser"></span>
+<section class="proof" id="proof"><div class="wrap">
+  <div class="head"><h2>Built for 2am</h2><div class="arrows"><button type="button" id="prev" aria-label="Previous card">←</button><button type="button" id="next" aria-label="Next card">→</button></div></div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Four reasons, swipe to see more">
+    <article class="pc p1">
+      <h3>Some answers it will never give.</h3>
+      <p>Human painkillers are blocked by name.</p>
+      <div class="viz names" aria-label="Crocin, Dolo, Combiflam, Saridon, Meftal, Disprin, all blocked"><s>Crocin</s><s>Dolo</s><s>Combiflam</s><s>Saridon</s><s>Meftal</s><s>Disprin</s></div>
+    </article>
+    <article class="pc p2">
+      <h3>The more cautious answer wins.</h3>
+      <p>A rules engine on your phone runs alongside the AI. If they disagree, caution wins. An emergency can't be talked down.</p>
+      <div class="viz duel" role="img" aria-label="Illustration: the rules engine says Visit soon, the AI says Monitor, and Visit soon is shown.">
+        <div class="lane"><span>Rules engine</span><div class="track"><span class="bar v">Visit soon</span></div></div>
+        <div class="lane"><span>Pawzitiv AI</span><div class="track"><span class="bar m">Monitor</span></div></div>
+        <p class="win"><i></i>You see: Visit soon</p>
+        <p style="font-size:18px">Illustration of how it decides.</p>
       </div>
-    </div>
+    </article>
+    <article class="pc p3">
+      <h3>Food labels, read for your pet.</h3>
+      <p>Photograph a pack. Red flags are checked against your pet's record.</p>
+      <div class="viz shot"><img src="img/app/scan-result-top.webp" width="540" height="400" alt="Screenshot of a PawVeda NutriLens result, Good fit for Bruno, with demo data." loading="lazy"></div>
+    </article>
+    <article class="pc p4">
+      <h3>It remembers, so you don't have to.</h3>
+      <p>Vaccines, meds and vet visits for every pet in the house.</p>
+      <div class="viz shot"><img src="img/app/today.webp" width="540" height="1212" alt="Screenshot of PawVeda's Today screen for Bruno, with demo data and the score blurred." loading="lazy"></div>
+    </article>
   </div>
-</div></section>
-
-<!-- NEVER -->
-<section class="never" id="never">
-  <div class="wrap grid">
-    <div class="strip rv"><img src="img/blister-strip.webp" width="724" height="624" alt="AI-generated gouache illustration of a blister strip of white tablets."><span class="stamp" aria-hidden="true">BLOCKED</span></div>
-    <div>
-      <h2 class="rv">Some answers it will never give.</h2>
-      <p class="rv">Human painkillers are blocked by name. It won't suggest them for your pet.</p>
-      <p class="rv">When it's an emergency, it says so. The AI can't talk it down.</p>
-      <p class="rv">It never diagnoses or prescribes. It helps you decide when to see a vet.</p>
-    </div>
-  </div>
-  <div class="marq" aria-label="Blocked by name: Crocin, Dolo, Combiflam, Saridon, Meftal, Disprin">
-    <div class="track" aria-hidden="true">
-      <s>Crocin</s><span class="dotsep"></span><s>Dolo</s><span class="dotsep"></span><s>Combiflam</s><span class="dotsep"></span><s>Saridon</s><span class="dotsep"></span><s>Meftal</s><span class="dotsep"></span><s>Disprin</s><span class="dotsep"></span>
-      <s>Crocin</s><span class="dotsep"></span><s>Dolo</s><span class="dotsep"></span><s>Combiflam</s><span class="dotsep"></span><s>Saridon</s><span class="dotsep"></span><s>Meftal</s><span class="dotsep"></span><s>Disprin</s>
-    </div>
-  </div>
-</section>
-
-<!-- NUMBERS -->
-<section class="nums" id="nums"><div class="wrap grid">
-  <div class="num rv"><div class="v" data-n="3">3</div><p>answers. Emergency, Visit soon, Monitor.</p></div>
-  <div class="num rv"><div class="v" data-n="30">30</div><p>days your label scans are cached.</p></div>
-  <div class="num rv"><div class="v" data-n="3">3</div><p>languages the emergency check is tested in before every release: English, Hinglish and Hindi.</p></div>
-  <div class="num rv"><div class="v" data-n="21">21</div><p>reward-based training modules.</p></div>
-</div></section>
-
-<!-- EVERY DAY -->
-<section class="every" id="every"><div class="wrap grid">
-  <div class="today">
-    <div class="phone" id="todayPhone"><div class="scr"><img class="s" src="img/app/today.webp" width="540" height="1212" alt="Screenshot of PawVeda's Today screen for Bruno, with demo data: a daily insight with its score blurred, a symptom-check prompt, next care action and quick actions."></div></div>
-    <span class="callout c1">Bruno not feeling right? Start a symptom check</span>
-    <span class="callout c2">What's due today</span>
-    <span class="callout c3">A seasonal note for your city</span>
-  </div>
-  <div>
-    <p class="k">And for every other day</p>
-    <h2 class="rv">It remembers, so you don't have to.</h2>
-    <div class="feat">
-      <div class="f rv"><img src="img/cat-sitting.webp" width="896" height="1152" alt="AI-generated gouache illustration of a tabby cat sitting."><div><h3>One record for every pet</h3><p>Vaccines, meds and vet visits, for the whole pack.</p></div></div>
-      <div class="f rv"><img src="img/dog-sitting.webp" width="896" height="1152" alt="AI-generated gouache illustration of an indie dog sitting in profile."><div><h3>21 training modules</h3><p>Reward-based, including Diwali fireworks calm.</p></div></div>
-      <div class="f rv"><img src="img/dog-with-sack.webp" width="896" height="1152" alt="AI-generated gouache illustration of an indie dog sitting beside a feed sack."><div><h3>NutriLens</h3><p>Food labels, read for your pet.</p></div></div>
-    </div>
-  </div>
-</div></section>
-
-<!-- JOIN -->
-<section class="join dark" id="join"><div class="wrap">
-  <div class="grid">
-    <div>
-      <h2><span class="ln"><span>Be ready before</span></span><span class="ln"><span>the next <em>2am.</em></span></span></h2>
-      <p class="lede rv">PawVeda is in beta. Join the waitlist and we'll email you when your access opens.</p>
-    </div>
-    <form id="wl" novalidate class="rv">
-      <label for="email">Your email</label>
-      <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="msg">
-      <button class="btn" type="submit">Join the waitlist</button>
-      <p id="msg" role="status"></p>
-      <p class="consent">By joining, you agree we'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Signups are collected with Google Forms.</p>
-    </form>
-  </div>
-  <div class="vet"><p>PawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your pet right now, a vet is the right call.</p></div>
-  <div class="foot"><img src="img/wordmark-cream.svg" width="130" height="27" alt="PawVeda"><span>Illustrations are AI-generated. App screens show demo data.</span></div>
+  <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+  <a class="more" href="tour.html">See how it works, step by step →</a>
 </div></section>
 </main>
+<footer class="vet"><div class="wrap">
+  <p>PawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your pet right now, a vet is the right call.</p>
+  <div class="foot"><img src="img/wordmark-cream.svg" width="120" height="25" alt="PawVeda"><span>App screens show demo data. The avatar illustration is AI-generated.</span></div>
+</div></footer>
+<div class="dock" id="dock"><span>One clear answer, at 2am.</span><a href="#wl" id="dockGo">Join the waitlist</a></div>
 
 <script src="js/gsap.min.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
 <script>
-/* waitlist form */
+var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- form, with states ---------- */
 var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdCdn3r9wYAN5arMo66Kf_jUoxmTe8H7JX83lrx-Eod5Q1oaA/formResponse";
-var f = document.getElementById("wl"), msg = document.getElementById("msg");
+var f = document.getElementById("wl"), msg = document.getElementById("msg"), go = document.getElementById("go"), field = document.getElementById("field"), email = document.getElementById("email");
+function paws(){
+  if (reduce || !window.gsap) return;
+  var box = document.getElementById("paws"), r = go.getBoundingClientRect(), b = box.getBoundingClientRect();
+  for (var i = 0; i < 8; i++) {
+    var p = document.createElement("span"); p.className = "paw"; box.appendChild(p);
+    var x0 = r.left - b.left + r.width/2, y0 = r.top - b.top + r.height/2, a = (Math.PI * 2 * i) / 8;
+    gsap.fromTo(p, {x:x0, y:y0, opacity:1, scale:.6}, {x:x0 + Math.cos(a)*70, y:y0 + Math.sin(a)*46, opacity:0, scale:1, duration:.9, ease:"power2.out", onComplete:function(){ this.targets()[0].remove(); }});
+  }
+}
 f.addEventListener("submit", function(e){
   e.preventDefault();
-  var v = f.email.value.trim();
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { f.email.setAttribute("aria-invalid","true"); msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
-  f.email.removeAttribute("aria-invalid");
+  if (go.classList.contains("loading") || go.classList.contains("done")) return;
+  var v = email.value.trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) {
+    field.classList.add("bad"); email.setAttribute("aria-invalid","true");
+    msg.textContent = "That email doesn't look right. Mind checking it?";
+    if (window.gsap && !reduce) gsap.fromTo(field, {x:-6}, {x:0, duration:.4, ease:"power2.out"});
+    return;
+  }
+  field.classList.remove("bad"); email.removeAttribute("aria-invalid"); msg.textContent = "";
+  go.classList.add("loading");
   var b = new URLSearchParams(); b.append("entry.1059010946", v);
   fetch(FORM, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:b})
-    .then(function(){ f.reset(); msg.textContent = "Thanks. We'll email you when beta access opens."; })
-    .catch(function(){ msg.textContent = "That didn't go through. Please try again in a moment."; });
+    .then(function(){
+      go.classList.remove("loading"); go.classList.add("done"); go.setAttribute("aria-label","Joined");
+      email.value = ""; email.placeholder = "You're on the list"; email.disabled = true;
+      msg.textContent = "Thanks. We'll email you when beta access opens."; paws();
+    })
+    .catch(function(){ go.classList.remove("loading"); msg.textContent = "That didn't go through. Please try again in a moment."; });
 });
 
-/* header turns solid after the hero */
-var topBar = document.getElementById("top");
-addEventListener("scroll", function(){ topBar.classList.toggle("solid", scrollY > 40); }, {passive:true});
-
-/* sticky phone screens: clone the hero's entry and result screens */
-var heroScr = document.querySelector("#heroPhone .scr");
-var pinScr = document.querySelector("#pinPhone .scr");
-[["sc-entry","p-entry"],["sc-res","p-res"]].forEach(function(p){
-  var src = heroScr.querySelector("."+p[0]).cloneNode(true), dst = pinScr.querySelector("."+p[1]);
-  dst.innerHTML = src.innerHTML;
-});
-document.querySelectorAll("[data-clone]").forEach(function(m){
-  var d = document.createElement("div"); d.className = "s"; d.innerHTML = heroScr.querySelector("."+m.dataset.clone).innerHTML; m.appendChild(d);
-  var a = d.querySelector(".t-app"); if (a) { a.classList.add("on"); d.querySelector(".p-since").classList.add("on"); d.querySelector(".cta").classList.remove("dim"); }
-});
-pinScr.querySelector(".p-entry .t-app").classList.add("on");
-pinScr.querySelector(".p-entry .p-since").classList.add("on");
-pinScr.querySelector(".p-entry .cta").classList.remove("dim");
-
-var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-var hasGsap = window.gsap && window.ScrollTrigger;
-
-function endStates(){
-  // no animation: show the finished answer everywhere
-  ["sc-entry","sc-ana"].forEach(function(c){ heroScr.querySelector("."+c).style.opacity = 0; });
-  pinScr.querySelectorAll(".s").forEach(function(s,i){ s.style.opacity = s.classList.contains("p-res") ? 1 : 0; });
-  var nl = document.querySelector("#nlPhone .scr"); nl.querySelector(".n1").style.opacity = 0; nl.querySelector(".n2").style.opacity = 0;
+/* ---------- mobile dock: shows once the form scrolls away, hides near it ---------- */
+var dock = document.getElementById("dock");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(function(es){ dock.classList.toggle("show", !es[0].isIntersecting && es[0].boundingClientRect.top < 0); }).observe(f);
 }
+document.getElementById("dockGo").addEventListener("click", function(e){ e.preventDefault(); f.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"}); setTimeout(function(){ email.focus({preventScroll:true}); }, reduce ? 0 : 500); });
 
-if (!hasGsap || reduce) { endStates(); }
-else {
+/* ---------- proof rail: dots, arrows, per-card animation ---------- */
+var rail = document.getElementById("rail"), cards = rail.querySelectorAll(".pc"), dots = document.querySelectorAll("#dots i");
+function current(){ var w = cards[0].getBoundingClientRect().width + 16; return Math.round(rail.scrollLeft / w); }
+rail.addEventListener("scroll", function(){ var c = Math.min(cards.length - 1, current()); dots.forEach(function(d,i){ d.classList.toggle("on", i === c); }); }, {passive:true});
+function step(d){ var w = cards[0].getBoundingClientRect().width + 16; rail.scrollBy({left: d*w, behavior: reduce ? "auto" : "smooth"}); }
+document.getElementById("prev").addEventListener("click", function(){ step(-1); });
+document.getElementById("next").addEventListener("click", function(){ step(1); });
+if ("IntersectionObserver" in window) {
+  var co = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("on"); co.unobserve(e.target); } }); }, {root:null, threshold:.55});
+  cards.forEach(function(c){ co.observe(c); });
+} else cards.forEach(function(c){ c.classList.add("on"); });
+
+/* ---------- hero motion + the playing demo ---------- */
+var heroScr = document.querySelector("#heroPhone .scr");
+if (!window.gsap || reduce) {
+  document.getElementById("pauseDemo").style.display = "none";
+  heroScr.querySelector(".sc-entry").style.opacity = 0; heroScr.querySelector(".sc-ana").style.opacity = 0;
+  cards.forEach(function(c){ c.classList.add("on"); });
+} else {
   gsap.registerPlugin(ScrollTrigger);
   var E = "power3.out";
-
-  /* hero copy: lines rise inside their masks, then the rest settles */
-  gsap.from(".hero-s h1 .ln>span", {yPercent:105, duration:1.1, ease:"expo.out", stagger:.09, delay:.1});
-  gsap.from(".hero-s .fx", {opacity:0, duration:1, ease:E, stagger:.12, delay:.5});
+  gsap.from("h1 .ln>span", {yPercent:105, duration:1.1, ease:"expo.out", stagger:.09, delay:.1});
+  gsap.from(".fx", {opacity:0, duration:1, ease:E, stagger:.12, delay:.45});
   gsap.from("#heroPhone", {opacity:0, scale:.94, duration:1.2, ease:"expo.out", delay:.25});
   gsap.to(".glow", {scale:1.08, duration:6, ease:"sine.inOut", yoyo:true, repeat:-1});
-
-  /* the clock ticks a few minutes, then rests */
   var mm = document.getElementById("mm"), m = 7, n = 0;
   var clk = setInterval(function(){ m++; mm.textContent = (m < 10 ? "0" : "") + m; if (++n >= 4) clearInterval(clk); }, 4500);
 
-  /* HERO PHONE: the symptom check, playing on a loop */
   var q = function(s){ return heroScr.querySelector(s); };
   var tap = q("#tap"), entry = q(".sc-entry"), ana = q(".sc-ana"), res = q(".sc-res");
-  function tapAt(el){
-    var r = el.getBoundingClientRect(), s = heroScr.getBoundingClientRect();
-    return {left:(r.left - s.left + r.width/2)+"px", top:(r.top - s.top + r.height/2)+"px"};
-  }
+  function tapAt(el){ var r = el.getBoundingClientRect(), s = heroScr.getBoundingClientRect(); return {left:(r.left - s.left + r.width/2)+"px", top:(r.top - s.top + r.height/2)+"px"}; }
   var tl = gsap.timeline({repeat:-1, repeatDelay:.6, paused:true});
   tl.set([ana,res], {opacity:0}).set(entry, {opacity:1})
     .call(function(){ q(".t-app").classList.remove("on"); q(".p-since").classList.remove("on"); q(".sc-entry .cta").classList.add("dim");
@@ -563,68 +440,9 @@ else {
     .from(q(".sc-res .scale .on"), {scaleX:0, transformOrigin:"left", duration:.6, ease:E}, "-=.2")
     .from(heroScr.querySelectorAll(".sc-res .watch li"), {opacity:0, duration:.4, stagger:.15}, "-=.2")
     .to({}, {duration:4.2});
-  ScrollTrigger.create({trigger:"#heroPhone", start:"top 95%", end:"bottom 5%", onToggle:function(s){ s.isActive ? tl.play() : tl.pause(); }});
-
-  /* chatter: the four voices land, then quieten when PawVeda answers */
-  var ct = gsap.timeline({scrollTrigger:{trigger:"#chatter", start:"top 65%"}});
-  ct.from("#chatter .bub", {opacity:0, scale:.96, transformOrigin:"left center", duration:.6, ease:E, stagger:.35})
-    .to("#chatter .bub", {opacity:.7, duration:.8}, "+=.6")
-    .from("#chatter .one h3", {opacity:0, duration:.9, ease:E}, "<");
-
-  /* generic soft reveals */
-  gsap.utils.toArray(".rv").forEach(function(el){
-    gsap.from(el, {opacity:0, duration:1, ease:E, scrollTrigger:{trigger:el, start:"top 88%"}});
-  });
-
-  /* sticky phone: swap screens with the chapter in view (desktop) */
-  var mmq = gsap.matchMedia();
-  mmq.add("(min-width:960px)", function(){
-    var screens = pinScr.querySelectorAll(".s");
-    gsap.set(screens, {opacity:0}); gsap.set(pinScr.querySelector(".p-entry"), {opacity:1});
-    document.querySelectorAll(".chap").forEach(function(ch){
-      ScrollTrigger.create({trigger:ch, start:"top 55%", end:"bottom 55%", onToggle:function(s){
-        if (!s.isActive) return;
-        var target = pinScr.querySelector("."+ch.dataset.screen);
-        gsap.to(screens, {opacity:0, duration:.45, overwrite:true});
-        gsap.to(target, {opacity:1, duration:.45, overwrite:true});
-        gsap.fromTo("#pinPhone", {rotate:0}, {rotate:ch.dataset.screen==="p-today"?-3:ch.dataset.screen==="p-res"?2:0, duration:.9, ease:E});
-      }});
-    });
-    gsap.from(".engine .eng-row", {opacity:0, duration:.6, stagger:.25, ease:E, scrollTrigger:{trigger:".engine", start:"top 80%"}});
-  });
-
-  /* NutriLens: scan, read, answer (real screens) */
-  var nl = document.querySelector("#nlPhone .scr");
-  gsap.set([nl.querySelector(".n2"), nl.querySelector(".n3")], {opacity:0});
-  var nt = gsap.timeline({repeat:-1, repeatDelay:1, paused:true});
-  nt.set(nl.querySelector(".n1"), {opacity:1}).set([nl.querySelector(".n2"), nl.querySelector(".n3")], {opacity:0})
-    .set(".laser", {top:"14%", opacity:0})
-    .to(".laser", {opacity:1, duration:.2}, "+=.6")
-    .to(".laser", {top:"36%", duration:1.1, ease:"sine.inOut", yoyo:true, repeat:1})
-    .to(".laser", {opacity:0, duration:.2})
-    .to(nl.querySelector(".n2"), {opacity:1, duration:.4})
-    .to(nl.querySelector(".n3"), {opacity:1, duration:.5}, "+=1.4")
-    .from(nl.querySelector(".n3 img"), {scale:.97, duration:.6, ease:E}, "<")
-    .to({}, {duration:3});
-  ScrollTrigger.create({trigger:"#nlPhone", start:"top 85%", end:"bottom 10%", onToggle:function(s){ s.isActive ? nt.play() : nt.pause(); }});
-  gsap.from("#nlPhone", {rotate:-6, opacity:0, duration:1.2, ease:"expo.out", scrollTrigger:{trigger:"#nlPhone", start:"top 85%"}});
-
-  /* NEVER: the stamp lands; the blocked names travel with the scroll */
-  gsap.from(".stamp", {opacity:0, scale:1.4, rotate:-14, duration:.5, ease:"power2.out", scrollTrigger:{trigger:".strip", start:"top 70%"}});
-  gsap.fromTo(".marq .track", {xPercent:0}, {xPercent:-40, ease:"none", scrollTrigger:{trigger:".marq", start:"top bottom", end:"bottom top", scrub:.6}});
-
-  /* numbers count up */
-  document.querySelectorAll(".num .v").forEach(function(el){
-    var o = {v:0}, to = +el.dataset.n;
-    gsap.to(o, {v:to, duration:1.4, ease:"power2.out", scrollTrigger:{trigger:el, start:"top 85%"}, onUpdate:function(){ el.textContent = Math.round(o.v); }});
-  });
-
-  /* every day: Today screen floats in, callouts land in turn */
-  gsap.from("#todayPhone", {rotate:4, opacity:0, duration:1.2, ease:"expo.out", scrollTrigger:{trigger:"#todayPhone", start:"top 85%"}});
-  gsap.from(".callout", {opacity:0, scale:.9, duration:.6, ease:E, stagger:.3, scrollTrigger:{trigger:"#todayPhone", start:"top 60%"}});
-
-  /* join headline */
-  gsap.from(".join h2 .ln>span", {yPercent:105, duration:1.1, ease:"expo.out", stagger:.1, scrollTrigger:{trigger:".join h2", start:"top 80%"}});
+  var userPaused = false, pz = document.getElementById("pauseDemo");
+  pz.addEventListener("click", function(){ userPaused = !userPaused; userPaused ? tl.pause() : tl.play(); pz.textContent = userPaused ? "Play demo" : "Pause demo"; });
+  ScrollTrigger.create({trigger:"#heroPhone", start:"top 95%", end:"bottom 5%", onToggle:function(s){ s.isActive && !userPaused ? tl.play() : tl.pause(); }});
 }
 </script>
 </body>
