@@ -13,7 +13,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF8F2">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="img/app/bruno.webp" as="image">
 <script>document.documentElement.className="js"</script>
 <style>
 @font-face{font-family:"Fraunces";font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
@@ -188,6 +187,32 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
 .dots i.on{width:26px;background:var(--cocoa-dark)}
 .more{display:inline-block;margin-top:22px;font:600 20px var(--body);color:var(--cocoa-dark)}
 
+.lt{display:grid;place-items:center;background:var(--cocoa);color:var(--cream-hero);font:600 20px var(--body)}
+.ringlt{position:absolute;inset:16px;border-radius:50%;background:var(--cocoa);color:var(--cream-hero);display:grid;place-items:center;font:600 38px var(--body)}
+.p5{background:var(--cream);border:2px solid var(--sand)}
+.p6{background:var(--cocoa-dark);color:var(--cream-hero)}
+.p7{background:var(--sand)}
+.doc{background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(49,29,14,.5);font-size:16px;color:var(--ink)}
+.doc .dh{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--sand);padding-bottom:8px;margin-bottom:6px}
+.doc .dh b{font:600 18px var(--display)}
+.doc .dh span{font:500 14px var(--data);color:var(--cocoa)}
+.doc .dr{display:grid;grid-template-columns:120px 1fr;gap:8px;padding:4px 0;font-size:15px;border-bottom:1px solid #eee5d8;opacity:.15;transition:opacity .5s}
+.doc .dr span:first-child{font-weight:600;color:var(--cocoa)}
+.doc .ln2{height:9px;border-radius:5px;background:var(--sand);align-self:center}
+.on .doc .dr{opacity:1}
+.on .doc .dr:nth-child(3){transition-delay:.25s}.on .doc .dr:nth-child(4){transition-delay:.5s}.on .doc .dr:nth-child(5){transition-delay:.75s}
+.doc .pdf{display:inline-block;margin-top:10px;font:600 14px var(--body);background:var(--terracotta-deep);color:var(--cream-hero);border-radius:10px;padding:5px 12px}
+.alert{background:var(--cream-hero);color:var(--ink);border-radius:18px 18px 18px 6px;padding:14px 16px;font-size:18px;opacity:0;transition:opacity .7s .3s}
+.alert b{display:block;font:600 14px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--cocoa);margin-bottom:4px}
+.alert .ev{margin-top:10px;display:flex;align-items:flex-end;gap:5px;height:56px}
+.alert .ev i{flex:1;background:var(--stone);border-radius:4px 4px 0 0;transform-origin:bottom;transform:scaleY(.2);transition:transform .8s cubic-bezier(.4,0,.2,1)}
+.alert .ev i.hi{background:var(--terracotta)}
+.on .alert{opacity:1}
+.on .alert .ev i{transform:scaleY(1)}
+.seasonal img{border-radius:16px}
+.seasonal{box-shadow:0 14px 30px -18px rgba(49,29,14,.5);opacity:0;transition:opacity .8s}
+.on .seasonal{opacity:1}
+.illus{font-size:16px;opacity:.85}
 /* ---------- vet + foot ---------- */
 .vet{background:var(--cocoa-dark);color:var(--cream-hero);padding:44px 0 30px}
 .vet p{font:500 22px/1.45 var(--body);max-width:32em}
@@ -200,7 +225,7 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
 .dock.show{transform:none}
 .dock a{background:var(--terracotta-deep);color:var(--cream-hero);text-decoration:none;font-weight:600;font-size:20px;border-radius:14px 14px 14px 6px;padding:12px 18px;white-space:nowrap}
 
-@media (max-width:959px){body{padding-bottom:96px}}
+@media (max-width:959px){body{padding-bottom:96px}.pc{height:auto;min-height:440px}}
 @media (min-width:960px){
   .intro{padding:24px 0 30px}
   .intro .grid{grid-template-columns:1.1fr .9fr;min-height:calc(100svh - 110px)}
@@ -220,7 +245,7 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
-<noscript><style>.shot{opacity:1;transform:none}.names s::after{transform:scaleX(1)}.bar.v{width:72%}.bar.m{width:44%}.win{opacity:1}</style></noscript>
+<noscript><style>.doc .dr,.alert,.seasonal{opacity:1}.alert .ev i{transform:none}.shot{opacity:1;transform:none}.names s::after{transform:scaleX(1)}.bar.v{width:72%}.bar.m{width:44%}.win{opacity:1}</style></noscript>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -247,7 +272,6 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
   </div>
   <div class="stage">
     <div class="glow" aria-hidden="true"></div>
-    <span class="badge-demo">DEMO</span>
     <div class="phone" id="heroPhone" role="img" aria-label="Demo of PawVeda's symptom check: pick Loss of Appetite since yesterday for Bruno, PawVeda checks for emergency signs, and the answer is Visit soon, today: Bruno needs a vet today, with signs to watch for.">
       <div class="scr" aria-hidden="true">
         <div class="sb"><span>2:07</span><span>●●●</span></div>
@@ -266,7 +290,7 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
         <div class="s sc-ana">
           <div class="appbar"><span class="disc">✕</span><span></span><span class="truth">DEMO DATA</span></div>
           <div class="ana">
-            <div class="ring"><svg viewBox="0 0 118 118"><circle cx="59" cy="59" r="54" fill="none" stroke="#E9E2D6" stroke-width="6"/><circle class="arc" cx="59" cy="59" r="54" fill="none" stroke="#CC785C" stroke-width="6" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" transform="rotate(-90 59 59)"/></svg><img src="img/app/bruno.webp" alt=""></div>
+            <div class="ring"><svg viewBox="0 0 118 118"><circle cx="59" cy="59" r="54" fill="none" stroke="#E9E2D6" stroke-width="6"/><circle class="arc" cx="59" cy="59" r="54" fill="none" stroke="#CC785C" stroke-width="6" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" transform="rotate(-90 59 59)"/></svg><span class="ringlt">B</span></div>
             <p class="h">Looking over what you told us about Bruno…</p>
             <p class="asub">Loss of appetite · Since yesterday</p>
             <div class="card steps">
@@ -280,7 +304,7 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
         <div class="s sc-res">
           <div class="appbar"><span class="disc">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
           <div class="hero">
-            <div class="hh"><span class="av"><img src="img/app/bruno.webp" alt=""></span><div><p class="eb">Visit soon · today</p><p class="ttl">Bruno needs a vet today</p></div></div>
+            <div class="hh"><span class="av lt">B</span><div><p class="eb">Visit soon · today</p><p class="ttl">Bruno needs a vet today</p></div></div>
             <div class="row" style="align-items:flex-start"><p class="why">Not eating for over a day</p><span class="chipdev">ON YOUR DEVICE</span></div>
             <div class="scale"><span></span><span class="on"></span><span></span></div>
             <div class="scl"><span>Watch at home</span><span>Vet soon</span><span>Vet now</span></div>
@@ -298,8 +322,33 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
 </div></section>
 
 <section class="proof" id="proof"><div class="wrap">
-  <div class="head"><h2>Built for 2am</h2><div class="arrows"><button type="button" id="prev" aria-label="Previous card">←</button><button type="button" id="next" aria-label="Next card">→</button></div></div>
-  <div class="rail" id="rail" tabindex="0" aria-label="Four reasons, swipe to see more">
+  <div class="head"><h2>Built for 2am. Useful every day.</h2><div class="arrows"><button type="button" id="prev" aria-label="Previous card">←</button><button type="button" id="next" aria-label="Next card">→</button></div></div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Seven reasons, swipe to see more">
+    <article class="pc p5">
+      <h3>Walk into the vet prepared.</h3>
+      <p>No more "when did the limp start?" One dated page with the whole story, as a PDF.</p>
+      <div class="viz"><div class="doc" role="img" aria-label="Illustration of a Vet Brief: what happened, meds, symptoms, and the weather and air that week, with PDF export.">
+        <div class="dh"><b>Vet Brief · Bruno</b><span>DATED</span></div>
+        <div class="dr"><span>What happened</span><span class="ln2"></span></div>
+        <div class="dr"><span>Meds</span><span class="ln2"></span></div>
+        <div class="dr"><span>Symptoms</span><span class="ln2"></span></div>
+        <div class="dr"><span>Heat &amp; air</span><span class="ln2"></span></div>
+        <span class="pdf">PDF</span>
+      </div><p class="illus" style="margin-top:8px">Illustration</p></div>
+    </article>
+    <article class="pc p6">
+      <h3>It speaks first.</h3>
+      <p>When small signs add up in your pet's record, PawVeda writes one alert, with the evidence attached.</p>
+      <div class="viz"><div class="alert" role="img" aria-label="Illustration of an alert: coughs that follow high-AQI days, with a small chart.">
+        <b>Pawzitiv noticed</b>Bruno's coughs follow the high-AQI days.
+        <div class="ev"><i style="height:30%"></i><i class="hi" style="height:90%"></i><i style="height:40%"></i><i style="height:35%"></i><i class="hi" style="height:100%"></i><i style="height:45%"></i><i class="hi" style="height:80%"></i></div>
+      </div><p class="illus" style="margin-top:8px">Illustration</p></div>
+    </article>
+    <article class="pc p7">
+      <h3>Care for your city and season.</h3>
+      <p>A seasonal note for your city, like this one from the beta. Indian by default.</p>
+      <div class="viz seasonal"><span class="truth" style="display:inline-block;margin:0 0 6px;font-size:11px">DEMO DATA</span><img src="img/app/seasonal.webp" width="525" height="102" alt="Screenshot from PawVeda's Today screen: Monsoon, Bengaluru. Flea season picks up. Coat checks twice a week, ears dry after a walk in the rain. With demo data." loading="lazy"></div>
+    </article>
     <article class="pc p1">
       <h3>Some answers it will never give.</h3>
       <p>Human painkillers are blocked by name.</p>
@@ -326,13 +375,13 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
       <div class="viz shot"><img src="img/app/today.webp" width="540" height="1212" alt="Screenshot of PawVeda's Today screen for Bruno, with demo data and the score blurred." loading="lazy"></div>
     </article>
   </div>
-  <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <a class="more" href="tour.html">See how it works, step by step →</a>
 </div></section>
 </main>
 <footer class="vet"><div class="wrap">
   <p>PawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your pet right now, a vet is the right call.</p>
-  <div class="foot"><img src="img/wordmark-cream.svg" width="120" height="25" alt="PawVeda"><span>App screens show demo data. The avatar illustration is AI-generated.</span></div>
+  <div class="foot"><img src="img/wordmark-cream.svg" width="120" height="25" alt="PawVeda"><span>App screens show demo data.</span></div>
 </div></footer>
 <div class="dock" id="dock"><span>One clear answer, at 2am.</span><a href="#wl" id="dockGo">Join the waitlist</a></div>
 
