@@ -89,6 +89,26 @@ def build(e):
     raise GraphError(f"unknown kind {kind}")
 
 
+def bio_has_link():
+    """True when the Instagram bio's website field is set. Captions that point at the bio only
+    keep that line when this is true; otherwise the line is swapped back (06-BUILD-STATUS rule:
+    never claim a link that does not exist)."""
+    try:
+        return bool((graph("GET", IG_ID, {"fields": "website"}) or {}).get("website", "").strip())
+    except Exception as err:
+        log("could not read bio website, posting without the bio line:", str(err)[:120])
+        return False
+
+
+def apply_waitlist_swap(e):
+    sw = e.get("waitlist_swap")
+    if not sw or sw.get("with", "") not in e["caption"]:
+        return
+    if not bio_has_link():
+        e["caption"] = e["caption"].replace(sw["with"], sw.get("without", ""))
+        log("bio has no link: posted without the waitlist line:", e["id"])
+
+
 def main():
     queue = load("queue/schedule.json", [])
     pub = load("state/published.json", {})
@@ -114,6 +134,7 @@ def main():
     if DRY:
         log("DRY RUN: would publish", e["id"], [media_url(f) for f in e["media"]])
         return
+    apply_waitlist_swap(e)
     try:
         cid = build(e)
         mid = graph("POST", f"{IG_ID}/media_publish", json_body={"creation_id": cid})["id"]

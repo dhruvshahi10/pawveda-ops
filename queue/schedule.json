@@ -206,7 +206,7 @@
    "media/2026-10-28-airplane-mode/06.jpg",
    "media/2026-10-28-airplane-mode/07.jpg"
   ],
-  "caption": "It's never the living room with full bars. It's the lift lobby, the basement parking, the highway back at 1am.\n\nThree things work with no signal if you set them up on a quiet day: your vet's number and address saved as a contact, the nearest 24-hour clinic saved in offline maps, and a photo of his vaccination card in your gallery. None of them needs anything you don't already have.\n\nThe fourth is the one we built. PawVeda's symptom triage keeps a rules engine on your phone, running alongside the cloud. With no network at all, you still describe what you're seeing and get one of three bands: Emergency, Visit soon or Monitor. The screen tells you it was your phone that answered. Back online, the cloud answers too, and the more cautious verdict wins.\n\nWhat it won't do, online or off, is name a condition or suggest a medicine. PawVeda helps you decide when to see a vet. It doesn't replace one. If something is wrong right now, a vet is the right call.\n\nPawVeda is in beta. Follow along; we'll say here when the waitlist opens.\n\nPhotos are AI-generated.\n\n#dogemergency #petparentsindia #dogparentsindia #petcareindia #pawveda",
+  "caption": "It's never the living room with full bars. It's the lift lobby, the basement parking, the highway back at 1am.\n\nThree things work with no signal if you set them up on a quiet day: your vet's number and address saved as a contact, the nearest 24-hour clinic saved in offline maps, and a photo of his vaccination card in your gallery. None of them needs anything you don't already have.\n\nThe fourth is the one we built. PawVeda's symptom triage keeps a rules engine on your phone, running alongside the cloud. With no network at all, you still describe what you're seeing and get one of three bands: Emergency, Visit soon or Monitor. The screen tells you it was your phone that answered. Back online, the cloud answers too, and the more cautious verdict wins.\n\nWhat it won't do, online or off, is name a condition or suggest a medicine. PawVeda helps you decide when to see a vet. It doesn't replace one. If something is wrong right now, a vet is the right call.\n\nPawVeda is in beta. The waitlist is open: link in bio.\n\nPhotos are AI-generated.\n\n#dogemergency #petparentsindia #dogparentsindia #petcareindia #pawveda",
   "alt": [
    "Cream slide. Headline: \"Airplane mode. Still works.\" Small label above: The 2AM Desk. Top right, an AI-generated photo of a tan and white dog sitting up awake on a bed at night, looking at the camera.",
    "Cream slide. Text reads \"The bad nights never check your signal.\"",
@@ -223,7 +223,11 @@
   "critique": "PASS",
   "hook": "Airplane mode. Still works.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/09-Wed-28-Oct-airplane-mode"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/09-Wed-28-Oct-airplane-mode",
+  "waitlist_swap": {
+   "with": "PawVeda is in beta. The waitlist is open: link in bio.",
+   "without": "PawVeda is in beta. Follow along; we'll say here when the waitlist opens."
+  }
  },
  {
   "id": "2026-10-29-cant-find-your-dog",
@@ -233,7 +237,7 @@
   "media": [
    "media/2026-10-29-cant-find-your-dog/reel.mp4"
   ],
-  "caption": "Better you hear this now than on the 8th.\n\nPawVeda has no GPS. It works from the city you save and the addresses you type, behind consent you can take back. We built it that way on purpose. Which means that on Diwali night, if she gets out, PawVeda can't find her.\n\nSo we put the work where it can help: the ten days before. One room she already knows. One door that stays shut, with one person whose job it is. A little practice every evening. Two PawVeda Academy modules walk through it, Diwali fireworks calm and Diwali safe room for cats, both in the beta.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If she's hurt or panicking right now, a vet is the right call.\n\nSave it for the 7th.\n\nThe presenter is AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #PetParentsIndia #IndieDogs #PetPrivacy",
+  "caption": "Better you hear this now than on the 8th.\n\nPawVeda has no GPS. It works from the city you save and the addresses you type, behind consent you can take back. We built it that way on purpose. Which means that on Diwali night, if she gets out, PawVeda can't find her.\n\nSo we put the work where it can help: the ten days before. One room she already knows. One door that stays shut, with one person whose job it is. A little practice every evening. Two PawVeda Academy modules walk through it, Diwali fireworks calm and Diwali safe room for cats, both in the beta. The waitlist is in our bio.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If she's hurt or panicking right now, a vet is the right call.\n\nSave it for the 7th.\n\nThe presenter is AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #PetParentsIndia #IndieDogs #PetPrivacy",
   "alt": [],
   "first_comment": "Ask us anything about what PawVeda does and doesn't collect.",
   "trial": true,
@@ -242,7 +246,11 @@
   "critique": "PASS after fixes (two independent passes)",
   "hook": "PawVeda can't find your dog.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/10-Thu-29-Oct-cant-find-your-dog"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/10-Thu-29-Oct-cant-find-your-dog",
+  "waitlist_swap": {
+   "with": " The waitlist is in our bio.",
+   "without": ""
+  }
  },
  {
   "id": "2026-10-30-carrier-comfort",
@@ -430,7 +438,7 @@
    "media/2026-11-05-diwali-carousel/06.jpg",
    "media/2026-11-05-diwali-carousel/07.jpg"
   ],
-  "caption": "Everyone's telling you to calm your dog down on Diwali. Nobody's telling you she might not be there to calm.\n\nOn Diwali night the front door opens again and again. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali. And in a Dutch survey of more than 3,600 dogs and cats, pet parents reported more cats than dogs going missing after fireworks, 8.4% against 5.4%.\n\nSo the plan is the door, not the hug: one room picked this week, windows and curtains shut, one person whose only job is the front door, and someone in the room with her. Slide 5 is the one to screenshot.\n\nPawVeda can't find a dog who ran. It has no GPS, by design. What it has is two Academy modules for the weeks before, Diwali fireworks calm and Diwali safe room for cats, both in the beta.\n\nIf your pet panics rather than startles, a vet has options worth asking about. Ask this week, not on the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it for the 7th.\n\nSources: ThePrint; Dutch survey on firework fear in dogs and cats (2024); Cats Protection. Photos are AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #CatParentsIndia #IndieDogs #FireworkFear",
+  "caption": "Everyone's telling you to calm your dog down on Diwali. Nobody's telling you she might not be there to calm.\n\nOn Diwali night the front door opens again and again. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali. And in a Dutch survey of more than 3,600 dogs and cats, pet parents reported more cats than dogs going missing after fireworks, 8.4% against 5.4%.\n\nSo the plan is the door, not the hug: one room picked this week, windows and curtains shut, one person whose only job is the front door, and someone in the room with her.\n\nPawVeda can't find a dog who ran. It has no GPS, by design. What it has is two Academy modules for the weeks before, Diwali fireworks calm and Diwali safe room for cats, both in the beta. The waitlist is in our bio.\n\nIf your pet panics rather than startles, a vet has options worth asking about. Ask this week, not on the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it for the 7th.\n\nSources: ThePrint; Dutch survey on firework fear in dogs and cats (2024); Cats Protection. Photos are AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #CatParentsIndia #IndieDogs #FireworkFear",
   "alt": [
    "In a dark hallway an open front door frames an indie dog standing side-on, lit from behind by a firework fountain in the lane. Text: Everyone says calm her down. She might not be there to calm. Pill: Diwali, Sunday 8 November.",
    "Large figure 20–30 km, from home. How far from home Delhi-NCR street dogs have been found after Diwali, as reported by ThePrint.",
@@ -447,7 +455,11 @@
   "critique": "PASS after fixes (two independent passes)",
   "hook": "She might not be there to calm.",
   "top5": true,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/17-Thu-05-Nov-diwali-carousel"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/17-Thu-05-Nov-diwali-carousel",
+  "waitlist_swap": {
+   "with": " The waitlist is in our bio.",
+   "without": ""
+  }
  },
  {
   "id": "2026-11-06-hero-film",
@@ -457,7 +469,7 @@
   "media": [
    "media/2026-11-06-hero-film/reel.mp4"
   ],
-  "caption": "Everyone will tell you to calm her down on Diwali. Hardly anyone tells you she might not be in the room to calm.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali.\n\nSo the work isn't on the night. It's the door: one room picked now, windows and curtains shut, one person whose only job on the 8th is the front door, and someone in the room with her.\n\nPawVeda Academy's Diwali fireworks calm module walks through the weeks before. It's in the beta. If your dog panics rather than startles, call your vet before the 8th, not on the night. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it. Send it to the house that always has guests.\n\nSources: ThePrint, on street dogs missing in Delhi-NCR after Diwali; Dogs Trust. This film is AI-generated: every dog, room and person in it.\n\n#DiwaliWithPets #DogScaredOfCrackers #IndieDogs #PetParentsIndia #FireworkFear",
+  "caption": "Everyone will tell you to calm her down on Diwali. Hardly anyone tells you she might not be in the room to calm.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali.\n\nSo the work isn't on the night. It's the door: one room picked now, windows and curtains shut, one person whose only job on the 8th is the front door, and someone in the room with her.\n\nPawVeda Academy's Diwali fireworks calm module walks through the weeks before. It's in the beta, and the waitlist is in our bio.\n\nIf your dog panics rather than startles, call your vet before the 8th, not on the night. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it. Send it to the house that always has guests.\n\nSources: ThePrint, on street dogs missing in Delhi-NCR after Diwali; Dogs Trust. This film is AI-generated: every dog, room and person in it.\n\n#DiwaliWithPets #DogScaredOfCrackers #IndieDogs #PetParentsIndia #FireworkFear",
   "alt": [],
   "first_comment": "If your dog panics rather than startles, call your vet before the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": true,
@@ -466,7 +478,11 @@
   "critique": "PASS after fixes (two independent passes)",
   "hook": "The One Door",
   "top5": true,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/18-Fri-06-Nov-HERO-FILM"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/18-Fri-06-Nov-HERO-FILM",
+  "waitlist_swap": {
+   "with": ", and the waitlist is in our bio.\n\nIf your dog",
+   "without": ". If your dog"
+  }
  },
  {
   "id": "2026-11-07-count-them",
