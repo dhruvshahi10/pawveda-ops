@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PawVeda · Know before you worry</title>
+<meta name="description" content="A 26-second film of PawVeda's symptom check. For Indian dog and cat parents. Join the beta waitlist.">
+<meta property="og:title" content="Know before you worry · PawVeda">
+<meta property="og:description" content="One clear answer at 2am, for your dog or cat. Join the beta waitlist.">
+<meta property="og:image" content="https://dhruvshahi10.github.io/pawveda-ops/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#311D0E">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Lexend";font-weight:400;font-display:swap;src:url(fonts/lexend-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Lexend";font-weight:600;font-display:swap;src:url(fonts/lexend-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
+:root{--terracotta:#CC785C;--terracotta-deep:#B86347;--cocoa:#523117;--cocoa-dark:#311D0E;--cream:#FAF8F2;--cream-hero:#FDF6E3;--ink:#1A1C1E;--sand:#EDE5D8}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--cocoa-dark);color:var(--cream-hero);font:400 20px/1.5 "Lexend",system-ui,sans-serif}
+p{margin:0}
+:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px}
+body{display:flex;flex-direction:column;min-height:100svh}
+.film{flex:1;min-height:0;display:grid;place-items:center;background:var(--cocoa-dark);padding-top:58px}
+.film video{width:100%;height:100%;max-height:calc(100svh - 230px);object-fit:contain;background:var(--cocoa-dark);border-radius:14px}
+.top{position:fixed;inset:0 0 auto;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:linear-gradient(rgba(49,29,14,.6),rgba(49,29,14,0))}
+.wm{width:120px;height:25px;background:var(--cream-hero);-webkit-mask:url(img/wordmark.svg) left center/contain no-repeat;mask:url(img/wordmark.svg) left center/contain no-repeat}
+.ctrl{display:flex;gap:10px;align-items:center}
+.ctrl button,.ctrl a{font:600 16px "Lexend";color:var(--cream-hero);background:rgba(49,29,14,.55);border:1.5px solid rgba(253,246,227,.5);border-radius:999px;padding:8px 14px;cursor:pointer;text-decoration:none}
+.bar{position:relative;margin:12px auto calc(12px + env(safe-area-inset-bottom));z-index:6;width:min(720px,calc(100% - 24px));background:rgba(49,29,14,.86);border:1.5px solid rgba(253,246,227,.18);border-radius:24px 24px 24px 10px;padding:12px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
+.row{display:flex;gap:8px}
+.row input{flex:1;min-width:0;font:400 20px "Lexend";color:var(--ink);background:var(--cream-hero);border:2px solid transparent;border-radius:16px 16px 16px 6px;padding:12px 14px;outline:none;transition:border-color .3s,box-shadow .3s}
+.row input:focus{border-color:var(--terracotta);box-shadow:0 0 0 5px rgba(204,120,92,.3)}
+.row input::placeholder{color:var(--cocoa);opacity:1}
+.go{flex:none;border:0;cursor:pointer;font:600 20px "Lexend";color:var(--cream-hero);background:var(--terracotta-deep);border-radius:16px 16px 16px 6px;padding:0 20px;min-height:52px;transition:background .3s}
+.go:hover{background:var(--terracotta)}
+.go.done{background:var(--cocoa)}
+.fine{font-size:15px;line-height:1.45;color:var(--cream-hero);opacity:.85;margin-top:8px;padding:0 4px}
+#msg{font:600 18px "Lexend";margin-top:8px;padding:0 4px}#msg:empty{display:none}
+.vet{font-size:15px;margin-top:4px;padding:0 4px;color:var(--cream-hero)}
+@media (max-width:700px){.film{flex:none;height:74svh}.film video{max-height:100%}}
+@media (max-width:520px){.row{flex-direction:column}.go{min-height:52px}.fine{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.film video{display:none}.film{background:var(--cocoa-dark) url(video/poster-16x9.jpg) center/contain no-repeat}}
+</style>
+</head>
+<body>
+<div class="film"><video id="v" muted playsinline loop autoplay preload="auto" aria-label="A 26-second film of PawVeda's symptom check, recreated from the app's screens with a sample dog. 2:07 AM, Bruno hasn't eaten since yesterday. The parent picks loss of appetite since yesterday; PawVeda checks for emergency signs and answers Visit soon, today: Bruno needs a vet today. Then: Crocin, Dolo and Combiflam blocked by name; if the rules engine and the AI disagree, the more cautious answer wins; a NutriLens food-label scan from the beta. Ends: Know before you worry."></video></div>
+<header class="top"><span class="wm" role="img" aria-label="PawVeda"></span><div class="ctrl"><button type="button" id="pp" aria-pressed="false">Pause</button><a href="tour.html">How it works</a></div></header>
+<form class="bar" id="wl" novalidate>
+  <label for="email" style="position:absolute;left:-9999px">Your email</label>
+  <div class="row"><input id="email" type="email" autocomplete="email" inputmode="email" placeholder="Your email" required aria-describedby="msg fine"><button class="go" id="go" type="submit">Join the waitlist</button></div>
+  <p id="msg" role="status"></p>
+  <p class="fine" id="fine">By joining, you agree we'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Collected with Google Forms.</p>
+  <p class="vet">If it's happening right now, a vet is the right call. · The film is recreated from the app's screens, with a sample dog and sample data.</p>
+</form>
+<script>
+var v = document.getElementById("v"), vert = innerHeight > innerWidth;
+v.poster = vert ? "video/poster-9x16.jpg" : "video/poster-16x9.jpg";
+var base = vert ? "video/film-9x16" : "video/film-16x9";
+[["webm","video/webm"],["mp4","video/mp4"]].forEach(function(t){ var so = document.createElement("source"); so.src = base + "." + t[0]; so.type = t[1]; v.appendChild(so); });
+v.load();
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); }
+var pp = document.getElementById("pp");
+pp.addEventListener("click", function(){ if (v.paused) { v.play(); pp.textContent = "Pause"; pp.setAttribute("aria-pressed","false"); } else { v.pause(); pp.textContent = "Play"; pp.setAttribute("aria-pressed","true"); } });
+var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdCdn3r9wYAN5arMo66Kf_jUoxmTe8H7JX83lrx-Eod5Q1oaA/formResponse";
+var f = document.getElementById("wl"), msg = document.getElementById("msg"), go = document.getElementById("go"), email = document.getElementById("email");
+f.addEventListener("submit", function(e){
+  e.preventDefault(); if (go.classList.contains("done")) return;
+  var val = email.value.trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val)) { email.setAttribute("aria-invalid","true"); msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
+  email.removeAttribute("aria-invalid"); go.textContent = "Joining…";
+  var b = new URLSearchParams(); b.append("entry.1059010946", val);
+  fetch(FORM, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:b})
+    .then(function(){ go.classList.add("done"); go.textContent = "✓ On the list"; email.value = ""; email.disabled = true; msg.textContent = "Thanks. We'll email you when beta access opens."; })
+    .catch(function(){ go.textContent = "Join the waitlist"; msg.textContent = "That didn't go through. Please try again in a moment."; });
+});
+</script>
+</body>
+</html>
