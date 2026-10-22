@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PawVeda · Know before you worry</title>
+<meta name="description" content="2am, and he hasn't eaten. PawVeda tells Indian dog and cat parents Emergency, Visit soon or Monitor. Join the beta waitlist.">
+<meta property="og:title" content="Know before you worry · PawVeda">
+<meta property="og:description" content="One clear answer at 2am, for your dog or cat. Join the beta waitlist.">
+<meta property="og:image" content="https://dhruvshahi10.github.io/pawveda-ops/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#311D0E">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.className="js"</script>
+<style>
+@font-face{font-family:"Fraunces";font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Lexend";font-weight:400;font-display:swap;src:url(fonts/lexend-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Lexend";font-weight:500;font-display:swap;src:url(fonts/lexend-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Lexend";font-weight:600;font-display:swap;src:url(fonts/lexend-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
+:root{
+  --terracotta:#CC785C; --terracotta-deep:#B86347; --cocoa:#523117; --cocoa-dark:#311D0E;
+  --cream:#FAF8F2; --cream-hero:#FDF6E3; --ink:#1A1C1E; --sand:#EDE5D8; --stone:#B9A895;
+  --ok:#2E7D32; --warn:#ED6C02; --danger:#D32F2F;
+  --app-danger:#B23B2C; --app-danger-bg:#F7E4DF; --app-caution:#B8791F; --app-caution-bg:#FBF0DC; --app-caution-ink:#8A5A12;
+  --app-success-bg:#E8F1E9; --app-success-ink:#2F5F3F; --app-surface:#FFFFFF; --app-alt:#F5F2EA; --app-line:#E9E2D6;
+  --display:"Fraunces",Georgia,serif; --body:"Lexend",system-ui,sans-serif; --data:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cocoa-dark);color:var(--cream-hero);font:400 20px/1.5 var(--body);overflow-x:hidden}
+p{margin:0}
+:focus-visible{outline:3px solid var(--terracotta);outline-offset:3px}
+
+/* ---------- PHONE ---------- */
+.phone{position:relative;width:300px;aspect-ratio:9/19.4;border-radius:46px;background:var(--cocoa-dark);padding:10px;box-shadow:0 40px 80px -30px rgba(49,29,14,.55),0 0 0 2px #4a2e18 inset}
+.phone::before{content:"";position:absolute;top:18px;left:50%;width:84px;height:24px;margin-left:-42px;background:var(--cocoa-dark);border-radius:20px;z-index:9}
+.scr{position:relative;width:100%;height:100%;border-radius:37px;overflow:hidden;background:var(--cream);font-size:12px;line-height:1.35;color:var(--ink)}
+.scr>.s{position:absolute;inset:0;padding:46px 16px 16px;background:var(--cream)}
+.scr>img.s{z-index:9;padding:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.sb{position:absolute;top:14px;left:26px;right:24px;display:flex;justify-content:space-between;font:600 12px var(--body);z-index:8;color:var(--ink)}
+.truth{display:inline-block;font:600 9px var(--body);letter-spacing:.08em;padding:3px 7px;border-radius:999px;background:var(--app-alt);color:#6b6258}
+.appbar{display:flex;justify-content:space-between;align-items:center;margin:0 0 12px}
+.appbar .t{font:600 13px var(--body)}
+.disc{width:28px;height:28px;border-radius:50%;background:var(--app-surface);display:grid;place-items:center;font-size:13px;box-shadow:0 1px 0 var(--app-line)}
+.q{font:600 21px/1.15 var(--display);margin:0 0 12px}
+.card{background:var(--app-surface);border-radius:18px;padding:10px 12px;margin:0 0 10px;box-shadow:0 1px 0 var(--app-line)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lbl{font:600 9.5px var(--body);letter-spacing:.1em;text-transform:uppercase;color:#7a6f63;margin:0 0 7px}
+.pill{font:500 11px var(--body);padding:5px 9px;border-radius:999px;background:var(--app-alt);color:var(--ink);transition:background .3s,color .3s}
+.pill.on{background:var(--terracotta);color:#fff}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tile{font:500 11px var(--body);background:var(--app-alt);border-radius:12px;padding:9px 8px;border:1.5px solid transparent;transition:background .3s,border-color .3s,color .3s}
+.tile.on{background:#F7E6DD;border-color:var(--terracotta);color:var(--cocoa-dark)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.cta{display:block;text-align:center;background:var(--terracotta);color:#fff;font:600 12.5px var(--body);border-radius:14px;padding:11px;margin-top:10px;transition:transform .2s,background .3s}
+.cta.dim{background:#d9c9bb}
+.tap{position:absolute;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:rgba(49,29,14,.18);border:2px solid rgba(49,29,14,.45);z-index:7;pointer-events:none;opacity:0;left:50%;top:50%}
+/* analysis */
+.ana{display:flex;flex-direction:column;align-items:center;text-align:center}
+.ring{position:relative;width:118px;height:118px;margin:26px 0 16px}
+.ring svg{position:absolute;inset:0}
+.ring img{position:absolute;inset:14px;width:90px;height:90px;border-radius:50%;object-fit:cover}
+.ana .h{font:600 17px/1.2 var(--display);margin:0 0 6px;padding:0 8px}
+.ana .asub{color:#6b6258;margin:0 0 14px;font-size:12px}
+.steps{width:100%;text-align:left}
+.st{display:flex;align-items:center;gap:9px;padding:9px 2px;border-top:1px solid var(--app-line);font-size:11.5px}
+.st:first-child{border-top:0}
+.st i{width:18px;height:18px;border-radius:50%;border:2px solid #d9cfc3;flex:none;display:grid;place-items:center;font-style:normal;font-size:10px;color:#fff;transition:background .3s,border-color .3s}
+.st.done i{background:var(--app-success-ink);border-color:var(--app-success-ink)}
+.st b{margin-left:auto;font-weight:500;color:#6b6258}
+/* result */
+.hero{background:var(--app-caution-bg);border-radius:22px;padding:14px;margin:0 0 10px}
+.hh{display:flex;gap:10px;align-items:center;margin:0 0 8px}
+.av{width:46px;height:46px;border-radius:50%;border:3px solid var(--app-caution);overflow:hidden;flex:none}
+.av img{width:100%;height:100%;object-fit:cover}
+.eb{font:600 9.5px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--app-caution-ink)}
+.ttl{font:600 18px/1.15 var(--display);color:var(--ink)}
+.why{font-size:11.5px;color:#4a4038;margin:0 0 8px}
+.scale{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:6px 0 2px}
+.scale span{height:6px;border-radius:4px;background:rgba(138,90,18,.18)}
+.scale span.on{background:var(--app-caution)}
+.scl{display:grid;grid-template-columns:repeat(3,1fr);font-size:9.5px;color:#6b6258}
+.scl span:nth-child(2){color:var(--app-caution-ink);font-weight:600;text-align:center}
+.scl span:last-child{text-align:right}
+.watch li{list-style:none;padding:7px 0;border-top:1px solid var(--app-line);font-size:11.5px;display:flex;gap:7px;align-items:center}
+.watch li:first-child{border-top:0}
+.watch li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--app-danger);flex:none}
+.watch{margin:0;padding:0}
+.tv{padding:6px 0;border-top:1px solid var(--app-line);font-size:11.5px}.tv:first-of-type{border-top:0}.tv b{font-weight:500}
+.chipdev{white-space:nowrap;flex:none;font:600 9px var(--body);letter-spacing:.08em;background:var(--app-alt);color:var(--cocoa);border-radius:999px;padding:3px 7px}
+
+
+
+.lt{display:grid;place-items:center;background:var(--cocoa);color:var(--cream-hero);font:600 20px var(--body)}
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;pointer-events:none}
+.top>*{pointer-events:auto}
+.wm{width:124px;height:26px;background:var(--cream-hero);-webkit-mask:url(img/wordmark.svg) left center/contain no-repeat;mask:url(img/wordmark.svg) left center/contain no-repeat;transition:background .4s}
+.hj{font:600 18px var(--body);color:var(--cocoa-dark);background:var(--cream-hero);text-decoration:none;border-radius:14px 14px 14px 6px;padding:10px 16px;transition:background .4s,color .4s}
+body.day .wm{background:var(--cocoa-dark)}
+body.day .hj{background:var(--cocoa-dark);color:var(--cream-hero)}
+
+/* the story: one pinned stage, scrubbed by scroll */
+.story{position:relative;height:620vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--cocoa-dark)}
+.layer{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:0 20px}
+.clock{font:500 clamp(108px,24vw,340px)/.9 var(--data);letter-spacing:-.04em;color:var(--cream-hero)}
+.clock small{font-size:.22em;letter-spacing:.02em;margin-left:.15em;color:var(--terracotta)}
+.l1 .line{font:600 clamp(28px,4vw,52px)/1.15 var(--display);margin-top:24px;color:var(--cream-hero)}
+.l1 .line em{font-style:normal;color:var(--terracotta)}
+.scroll-cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font:500 16px var(--data);letter-spacing:.14em;color:var(--stone);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-cue i{width:2px;height:38px;background:linear-gradient(var(--terracotta),transparent);animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.chip{position:absolute;left:50%;top:50%;white-space:nowrap;font:500 clamp(16px,1.8vw,24px) var(--body);color:var(--ink);background:var(--sand);border-radius:18px 18px 18px 6px;padding:10px 18px;transform:translate(-50%,-50%) scale(0);will-change:transform,opacity}
+.chip.t{background:var(--cream-hero)}
+.chip.d{background:var(--cocoa);color:var(--cream-hero)}
+.l2 .ask{font:600 clamp(30px,5vw,72px)/1.05 var(--display);opacity:0;max-width:12em}
+.dot{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--terracotta),var(--terracotta-deep));transform:scale(0);box-shadow:0 0 60px 20px rgba(204,120,92,.35)}
+.phonewrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.2);opacity:0}
+.phonewrap .phone{width:min(300px,68vw)}
+.one{position:absolute;left:0;right:0;top:7%;text-align:center;font:600 clamp(28px,4vw,52px)/1 var(--display);opacity:0}
+.one em{font-style:normal;color:var(--terracotta)}
+.end{position:absolute;inset:0;display:grid;align-items:center;padding:90px 24px 24px;opacity:0;pointer-events:none}
+.end .copy{max-width:560px}
+.end h1{font:600 clamp(44px,6.4vw,96px)/1 var(--display);letter-spacing:-.015em;color:var(--ink);margin:0 0 18px}
+.end h1 em{font-style:normal;color:var(--terracotta-deep)}
+.end .sub{font-size:clamp(20px,1.8vw,24px);color:var(--cocoa-dark);margin:0 0 24px}
+.end.live{pointer-events:auto}
+.cap2{position:absolute;bottom:14px;right:18px;font:500 15px var(--body);color:var(--cocoa);opacity:0}
+
+/* form */
+.field{display:flex;gap:8px;background:var(--cream-hero);border:2px solid var(--cocoa-dark);border-radius:20px 20px 20px 8px;padding:6px;transition:box-shadow .35s,border-color .35s}
+.field:focus-within{box-shadow:0 0 0 6px rgba(204,120,92,.3);border-color:var(--terracotta-deep)}
+.field.bad{box-shadow:0 0 0 6px rgba(49,29,14,.18)}
+.field input{flex:1;min-width:0;border:0;background:transparent;font:400 20px var(--body);color:var(--ink);padding:12px;outline:none}
+.field input::placeholder{color:var(--cocoa);opacity:1}
+.go{position:relative;flex:none;border:0;cursor:pointer;background:var(--terracotta-deep);color:var(--cream-hero);font:600 20px var(--body);border-radius:14px 14px 14px 6px;padding:0 22px;min-height:54px;min-width:150px;overflow:hidden;transition:background .3s,min-width .45s}
+.go:hover{background:var(--cocoa)}
+.go .spin,.go .tick{position:absolute;inset:0;display:grid;place-items:center;opacity:0}
+.go .spin i{width:22px;height:22px;border-radius:50%;border:3px solid rgba(253,246,227,.35);border-top-color:var(--cream-hero);animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.go.loading .lbl2{opacity:0}.go.loading .spin{opacity:1}
+.go.done{background:var(--cocoa-dark);min-width:54px}.go.done .lbl2{opacity:0}.go.done .tick{opacity:1}
+#msg{font:500 20px var(--body);color:var(--cocoa-dark);margin:10px 0 0}#msg:empty{display:none}
+.fine{font-size:16px;color:var(--cocoa);margin-top:10px;line-height:1.45}
+.vetl{font:600 18px var(--body);color:var(--cocoa-dark);margin-top:14px}
+
+/* after the story */
+.after{background:var(--cream);color:var(--ink);padding:40px 24px 56px}
+.after .in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;font-size:18px;color:var(--cocoa)}
+.after a{color:var(--cocoa-dark);font-weight:600}
+
+@media (min-width:900px){
+  .end{grid-template-columns:1fr 1fr;padding:90px 7vw 24px}
+  .end .copy{grid-column:2}
+}
+@media (max-width:899px){
+  .end{align-items:center}
+}
+@media (max-width:440px){.field{flex-direction:column}.go{min-height:56px}}
+
+/* no motion: the story becomes a short, static page */
+.static .story{height:auto}
+.static .stage{position:relative;height:auto;min-height:100svh;background:var(--cream);color:var(--ink);overflow:visible}
+.static .l1,.static .l2,.static .chip,.static .dot,.static .scroll-cue,.static .one{display:none}
+.static .phonewrap{position:relative;left:auto;top:auto;transform:none;opacity:1;display:grid;place-items:center;padding:100px 0 10px}
+.static .end{position:relative;opacity:1;pointer-events:auto;padding-top:20px}
+.static .cap2{position:relative;opacity:1;text-align:center;right:auto;bottom:auto;padding-bottom:10px}
+.static .wm{background:var(--cocoa-dark)}.static .hj{background:var(--cocoa-dark);color:var(--cream-hero)}
+</style>
+<noscript><style>.story{height:auto}.stage{position:relative;height:auto;background:#FAF8F2;color:#1A1C1E}.l1,.l2,.chip,.dot,.scroll-cue,.one{display:none}.phonewrap{position:relative;left:auto;top:auto;transform:none;opacity:1;display:grid;place-items:center;padding:100px 0 10px}.end{position:relative;opacity:1;pointer-events:auto}.cap2{position:relative;opacity:1;text-align:center}</style></noscript>
+</head>
+<body>
+<header class="top"><span class="wm" role="img" aria-label="PawVeda"></span><a class="hj" href="#wl" id="hj">Join the waitlist</a></header>
+<main>
+<section class="story" id="story" aria-label="2am, and Bruno hasn't eaten since yesterday">
+  <div class="stage" id="stage">
+    <div class="layer l1" id="l1">
+      <div>
+        <p class="clock" aria-label="2:07 AM"><span id="hh">2</span>:<span id="mm">07</span><small>AM</small></p>
+        <p class="line">Bruno hasn't eaten <em>since yesterday.</em></p>
+      </div>
+    </div>
+    <div class="scroll-cue" id="cue" aria-hidden="true">SCROLL<i></i></div>
+
+    <div class="layer l2" id="l2" aria-hidden="true"><p class="ask" id="ask">Wait, or go to the vet?</p></div>
+    <div id="swarm" aria-hidden="true">
+      <span class="chip">Could be nothing.</span><span class="chip t">Could be serious.</span><span class="chip">Give him curd rice.</span>
+      <span class="chip d">12 possible causes</span><span class="chip t">Wait till morning?</span><span class="chip">Rush to the vet!</span>
+      <span class="chip d">Mine did this once.</span><span class="chip">Forum, 2014</span><span class="chip t">Ask the family group</span>
+      <span class="chip">Search again…</span><span class="chip d">Is this normal?</span><span class="chip t">My cousin's dog…</span>
+      <span class="chip">Just give it a day</span><span class="chip d">Ring someone?</span><span class="chip t">37 tabs open</span>
+      <span class="chip">Could be anything.</span>
+    </div>
+    <span class="dot" id="dot" aria-hidden="true"></span>
+    <p class="one" id="one" aria-hidden="true">PawVeda gives you <em>one answer.</em></p>
+
+    <div class="phonewrap" id="pw">
+      <div class="phone" role="img" aria-label="Demo result for Bruno, a sample dog: Visit soon, today. Bruno needs a vet today. Not eating for over a day.">
+        <div class="scr" aria-hidden="true">
+          <div class="sb"><span>2:09</span><span>●●●</span></div>
+          <div class="s">
+            <div class="appbar"><span class="disc">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
+            <div class="hero" id="rHero">
+              <div class="hh"><span class="av lt">B</span><div><p class="eb">Visit soon · today</p><p class="ttl">Bruno needs a vet today</p></div></div>
+              <div class="row" style="align-items:flex-start"><p class="why">Not eating for over a day</p><span class="chipdev">ON YOUR DEVICE</span></div>
+              <div class="scale"><span></span><span class="on" id="lit"></span><span></span></div>
+              <div class="scl"><span>Watch at home</span><span>Vet soon</span><span>Vet now</span></div>
+            </div>
+            <div class="card"><p class="lbl">Watch for</p>
+              <ul class="watch" id="watch"><li>Difficulty breathing or collapse</li><li>Pale or blue-tinged gums</li><li>Vomiting or diarrhoea with blood</li><li>Hard or swollen belly</li></ul></div>
+            <div class="card"><p class="lbl">Tell the vet</p><div class="row tv"><span>Symptoms</span><b>Loss of appetite</b></div><div class="row tv"><span>Since</span><b>Since yesterday</b></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="end" id="end">
+      <div class="copy">
+        <h1>Know before you <em>worry.</em></h1>
+        <p class="sub">PawVeda tells you Emergency, Visit soon or Monitor, for your dog or cat, with what to do now. In beta, by waitlist.</p>
+        <form id="wl" novalidate>
+          <label for="email" style="position:absolute;left:-9999px">Your email</label>
+          <div class="field" id="field">
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="Your email" aria-describedby="msg fine">
+            <button class="go" id="go" type="submit"><span class="lbl2">Join the waitlist</span><span class="spin" aria-hidden="true"><i></i></span><span class="tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M6 13.5l4.5 4.5L20 8" fill="none" stroke="#FDF6E3" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          </div>
+          <p id="msg" role="status"></p>
+          <p class="fine" id="fine">By joining, you agree we'll use your email only to tell you when beta access opens. To have it deleted, message @pawveda.in on Instagram. Collected with Google Forms.</p>
+        </form>
+        <p class="vetl">If it's happening right now, a vet is the right call.</p>
+      </div>
+    </div>
+    <p class="cap2" id="cap2">Sample dog, sample data. Recreated from the app's screens.</p>
+  </div>
+</section>
+</main>
+<footer class="after"><div class="in"><span>PawVeda helps you decide when to see a vet. It doesn't replace one.</span><a href="tour.html">See how it works →</a></div></footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* form */
+var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdCdn3r9wYAN5arMo66Kf_jUoxmTe8H7JX83lrx-Eod5Q1oaA/formResponse";
+var f = document.getElementById("wl"), msg = document.getElementById("msg"), go = document.getElementById("go"), field = document.getElementById("field"), email = document.getElementById("email");
+f.addEventListener("submit", function(e){
+  e.preventDefault();
+  if (go.classList.contains("loading") || go.classList.contains("done")) return;
+  var v = email.value.trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { field.classList.add("bad"); email.setAttribute("aria-invalid","true"); msg.textContent = "That email doesn't look right. Mind checking it?"; return; }
+  field.classList.remove("bad"); email.removeAttribute("aria-invalid"); msg.textContent = ""; go.classList.add("loading");
+  var b = new URLSearchParams(); b.append("entry.1059010946", v);
+  fetch(FORM, {method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:b})
+    .then(function(){ go.classList.remove("loading"); go.classList.add("done"); email.value = ""; email.placeholder = "You're on the list"; email.disabled = true; msg.textContent = "Thanks. We'll email you when beta access opens."; })
+    .catch(function(){ go.classList.remove("loading"); msg.textContent = "That didn't go through. Please try again in a moment."; });
+});
+
+/* header button: jump to the end of the story, where the form is */
+function toForm(){
+  var st = document.getElementById("story");
+  if (!document.documentElement.classList.contains("static")) window.scrollTo({top: st.offsetTop + st.offsetHeight - innerHeight, behavior: reduce ? "auto" : "smooth"});
+}
+f.addEventListener("focusin", function(){ if (!document.getElementById("end").classList.contains("live")) toForm(); });
+document.getElementById("hj").addEventListener("click", function(e){
+  e.preventDefault();
+  var st = document.getElementById("story");
+  if (document.documentElement.classList.contains("static")) { f.scrollIntoView({block:"center"}); }
+  else { window.scrollTo({top: st.offsetTop + st.offsetHeight - innerHeight, behavior: reduce ? "auto" : "smooth"}); }
+  setTimeout(function(){ email.focus({preventScroll:true}); }, 900);
+});
+
+if (!window.gsap || !window.ScrollTrigger || reduce) {
+  document.documentElement.classList.add("static"); document.body.classList.add("day");
+} else {
+  gsap.registerPlugin(ScrollTrigger);
+  var chips = gsap.utils.toArray(".chip");
+  var vw = function(){ return innerWidth; }, vh = function(){ return innerHeight; };
+  /* each chip gets a home on a loose ring around the centre */
+  var homes = chips.map(function(c, i){
+    var a = (i / chips.length) * Math.PI * 2 + (i % 2 ? .25 : -.1);
+    var r = .30 + (i % 3) * .08;
+    return {x: function(){ return Math.cos(a) * vw() * r * (vw() < 700 ? .62 : 1); }, y: function(){ return Math.sin(a) * vh() * (r + .05); }, rot: (i % 2 ? 1 : -1) * (3 + i % 5)};
+  });
+  var mm = document.getElementById("mm"), stage = document.getElementById("stage");
+
+  var tl = gsap.timeline({defaults:{ease:"none"}, scrollTrigger:{trigger:"#story", start:"top top", end:"bottom bottom", scrub:.8,
+    onUpdate:function(s){
+      var p = s.progress; mm.textContent = String(7 + Math.min(4, Math.floor(p * 18))).padStart(2, "0");
+      document.body.classList.toggle("day", p > .8);
+      document.getElementById("end").classList.toggle("live", p > .9);
+    }}});
+
+  /* beat 1: the clock, then it lifts away */
+  tl.to("#cue", {opacity:0, duration:.3}, 0)
+    .to("#l1 .clock", {scale:.55, y:function(){ return -vh() * .32; }, opacity:.35, duration:1.2, ease:"power2.in"}, .4)
+    .to("#l1 .line", {opacity:0, y:-40, duration:.6}, .5)
+  /* beat 2: everyone's answer, swarming */
+    .to("#ask", {opacity:1, duration:.5}, 1.1);
+  chips.forEach(function(c, i){
+    tl.fromTo(c, {xPercent:-50, yPercent:-50, x:0, y:0, scale:0, rotate:0, opacity:0},
+      {x:homes[i].x, y:homes[i].y, scale:1, rotate:homes[i].rot, opacity:1, duration:1, ease:"power3.out"}, 1.2 + i * .07);
+  });
+  tl.to(chips, {x:function(i){ return homes[i].x() * 1.12; }, y:function(i){ return homes[i].y() * 1.1; }, rotate:function(i){ return -homes[i].rot; }, duration:1}, 2.6)
+    .to("#ask", {scale:.9, opacity:.0, duration:.6}, 3.3)
+  /* beat 3: it all collapses into one point */
+    .to(chips, {x:0, y:0, scale:.1, rotate:0, opacity:0, duration:1, ease:"power3.in", stagger:{each:.03, from:"random"}}, 3.6)
+    .to("#l1 .clock", {opacity:0, duration:.5}, 3.6)
+    .to("#dot", {scale:1, duration:.4, ease:"power2.out"}, 4.4)
+    .to("#dot", {scale:46, opacity:0, duration:1, ease:"power2.in"}, 4.8)
+  /* the answer */
+    .to("#pw", {opacity:1, scale:1, duration:1, ease:"expo.out"}, 5.0)
+    .fromTo("#pw .phone", {rotate:-10}, {rotate:0, duration:1, ease:"expo.out"}, 5.0)
+    .to("#one", {opacity:1, duration:.6}, 5.3)
+    .from("#lit", {scaleX:0, transformOrigin:"left", duration:.6}, 5.6)
+    .from("#watch li", {opacity:0, x:-12, duration:.4, stagger:.12}, 5.8)
+  /* morning */
+    .to(stage, {backgroundColor:"#FAF8F2", duration:1.2}, 6.6)
+    .to("#one", {opacity:0, duration:.5}, 6.6)
+    .to("#pw", {x:function(){ return vw() >= 900 ? -vw() * .2 : 0; }, y:function(){ return vw() >= 900 ? 0 : -vh() * .2; }, scale:function(){ return vw() >= 900 ? 1 : .5; }, opacity:function(){ return vw() >= 900 ? 1 : 0; }, duration:1.2, ease:"power2.inOut"}, 6.8)
+    .to("#end", {opacity:1, duration:.8}, 7.6)
+    .from("#end h1", {yPercent:30, duration:.8, ease:"power3.out"}, 7.6)
+    .to("#cap2", {opacity:1, duration:.5}, 8)
+    .to({}, {duration:.8});
+}
+</script>
+</body>
+</html>
