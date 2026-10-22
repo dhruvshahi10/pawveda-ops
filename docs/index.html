@@ -97,6 +97,28 @@ h1,h2,h3{margin:0}
 
 
 
+
+/* interactive demo */
+.scr>.s{transition:opacity .35s}
+.scr{overscroll-behavior:contain}
+.scr button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.scr button.tile{text-align:left}
+.scr button.pill{border:0}
+.scr button.cta{border:0;width:100%}
+.scr button:focus-visible{outline:2px solid var(--cocoa-dark);outline-offset:1px}
+.cta.dim{cursor:default}
+.hero.tone-e{background:var(--app-danger-bg)}.hero.tone-e .eb{color:var(--app-danger)}.hero.tone-e .av{border-color:var(--app-danger)}.hero.tone-e .scale span.on{background:var(--app-danger)}.hero.tone-e .scl span:nth-child(3){color:var(--app-danger);font-weight:600}
+.hero.tone-m{background:var(--app-success-bg)}.hero.tone-m .eb{color:var(--app-success-ink)}.hero.tone-m .av{border-color:var(--app-success-ink)}.hero.tone-m .scale span.on{background:var(--app-success-ink)}.hero.tone-m .scl span:first-child{color:var(--app-success-ink);font-weight:600}
+.hero.tone-e .scl span:nth-child(2),.hero.tone-m .scl span:nth-child(2){color:#6b6258;font-weight:400}
+.hero.tone-e .ttl{color:var(--app-danger)}
+.watch.wg li::before{background:var(--app-danger)}
+.sample{font:600 10px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--cocoa);background:var(--app-alt);display:inline-block;padding:3px 8px;border-radius:999px;margin:-6px 0 10px}
+.warn-note{position:relative;z-index:4;max-width:360px;margin:16px auto 0;text-align:center;font:600 18px/1.45 var(--body);color:var(--cocoa-dark);background:var(--sand);border-radius:16px 16px 16px 6px;padding:12px 16px}
+.try{display:flex;align-items:center;gap:10px;justify-content:center;font:600 18px var(--body);color:var(--cocoa-dark);margin-top:16px;position:relative;z-index:4}
+.tdot{width:10px;height:10px;border-radius:50%;background:var(--terracotta);box-shadow:0 0 0 0 rgba(204,120,92,.6);animation:ping 2s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(204,120,92,.55)}100%{box-shadow:0 0 0 12px rgba(204,120,92,0)}}
+.try.gone{visibility:hidden}
+
 /* ---------- top ---------- */
 .top .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
 .top img{width:132px}
@@ -272,52 +294,54 @@ h1 em{font-style:normal;color:var(--terracotta-deep)}
   </div>
   <div class="stage">
     <div class="glow" aria-hidden="true"></div>
-    <div class="phone" id="heroPhone" role="img" aria-label="Demo of PawVeda's symptom check: pick Loss of Appetite since yesterday for Bruno, PawVeda checks for emergency signs, and the answer is Visit soon, today: Bruno needs a vet today, with signs to watch for.">
-      <div class="scr" aria-hidden="true">
-        <div class="sb"><span>2:07</span><span>●●●</span></div>
+    <div class="phone" id="heroPhone">
+      <div class="scr" role="group" aria-label="Try PawVeda's symptom check with a sample dog, Bruno. Demo with sample data.">
+        <div class="sb" aria-hidden="true"><span>2:07</span><span>●●●</span></div>
         <!-- screen 1: entry (copy from apps/mobile/src/copy/triageEntry.ts) -->
         <div class="s sc-entry">
-          <div class="appbar"><span class="disc">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
-          <p class="q">What's going on with Bruno?</p>
-          <div class="card"><div class="row"><span style="font-weight:500">Any emergency signs?</span><span class="pill on">None of these</span></div></div>
-          <div class="card"><p class="lbl">What you see</p>
-            <div class="tiles"><span class="tile">Vomiting</span><span class="tile">Diarrhea</span><span class="tile">Lethargy</span><span class="tile t-app">Loss of Appetite</span><span class="tile">Coughing</span><span class="tile">Limping</span></div></div>
-          <div class="card"><p class="lbl">Since when?</p>
-            <div class="chips"><span class="pill">Just started</span><span class="pill">Few hours</span><span class="pill p-since">Since yesterday</span><span class="pill">Over 2 days</span></div></div>
-          <span class="cta dim">Check 1 symptom</span>
+          <div class="appbar"><span class="disc" aria-hidden="true">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
+          <p class="q">What's going on with Bruno?</p><p class="sample">Bruno · sample dog</p>
+          <div class="card"><div class="row"><span style="font-weight:500">Any emergency signs?</span><span class="pill on">Bruno: none of these</span></div></div>
+          <div class="card"><p class="lbl" id="seeL">What you see</p>
+            <div class="tiles" role="group" aria-labelledby="seeL"><button type="button" class="tile" data-s="Vomiting" aria-pressed="false">Vomiting</button><button type="button" class="tile" data-s="Diarrhea" aria-pressed="false">Diarrhea</button><button type="button" class="tile" data-s="Lethargy" aria-pressed="false">Lethargy</button><button type="button" class="tile t-app" data-s="Loss of Appetite" aria-pressed="false">Loss of Appetite</button><button type="button" class="tile" data-s="Coughing" aria-pressed="false">Coughing</button><button type="button" class="tile" data-s="Limping" aria-pressed="false">Limping</button></div></div>
+          <div class="card"><p class="lbl" id="sinceL">Since when?</p>
+            <div class="chips" role="group" aria-labelledby="sinceL"><button type="button" class="pill" data-d="Just started" aria-pressed="false">Just started</button><button type="button" class="pill" data-d="Few hours" aria-pressed="false">Few hours</button><button type="button" class="pill p-since" data-d="Since yesterday" aria-pressed="false">Since yesterday</button><button type="button" class="pill" data-d="Over 2 days" aria-pressed="false">Over 2 days</button></div></div>
+          <button type="button" class="cta dim" id="cta">Pick what you see</button>
         </div>
         <!-- screen 2: analysis (TriageAiAnalysisScreen) -->
-        <div class="s sc-ana">
+        <div class="s sc-ana" aria-hidden="true">
           <div class="appbar"><span class="disc">✕</span><span></span><span class="truth">DEMO DATA</span></div>
           <div class="ana">
             <div class="ring"><svg viewBox="0 0 118 118"><circle cx="59" cy="59" r="54" fill="none" stroke="#E9E2D6" stroke-width="6"/><circle class="arc" cx="59" cy="59" r="54" fill="none" stroke="#CC785C" stroke-width="6" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="339.3" transform="rotate(-90 59 59)"/></svg><span class="ringlt">B</span></div>
             <p class="h">Looking over what you told us about Bruno…</p>
-            <p class="asub">Loss of appetite · Since yesterday</p>
+            <p class="asub" id="aSub">Loss of appetite · Since yesterday</p>
             <div class="card steps">
               <div class="st"><i>✓</i><span>Read what you picked</span><b>Done</b></div>
-              <div class="st"><i>✓</i><span>Checked for emergency signs</span><b>None</b></div>
+              <div class="st"><i>✓</i><span>Checked for emergency signs</span><b id="aFlag">None</b></div>
               <div class="st"><i>✓</i><span>Wrote what to do next</span><b>Done</b></div>
             </div>
           </div>
         </div>
-        <!-- screen 3: result (TriageResultScreen + the on-device rules engine's Visit-today answer) -->
-        <div class="s sc-res">
-          <div class="appbar"><span class="disc">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
-          <div class="hero">
-            <div class="hh"><span class="av lt">B</span><div><p class="eb">Visit soon · today</p><p class="ttl">Bruno needs a vet today</p></div></div>
-            <div class="row" style="align-items:flex-start"><p class="why">Not eating for over a day</p><span class="chipdev">ON YOUR DEVICE</span></div>
-            <div class="scale"><span></span><span class="on"></span><span></span></div>
-            <div class="scl"><span>Watch at home</span><span>Vet soon</span><span>Vet now</span></div>
+        <!-- screen 3: result (TriageResultScreen; verdicts from the on-device rules engine, ported exactly) -->
+        <div class="s sc-res" aria-live="polite">
+          <div class="appbar"><span class="disc" aria-hidden="true">✕</span><span class="t">Symptom check</span><span class="truth">DEMO DATA</span></div>
+          <div class="hero" id="rHero">
+            <div class="hh"><span class="av lt" id="rAv">B</span><div><p class="eb" id="rEb">Visit soon · today</p><p class="ttl" id="rTtl">Bruno needs a vet today</p></div></div>
+            <div class="row" style="align-items:flex-start"><p class="why" id="rWhy">Not eating for over a day</p><span class="chipdev">ON YOUR DEVICE</span></div>
+            <div class="scale" id="rScale" aria-hidden="true"><span></span><span class="on"></span><span></span></div>
+            <div class="scl" id="rScl"><span>Watch at home</span><span>Vet soon</span><span>Vet now</span></div>
           </div>
+          <div class="card" id="rGo" hidden><p class="lbl">While you go</p><ul class="watch wg"><li>Call the clinic ahead</li><li>Keep Bruno calm and still</li><li>No human medicines</li></ul></div>
           <div class="card"><p class="lbl">Watch for</p>
-            <ul class="watch"><li>Difficulty breathing or collapse</li><li>Pale or blue-tinged gums</li><li>Vomiting or diarrhoea with blood</li><li>Hard or swollen belly</li></ul></div>
-          <div class="card"><p class="lbl">Tell the vet</p><div class="row tv"><span>Symptoms</span><b>Loss of appetite</b></div><div class="row tv"><span>Since</span><b>Since yesterday</b></div></div>
-          </div>
-        <span class="tap" id="tap"></span>
+            <ul class="watch" id="rWatch"><li>Difficulty breathing or collapse</li><li>Pale or blue-tinged gums</li><li>Vomiting or diarrhoea with blood</li><li>Hard or swollen belly</li></ul></div>
+          <div class="card" id="rTell"><p class="lbl">Tell the vet</p><div class="row tv"><span>Symptoms</span><b id="rSym">Loss of appetite</b></div><div class="row tv"><span>Since</span><b id="rSince">Since yesterday</b></div></div>
+        </div>
+        <span class="tap" id="tap" aria-hidden="true"></span>
       </div>
     </div>
-    
-    <p class="cap">Recreated from the app's screens, with sample data. <button type="button" id="pauseDemo" class="pz">Pause demo</button></p>
+    <p class="try" id="tryHint"><span class="tdot" aria-hidden="true"></span>Tap the screen to try it yourself</p>
+    <p class="warn-note" id="warnNote" hidden>This is Bruno, a sample dog, not a check of your pet. If you're worried about yours, a vet is the right call.</p>
+    <p class="cap">Recreated from the app's screens, with sample data. <button type="button" id="pauseDemo" class="pz">Pause demo</button> <button type="button" id="again" class="pz" hidden>Try again</button></p>
   </div>
 </div></section>
 
@@ -443,11 +467,102 @@ if ("IntersectionObserver" in window) {
   cards.forEach(function(c){ co.observe(c); });
 } else cards.forEach(function(c){ c.classList.add("on"); });
 
-/* ---------- hero motion + the playing demo ---------- */
+/* ---------- hero: the symptom check, playing, then yours to try ---------- */
 var heroScr = document.querySelector("#heroPhone .scr");
-if (!window.gsap || reduce) {
-  document.getElementById("pauseDemo").style.display = "none";
-  heroScr.querySelector(".sc-entry").style.opacity = 0; heroScr.querySelector(".sc-ana").style.opacity = 0;
+var q = function(sel){ return heroScr.querySelector(sel); };
+var entry = q(".sc-entry"), ana = q(".sc-ana"), res = q(".sc-res"), tap = q("#tap");
+var tiles = heroScr.querySelectorAll(".tile"), sinces = heroScr.querySelectorAll(".chips .pill"), cta = q("#cta");
+var againBtn = document.getElementById("again"), pz = document.getElementById("pauseDemo"), hint = document.getElementById("tryHint");
+var hasG = !!window.gsap && !reduce;
+var warn = document.getElementById("warnNote");
+
+/* The on-device rules engine, ported line for line from the app
+   (apps/mobile/src/utils/triageUrgencyRules.ts + logic/triageTiers.ts), for a dog with no note. */
+var W = {"Vomiting":5,"Diarrhea":4,"Lethargy":6,"Loss of Appetite":5,"Coughing":4,"Limping":5};
+var MULT = {"Just started":1.0,"Few hours":1.1,"Since yesterday":1.3,"Over 2 days":1.5};
+var PAIRS = [[["Vomiting","Lethargy"],"Vomiting with low energy"],[["Diarrhea","Lethargy"],"Diarrhoea with low energy"],[["Vomiting","Loss of Appetite"],"Vomiting and not eating"],[["Lethargy","Loss of Appetite"],"Low energy and not eating"],[["Coughing","Lethargy"],"Coughing with low energy"],[["Vomiting","Diarrhea"],"Vomiting and diarrhoea together"]];
+var DURS = [["Loss of Appetite",["Since yesterday","Over 2 days"],"Not eating for over a day"],["Vomiting",["Over 2 days"],"Vomiting for over two days"],["Diarrhea",["Over 2 days"],"Diarrhoea for over two days"],["Lethargy",["Over 2 days"],"Low energy for over two days"]];
+function classify(sym, dur){
+  var sev = Math.min(10, Math.max(1, Math.round(sym.reduce(function(a,x){ return a + (W[x] || 3); }, 0) * (MULT[dur] || 1))));
+  var has = function(x){ return sym.indexOf(x) > -1; };
+  if (sym.length >= 3 && has("Lethargy") && (dur === "Since yesterday" || dur === "Over 2 days")) return {tier:"Emergency", reason:"Low energy with several signs, over a day"};
+  for (var i = 0; i < PAIRS.length; i++) if (has(PAIRS[i][0][0]) && has(PAIRS[i][0][1])) return {tier:"Visit today", reason:PAIRS[i][1]};
+  for (var j = 0; j < DURS.length; j++) if (has(DURS[j][0]) && DURS[j][1].indexOf(dur) > -1) return {tier:"Visit today", reason:DURS[j][2]};
+  if (sev >= 9) return {tier:"Visit today", reason:"Several signs at once"};
+  if (sev >= 6) return {tier:"Visit soon", reason:null};
+  return {tier:"Monitor", reason:null};
+}
+var COPY = { /* apps/mobile/src/copy/triageResult.ts + the engine's watch lists */
+  "Emergency":  {tone:"e", eb:"Emergency · go now", ttl:"Bruno needs a vet now", lit:2, go:true,
+                 watch:["Difficulty breathing or open-mouth breathing","Collapse or inability to stand","Pale or blue-tinged gums","Seizures or loss of consciousness"]},
+  "Visit today":{tone:"v", eb:"Visit soon · today", ttl:"Bruno needs a vet today", lit:1,
+                 watch:["Difficulty breathing or collapse","Pale or blue-tinged gums","Vomiting or diarrhoea with blood","Hard or swollen belly"]},
+  "Visit soon": {tone:"v", eb:"Vet within 2 days", ttl:"Not an emergency", lit:1,
+                 watch:["Symptoms worsening or new symptoms appearing","Refusal to drink water for more than 12 hours","Visible pain or distress when touched","Bleeding or unusual discharge"]},
+  "Monitor":    {tone:"m", eb:"Watch at home", ttl:"Bruno is most likely fine", lit:0,
+                 watch:["Symptoms not improving after 24 hours","New symptoms appearing alongside current ones","Loss of appetite lasting more than 24 hours","Signs of pain or significant lethargy"]}
+};
+function symLine(sym){ var l = sym.map(function(x,i){ x = x === "Loss of Appetite" ? "loss of appetite" : x.toLowerCase(); return i === 0 ? x.charAt(0).toUpperCase() + x.slice(1) : x; }); return l.length > 1 ? l.slice(0,-1).join(", ") + " and " + l[l.length-1] : l[0]; }
+function render(sym, dur){
+  var v = classify(sym, dur), c = COPY[v.tier];
+  q("#rHero").className = "hero" + (c.tone === "v" ? "" : " tone-" + c.tone);
+  q("#rEb").textContent = c.eb; q("#rTtl").textContent = c.ttl;
+  q("#rWhy").textContent = v.reason || (symLine(sym) + " · " + dur);
+  q("#rScale").querySelectorAll("span").forEach(function(x,i){ x.classList.toggle("on", i === c.lit); });
+  q("#rWatch").innerHTML = c.watch.map(function(w){ return "<li>" + w + "</li>"; }).join("");
+  q("#rGo").hidden = !c.go; q("#rTell").hidden = !!c.go;
+  q("#rSym").textContent = symLine(sym); q("#rSince").textContent = dur;
+  q("#aSub").textContent = symLine(sym) + " · " + dur;
+  q("#aFlag").textContent = v.tier === "Emergency" ? "Found" : "None";
+  return v;
+}
+
+/* the entry screen's state */
+var sel = [], dur = null;
+function paint(){
+  tiles.forEach(function(t){ var on = sel.indexOf(t.dataset.s) > -1; t.classList.toggle("on", on); t.setAttribute("aria-pressed", on); });
+  sinces.forEach(function(p){ var on = p.dataset.d === dur; p.classList.toggle("on", on); p.setAttribute("aria-pressed", on); });
+  var ready = sel.length && dur;
+  cta.classList.toggle("dim", !ready);
+  cta.textContent = !sel.length ? "Pick what you see" : !dur ? "Say since when" : (sel.length === 1 ? "Check 1 symptom" : "Check " + sel.length + " symptoms");
+}
+function show(scr){ heroScr.scrollTop = 0; [entry, ana, res].forEach(function(x){ x.scrollTop = 0; }); [entry, ana, res].forEach(function(x){ x.style.opacity = x === scr ? 1 : 0; x.style.pointerEvents = x === scr ? "auto" : "none"; x.setAttribute("aria-hidden", x === scr ? "false" : "true"); }); }
+function steps(n){ heroScr.querySelectorAll(".st").forEach(function(x,i){ x.classList.toggle("done", i < n); }); }
+
+/* the scripted loop, until the visitor takes over */
+var tl = null, mine = false, userPaused = false;
+function takeOver(){
+  if (mine) return; mine = true;
+  if (tl) { tl.pause(); tl.kill(); }
+  if (hasG) gsap.set(tap, {opacity:0});
+  sel = []; dur = null; paint(); steps(0); show(entry);
+  hint.classList.add("gone"); pz.hidden = true;
+}
+heroScr.addEventListener("pointerdown", takeOver, true);
+heroScr.addEventListener("keydown", takeOver, true);
+
+tiles.forEach(function(t){ t.addEventListener("click", function(){
+  takeOver(); var s = t.dataset.s, i = sel.indexOf(s);
+  if (i > -1) sel.splice(i,1); else if (sel.length < 3) sel.push(s);
+  paint();
+}); });
+sinces.forEach(function(p){ p.addEventListener("click", function(){ takeOver(); dur = p.dataset.d; paint(); }); });
+cta.addEventListener("click", function(){
+  takeOver(); if (!sel.length || !dur) return;
+  render(sel.slice(), dur); steps(0); show(ana);
+  var arc = q(".arc");
+  if (hasG) {
+    gsap.fromTo(arc, {attr:{"stroke-dashoffset":339.3}}, {attr:{"stroke-dashoffset":0}, duration:1.5, ease:"power1.inOut"});
+    setTimeout(function(){ steps(1); }, 350); setTimeout(function(){ steps(2); }, 800); setTimeout(function(){ steps(3); }, 1300);
+    setTimeout(function(){ show(res); gsap.from(q("#rHero"), {scale:.96, duration:.5, ease:"power3.out"}); gsap.from(heroScr.querySelectorAll("#rWatch li"), {opacity:0, duration:.35, stagger:.1}); againBtn.hidden = false; warn.hidden = false; }, 1750);
+  } else { arc.setAttribute("stroke-dashoffset", 0); steps(3); show(res); againBtn.hidden = false; warn.hidden = false; }
+});
+againBtn.addEventListener("click", function(){ takeOver(); sel = []; dur = null; paint(); steps(0); show(entry); againBtn.hidden = true; warn.hidden = true; var f = heroScr.querySelector(".tile"); if (f) f.focus(); });
+
+render(["Loss of Appetite"], "Since yesterday"); show(entry);
+if (!hasG) {
+  pz.style.display = "none"; hint.querySelector(".tdot").style.animation = "none";
+  sel = []; dur = null; paint(); show(entry);
   cards.forEach(function(c){ c.classList.add("on"); });
 } else {
   gsap.registerPlugin(ScrollTrigger);
@@ -459,39 +574,30 @@ if (!window.gsap || reduce) {
   var mm = document.getElementById("mm"), m = 7, n = 0;
   var clk = setInterval(function(){ m++; mm.textContent = (m < 10 ? "0" : "") + m; if (++n >= 4) clearInterval(clk); }, 4500);
 
-  var q = function(s){ return heroScr.querySelector(s); };
-  var tap = q("#tap"), entry = q(".sc-entry"), ana = q(".sc-ana"), res = q(".sc-res");
-  function tapAt(el){ var r = el.getBoundingClientRect(), s = heroScr.getBoundingClientRect(); return {left:(r.left - s.left + r.width/2)+"px", top:(r.top - s.top + r.height/2)+"px"}; }
-  var tl = gsap.timeline({repeat:-1, repeatDelay:.6, paused:true});
-  tl.set([ana,res], {opacity:0}).set(entry, {opacity:1})
-    .call(function(){ q(".t-app").classList.remove("on"); q(".p-since").classList.remove("on"); q(".sc-entry .cta").classList.add("dim");
-                      q(".arc").setAttribute("stroke-dashoffset","339.3"); heroScr.querySelectorAll(".st").forEach(function(s){ s.classList.remove("done"); }); })
+  function tapAt(el){ var r = el.getBoundingClientRect(), b = heroScr.getBoundingClientRect(); return {left:(r.left - b.left + r.width/2)+"px", top:(r.top - b.top + r.height/2)+"px"}; }
+  var tApp = q('.tile[data-s="Loss of Appetite"]'), tSince = q('.pill[data-d="Since yesterday"]');
+  tl = gsap.timeline({repeat:-1, repeatDelay:.6, paused:true});
+  tl.call(function(){ sel = []; dur = null; paint(); steps(0); render(["Loss of Appetite"], "Since yesterday"); show(entry); q(".arc").setAttribute("stroke-dashoffset","339.3"); })
     .set(tap, {opacity:0, left:"50%", top:"60%"})
     .to(tap, {opacity:1, duration:.3}, "+=.8")
-    .to(tap, {duration:.7, ease:"power2.inOut", left:function(){ return tapAt(q(".t-app")).left; }, top:function(){ return tapAt(q(".t-app")).top; }})
+    .to(tap, {duration:.7, ease:"power2.inOut", left:function(){ return tapAt(tApp).left; }, top:function(){ return tapAt(tApp).top; }})
     .to(tap, {scale:.75, duration:.12, yoyo:true, repeat:1})
-    .call(function(){ q(".t-app").classList.add("on"); })
-    .to(tap, {duration:.6, ease:"power2.inOut", left:function(){ return tapAt(q(".p-since")).left; }, top:function(){ return tapAt(q(".p-since")).top; }}, "+=.35")
+    .call(function(){ sel = ["Loss of Appetite"]; paint(); })
+    .to(tap, {duration:.6, ease:"power2.inOut", left:function(){ return tapAt(tSince).left; }, top:function(){ return tapAt(tSince).top; }}, "+=.35")
     .to(tap, {scale:.75, duration:.12, yoyo:true, repeat:1})
-    .call(function(){ q(".p-since").classList.add("on"); q(".sc-entry .cta").classList.remove("dim"); })
-    .to(tap, {duration:.6, ease:"power2.inOut", left:function(){ return tapAt(q(".sc-entry .cta")).left; }, top:function(){ return tapAt(q(".sc-entry .cta")).top; }}, "+=.35")
+    .call(function(){ dur = "Since yesterday"; paint(); })
+    .to(tap, {duration:.6, ease:"power2.inOut", left:function(){ return tapAt(cta).left; }, top:function(){ return tapAt(cta).top; }}, "+=.35")
     .to(tap, {scale:.75, duration:.12, yoyo:true, repeat:1})
     .to(tap, {opacity:0, duration:.2})
-    .to(entry, {opacity:0, duration:.35}, "+=.1")
-    .to(ana, {opacity:1, duration:.35}, "<")
+    .call(function(){ show(ana); }, null, "+=.1")
     .to(q(".arc"), {attr:{"stroke-dashoffset":0}, duration:2.2, ease:"power1.inOut"})
-    .call(function(){ heroScr.querySelectorAll(".st")[0].classList.add("done"); }, null, "-=1.8")
-    .call(function(){ heroScr.querySelectorAll(".st")[1].classList.add("done"); }, null, "-=1.1")
-    .call(function(){ heroScr.querySelectorAll(".st")[2].classList.add("done"); }, null, "-=.3")
-    .to(ana, {opacity:0, duration:.35}, "+=.3")
-    .to(res, {opacity:1, duration:.35}, "<")
-    .from(q(".sc-res .hero"), {scale:.96, duration:.6, ease:E}, "<")
-    .from(q(".sc-res .scale .on"), {scaleX:0, transformOrigin:"left", duration:.6, ease:E}, "-=.2")
-    .from(heroScr.querySelectorAll(".sc-res .watch li"), {opacity:0, duration:.4, stagger:.15}, "-=.2")
-    .to({}, {duration:4.2});
-  var userPaused = false, pz = document.getElementById("pauseDemo");
+    .call(function(){ steps(1); }, null, "-=1.8")
+    .call(function(){ steps(2); }, null, "-=1.1")
+    .call(function(){ steps(3); }, null, "-=.3")
+    .call(function(){ show(res); }, null, "+=.3")
+    .to({}, {duration:4.6});
   pz.addEventListener("click", function(){ userPaused = !userPaused; userPaused ? tl.pause() : tl.play(); pz.textContent = userPaused ? "Play demo" : "Pause demo"; });
-  ScrollTrigger.create({trigger:"#heroPhone", start:"top 95%", end:"bottom 5%", onToggle:function(s){ s.isActive && !userPaused ? tl.play() : tl.pause(); }});
+  ScrollTrigger.create({trigger:"#heroPhone", start:"top 95%", end:"bottom 5%", onToggle:function(st){ if (mine) return; st.isActive && !userPaused ? tl.play() : tl.pause(); }});
 }
 </script>
 </body>
