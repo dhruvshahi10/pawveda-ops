@@ -89,12 +89,13 @@
   "alt": [],
   "first_comment": null,
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (two independent passes)",
   "hook": "16 days. Pick her room.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/04-Fri-23-Oct-pick-her-room"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/04-Fri-23-Oct-pick-her-room",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-10-24-lift-his-lip",
