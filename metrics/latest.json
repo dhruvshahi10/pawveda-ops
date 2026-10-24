@@ -1,28 +1,42 @@
 {
- "read_at": "2026-10-23T21:37:42.996036+00:00",
+ "read_at": "2026-10-24T21:08:54.513710+00:00",
  "account": {
   "username": "pawveda.in",
   "followers_count": 3,
   "follows_count": 7,
-  "media_count": 18,
+  "media_count": 19,
   "id": "28691801940449061"
  },
  "posts": [
+  {
+   "media_id": "18120358106319634",
+   "permalink": "https://www.instagram.com/p/De4QHJ-FuhQ/",
+   "timestamp": "2026-10-24T13:34:51+0000",
+   "type": "carousel_album",
+   "hook": "A wet nose tells you he has a wet nose. Vets check something else.",
+   "reach": 1,
+   "views": 1,
+   "likes": 0,
+   "comments": 1,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 1
+  },
   {
    "media_id": "18127156690859861",
    "permalink": "https://www.instagram.com/reel/De14cKQii0K/",
    "timestamp": "2026-10-23T15:29:55+0000",
    "type": "reel",
    "hook": "Sixteen days to Diwali. Pick her room this week.",
-   "reach": 163,
-   "views": 194,
-   "likes": 2,
+   "reach": 182,
+   "views": 221,
+   "likes": 4,
    "comments": 0,
    "shares": 0,
    "saved": 0,
-   "total_interactions": 2,
-   "ig_reels_avg_watch_time": 3650,
-   "ig_reels_video_view_total_time": 609572
+   "total_interactions": 4,
+   "ig_reels_avg_watch_time": 4186,
+   "ig_reels_video_view_total_time": 791241
   },
   {
    "media_id": "18422947558154229",
