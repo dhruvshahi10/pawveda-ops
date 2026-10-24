@@ -3,6 +3,12 @@ name: house
 on:
   schedule:
     - cron: "*/5 * * * *"
+  # A push that touches nudge/ runs the publisher at once. The slot-nudge scheduled tasks use this,
+  # because Claude sessions cannot dispatch workflows (no actions:write) and GitHub's 5-minute
+  # schedule fires only every few hours. Approved by Dhruv, 24 Oct 2026.
+  push:
+    branches: [main]
+    paths: ["nudge/**"]
   workflow_dispatch:
     inputs:
       dry_run:
