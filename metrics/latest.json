@@ -1,13 +1,29 @@
 {
- "read_at": "2026-10-24T21:08:54.513710+00:00",
+ "read_at": "2026-10-25T21:11:51.256418+00:00",
  "account": {
   "username": "pawveda.in",
-  "followers_count": 3,
+  "followers_count": 4,
   "follows_count": 7,
-  "media_count": 19,
+  "media_count": 20,
   "id": "28691801940449061"
  },
  "posts": [
+  {
+   "media_id": "17905794642605093",
+   "permalink": "https://www.instagram.com/reel/De60xC_uBBy/",
+   "timestamp": "2026-10-25T13:34:01+0000",
+   "type": "reel",
+   "hook": "Every Diwali post is about dogs. Your cat noticed.",
+   "reach": 105,
+   "views": 123,
+   "likes": 1,
+   "comments": 1,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 2,
+   "ig_reels_avg_watch_time": 3788,
+   "ig_reels_video_view_total_time": 420562
+  },
   {
    "media_id": "18120358106319634",
    "permalink": "https://www.instagram.com/p/De4QHJ-FuhQ/",
@@ -196,8 +212,8 @@
    "timestamp": "2026-09-08T17:53:52+0000",
    "type": "carousel_album",
    "hook": "Your dog can have a bit of the peda. Your dog cannot have the kishmish in it.",
-   "reach": 2,
-   "views": 5,
+   "reach": 3,
+   "views": 6,
    "likes": 1,
    "comments": 0,
    "shares": 0,
