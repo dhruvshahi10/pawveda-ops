@@ -147,12 +147,13 @@
   "alt": [],
   "first_comment": "Cat parents: what does yours go under? Bed, sofa, or somewhere you only found once?",
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (two independent passes)",
   "hook": "Your cat won't come to you. She'll go under something.",
   "top5": true,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/06-Sun-25-Oct-cat-goes-under"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/06-Sun-25-Oct-cat-goes-under",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-10-26-cat-24-hours",
