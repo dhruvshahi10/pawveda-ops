@@ -169,7 +169,7 @@
   ],
   "first_comment": "If your cat is off her food, call your vet. Don't wait the day out. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS",
   "hook": "\"She'll eat when she's hungry.\"",
