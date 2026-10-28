@@ -204,7 +204,7 @@
   "media": [
    "media/2026-10-28-airplane-mode/reel.mp4"
   ],
-  "caption": "It's never the living room with full bars. It's the lift lobby, the basement parking, the highway back at 1am.\n\nThree things work with no signal if you set them up on a quiet day: your vet's number and address saved as a contact, the nearest 24-hour clinic saved in offline maps, and a photo of his vaccination card in your gallery. None of them needs anything you don't already have.\n\nThe fourth is the one we built. PawVeda's symptom triage keeps a rules engine on your phone, running alongside the cloud. With no network at all, you still describe what you're seeing and get one of three bands: Emergency, Visit soon or Monitor. The screen tells you it was your phone that answered. Back online, the cloud answers too, and the more cautious verdict wins.\n\nWhat it won't do, online or off, is name a condition or suggest a medicine. PawVeda helps you decide when to see a vet. It doesn't replace one. If something is wrong right now, a vet is the right call.\n\nPawVeda is in beta. The waitlist is open: link in bio.\n\nPhotos are AI-generated.\n\n#dogemergency #petparentsindia #dogparentsindia #petcareindia #pawveda",
+  "caption": "It's never the living room with full bars. It's the lift lobby, the basement parking, the highway back at 1am.\n\nThree things work with no signal if you set them up on a quiet day: your vet's number and address saved as a contact, the nearest 24-hour clinic saved in offline maps, and a photo of his vaccination card in your gallery. None of them needs anything you don't already have.\n\nThe fourth is the one we built. PawVeda's symptom triage keeps a rules engine on your phone, running alongside the cloud. With no network at all, you still describe what you're seeing and get one of three bands: Emergency, Visit soon or Monitor. The screen tells you it was your phone that answered. Back online, the cloud answers too, and the more cautious verdict wins.\n\nWhat it won't do, online or off, is name a condition or suggest a medicine. PawVeda helps you decide when to see a vet. It doesn't replace one. If something is wrong right now, a vet is the right call.\n\nPawVeda is in beta. Follow along; we'll say here when the waitlist opens.\n\nPhotos are AI-generated.\n\n#dogemergency #petparentsindia #dogparentsindia #petcareindia #pawveda",
   "alt": [
    "Cream slide. Headline: \"Airplane mode. Still works.\" Small label above: The 2AM Desk. Top right, an AI-generated photo of a tan and white dog sitting up awake on a bed at night, looking at the camera.",
    "Cream slide. Text reads \"The bad nights never check your signal.\"",
@@ -216,7 +216,7 @@
   ],
   "first_comment": "PawVeda helps you decide when to see a vet. It doesn't replace one. If something's happening right now, call your vet.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
   "hook": "Airplane mode. Still works.",
