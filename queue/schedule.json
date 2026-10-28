@@ -258,9 +258,9 @@
   "id": "2026-10-30-carrier-comfort",
   "day": 11,
   "slot": "2026-10-30T19:00:00+05:30",
-  "kind": "reel",
+  "kind": "image",
   "media": [
-   "media/2026-10-30-carrier-comfort/reel.mp4"
+   "media/2026-10-30-carrier-comfort/01.jpg"
   ],
   "caption": "If the carrier only ever appears before a vet visit, she has learned exactly what it means, and she is right.\n\nThe way out is dull: make the carrier furniture. Leave it out where she already sleeps, door open, her own blanket inside. Treats near it, then in it, and she's free to walk out. Only when she's resting in there by choice does the door close, for a few seconds at first. Then a lift. Then short drives that end back home.\n\nIt takes days for some cats and weeks for others, longer if she already has bad memories of it. Go at her pace and never push her in; that teaches the opposite lesson. In one small trial (22 cats, six weeks of reward-based carrier training) the trained cats showed less stress on the drive and needed a shorter exam at the other end.\n\nA carrier that opens at the top, or whose top half lifts off, makes the vet's job gentler too. Cover it with a towel on the way.\n\nPawVeda Academy runs on the same rules: rewards only, never force, and the reason behind every step. 21 illustrated modules, 11 of them for cats.\n\nStart a few weeks before her next vet visit.\n\nSources: Cat Friendly Homes; International Cat Care; RSPCA Australia; Pratsch et al., Applied Animal Behaviour Science, 2018. Photo is AI-generated.\n\n#catparentsindia #cattraining #catcarrier #indiancats #pawveda",
   "alt": [
@@ -270,14 +270,11 @@
   "trial": false,
   "status": "scheduled",
   "hold_reason": null,
-  "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
+  "critique": "PASS",
   "hook": "The carrier only comes out for the vet.",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/11-Fri-30-Oct-carrier-comfort",
-  "repackaged_from": "image",
-  "repackaged_at": "2026-10-27",
-  "changed": "format: image to slide reel, same approved slides and caption",
-  "predicted": "reach 40-180 like the other reels; watch share under 20% because of length"
+  "changed": "reverted to original image 28 Oct (Dhruv): slide-reel rejected"
  },
  {
   "id": "2026-10-31-who-shuts-the-door",
@@ -302,9 +299,17 @@
   "id": "2026-11-01-roti-depends",
   "day": 13,
   "slot": "2026-11-01T19:00:00+05:30",
-  "kind": "reel",
+  "kind": "carousel",
   "media": [
-   "media/2026-11-01-roti-depends/reel.mp4"
+   "media/2026-11-01-roti-depends/01.jpg",
+   "media/2026-11-01-roti-depends/02.jpg",
+   "media/2026-11-01-roti-depends/03.jpg",
+   "media/2026-11-01-roti-depends/04.jpg",
+   "media/2026-11-01-roti-depends/05.jpg",
+   "media/2026-11-01-roti-depends/06.jpg",
+   "media/2026-11-01-roti-depends/07.jpg",
+   "media/2026-11-01-roti-depends/08.jpg",
+   "media/2026-11-01-roti-depends/09.jpg"
   ],
   "caption": "Plain roti isn't the problem. The pyaaz paratha is.\n\nEvery answer about dogs and roti is about dogs in general. Plain wheat roti, a small piece now and then, is filler: no harm for most dogs, no nutrition their food doesn't already give them. Ghee or butter on top adds fat they don't need, so go easy.\n\nOnion and garlic are the line. Raw, cooked, or as powder in the masala, they damage red blood cells, and the signs usually show up days later, after everyone's decided he was fine. Cats are even more sensitive to onion than dogs. If he's had a pyaaz or lehsun paratha, call your vet today.\n\nAnd some dogs shouldn't have the roti at all. Of 297 dogs with a confirmed food allergy, wheat was a trigger for 13% of them. So the real question is never \"can dogs eat roti\". It's \"can this dog eat this roti\". PawVeda answers against your pet's own record, so Bruno and Coco get different answers to the same question.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSend this to whoever says \"thodi si roti se kya hoga.\"\n\nSources: AKC; Merck Veterinary Manual (Allium toxicosis); Mueller, Olivry & Prélaud, BMC Veterinary Research 2016. Photos are AI-generated.\n\n#candogseatroti #petparentsindia #indiedog #dogfood #pawveda",
   "alt": [
@@ -322,22 +327,19 @@
   "trial": false,
   "status": "scheduled",
   "hold_reason": null,
-  "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
+  "critique": "PASS 4.1",
   "hook": "Roti? Depends on which dog.",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/13-Sun-01-Nov-roti-depends",
-  "repackaged_from": "carousel",
-  "repackaged_at": "2026-10-27",
-  "changed": "format: carousel to slide reel, same approved slides and caption",
-  "predicted": "reach 40-180 like the other reels; watch share under 20% because of length"
+  "changed": "reverted to original carousel 28 Oct (Dhruv): slide-reel rejected"
  },
  {
   "id": "2026-11-02-the-puddle",
   "day": 14,
   "slot": "2026-11-02T19:00:00+05:30",
-  "kind": "reel",
+  "kind": "image",
   "media": [
-   "media/2026-11-02-the-puddle/reel.mp4"
+   "media/2026-11-02-the-puddle/01.jpg"
   ],
   "caption": "He'll walk past a full steel bowl at home and drink from the first puddle on the road. It's only rainwater, except it has been sitting on a road he shares with rats.\n\nLeptospirosis is a bacterial infection spread through the urine of infected animals, rodents above all, and the bacteria can survive in standing water and wet soil for weeks. Cornell's vet school says the most common way dogs catch it is water contaminated with urine: puddles, ponds, anything stagnant. It gets in through the mouth, the eyes, the nose or a cut on a paw, so wading counts as well as drinking. In a Chennai study of 210 dogs that vets already suspected of having it, the monsoon months, rodents, and wet soil or stagnant water all showed up as risk factors.\n\nThe early signs look like a lot of other things: off food, tired, vomiting, fever, a change in how much he drinks and pees. You can't rule it in or out at home, which is the point of asking early.\n\nThere is a vaccine, given every year after a two-dose start. It doesn't cover every strain, so a vaccinated dog still shouldn't drink from the road. It's worth one question at the next visit: is his leptospirosis shot current?\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If he's off his food, tired or vomiting after a wet week, a vet is the right call.\n\nCarry water on the walk.\n\nSources: Cornell Riney Canine Health Center; ACVIM consensus statement on leptospirosis in dogs, 2023; Merck Veterinary Manual; AVMA; Sarangi et al., Microbial Pathogenesis, 2025. Photo is AI-generated.\n\n#leptospirosis #monsoonpetcare #dogwalk #petparentsindia #pawveda",
   "alt": [
@@ -347,14 +349,11 @@
   "trial": false,
   "status": "scheduled",
   "hold_reason": null,
-  "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
+  "critique": "PASS",
   "hook": "Not from the puddle.",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/14-Mon-02-Nov-the-puddle",
-  "repackaged_from": "image",
-  "repackaged_at": "2026-10-27",
-  "changed": "format: image to slide reel, same approved slides and caption",
-  "predicted": "reach 40-180 like the other reels; watch share under 20% because of length"
+  "changed": "reverted to original image 28 Oct (Dhruv): slide-reel rejected"
  },
  {
   "id": "2026-11-03-c4-low-table-story",
@@ -378,9 +377,17 @@
   "id": "2026-11-03-dahi-check-first",
   "day": 15,
   "slot": "2026-11-03T19:00:00+05:30",
-  "kind": "reel",
+  "kind": "carousel",
   "media": [
-   "media/2026-11-03-dahi-check-first/reel.mp4"
+   "media/2026-11-03-dahi-check-first/01.jpg",
+   "media/2026-11-03-dahi-check-first/02.jpg",
+   "media/2026-11-03-dahi-check-first/03.jpg",
+   "media/2026-11-03-dahi-check-first/04.jpg",
+   "media/2026-11-03-dahi-check-first/05.jpg",
+   "media/2026-11-03-dahi-check-first/06.jpg",
+   "media/2026-11-03-dahi-check-first/07.jpg",
+   "media/2026-11-03-dahi-check-first/08.jpg",
+   "media/2026-11-03-dahi-check-first/09.jpg"
   ],
   "caption": "Thoda dahi to chalta hai. Probably. But has anyone in the family ever said where they heard it?\n\nSomebody did check. A team at the Indian Veterinary Research Institute in Izatnagar gave one group of Labradors traditionally set dahi every day for eight weeks, and compared them with a group that got none. Eight dogs in all. That is the entire study, and we'd rather say so first.\n\nIn those dogs, faecal pH and ammonia went down, lactobacilli and bifidobacteria went up, coliforms went down, and calcium digestibility went up. Those are measurements in eight Labradors. They aren't a promise about your dog. The study fed 100 ml a day. That is what those Labradors got in a trial, and it isn't a serving suggestion.\n\nSo: depends. On the dahi, because what was tested was dahi set the traditional way. Mishti doi and flavoured tubs weren't. And on the dog. PawVeda is built so that every answer is conditioned on your own pet's record, allergies and conditions included. Same food, different pet, different answer.\n\nIf dahi upsets his stomach, that's one for your vet. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it for the next time someone says thoda dahi de do.\n\nSource: Indian Journal of Traditional Knowledge, 11(1), 2012. Photos are AI-generated.\n\n#candogseatcurd #dahifordogs #petparentsindia #dogfood #pawveda",
   "alt": [
@@ -398,14 +405,11 @@
   "trial": false,
   "status": "scheduled",
   "hold_reason": null,
-  "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
+  "critique": "PASS, source-checked 19 Oct (slide 4 corrected to digestibility)",
   "hook": "Dahi: yes, no, or depends?",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/15-Tue-03-Nov-dahi-CHECK-FIRST",
-  "repackaged_from": "carousel",
-  "repackaged_at": "2026-10-27",
-  "changed": "format: carousel to slide reel, same approved slides and caption",
-  "predicted": "reach 40-180 like the other reels; watch share under 20% because of length"
+  "changed": "reverted to original carousel 28 Oct (Dhruv): slide-reel rejected"
  },
  {
   "id": "2026-11-04-laddoo-just-one",
@@ -430,9 +434,15 @@
   "id": "2026-11-05-diwali-carousel",
   "day": 17,
   "slot": "2026-11-05T19:00:00+05:30",
-  "kind": "reel",
+  "kind": "carousel",
   "media": [
-   "media/2026-11-05-diwali-carousel/reel.mp4"
+   "media/2026-11-05-diwali-carousel/01.jpg",
+   "media/2026-11-05-diwali-carousel/02.jpg",
+   "media/2026-11-05-diwali-carousel/03.jpg",
+   "media/2026-11-05-diwali-carousel/04.jpg",
+   "media/2026-11-05-diwali-carousel/05.jpg",
+   "media/2026-11-05-diwali-carousel/06.jpg",
+   "media/2026-11-05-diwali-carousel/07.jpg"
   ],
   "caption": "Everyone's telling you to calm your dog down on Diwali. Nobody's telling you she might not be there to calm.\n\nOn Diwali night the front door opens again and again. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali. And in a Dutch survey of more than 3,600 dogs and cats, pet parents reported more cats than dogs going missing after fireworks, 8.4% against 5.4%.\n\nSo the plan is the door, not the hug: one room picked this week, windows and curtains shut, one person whose only job is the front door, and someone in the room with her.\n\nPawVeda can't find a dog who ran. It has no GPS, by design. What it has is two Academy modules for the weeks before, Diwali fireworks calm and Diwali safe room for cats, both in the beta. The waitlist is in our bio.\n\nIf your pet panics rather than startles, a vet has options worth asking about. Ask this week, not on the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it for the 7th.\n\nSources: ThePrint; Dutch survey on firework fear in dogs and cats (2024); Cats Protection. Photos are AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #CatParentsIndia #IndieDogs #FireworkFear",
   "alt": [
@@ -448,7 +458,7 @@
   "trial": false,
   "status": "scheduled",
   "hold_reason": null,
-  "critique": "PASS (repackaged reel, two independent passes, 27 Oct)",
+  "critique": "PASS after fixes (two independent passes)",
   "hook": "She might not be there to calm.",
   "top5": true,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/17-Thu-05-Nov-diwali-carousel",
@@ -456,10 +466,7 @@
    "with": " The waitlist is in our bio.",
    "without": ""
   },
-  "repackaged_from": "carousel",
-  "repackaged_at": "2026-10-27",
-  "changed": "format: carousel to slide reel, same approved slides and caption",
-  "predicted": "reach 40-180 like the other reels; watch share under 20% because of length"
+  "changed": "reverted to original carousel 28 Oct (Dhruv): slide-reel rejected"
  },
  {
   "id": "2026-11-06-hero-film",
