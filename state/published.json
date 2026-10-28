@@ -76,6 +76,11 @@
   "kind": "reel",
   "permalink": "https://www.instagram.com/reel/DfClM5BBVFA/",
   "trial": false,
-  "first_comment_id": "18137535976652038"
+  "first_comment_id": "18137535976652038",
+  "archived": {
+   "at": "2026-10-28T23:23:00+05:30",
+   "by": "Dhruv",
+   "reason": "49 s slide-reel (carousel slides as video); format rejected. Exclude from weekly review."
+  }
  }
 }
