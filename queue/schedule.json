@@ -591,5 +591,32 @@
    "with": " The link is in our bio.",
    "without": ""
   }
+ },
+ {
+  "id": "2026-11-14-same-food-different-pet",
+  "day": 26,
+  "slot": "2026-11-14T19:00:00+05:30",
+  "kind": "image",
+  "media": [
+   "media/2026-11-14-same-food-different-pet/01.jpg"
+  ],
+  "caption": "Misha has a chicken allergy on her record, so the kibble that's fine for Bruno gets flagged for her.\n\nNutriLens in the PawVeda beta reads a food label against your pet's own health record, allergies and conditions included. So the answer depends on who's eating, not just what's on the pack. Bruno and Misha are sample pets, and the allergy is an example.\n\nIf you think your pet is reacting to a food, a vet is the right call. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nThe photo is AI-generated.\n\n#PetParentsIndia #DogFood #IndieDogs",
+  "alt": [
+   "Two indie dogs on a kitchen floor with identical steel bowls of the same kibble: a tan dog eats from his, a black-and-white dog sits beside her full bowl and looks up. Headline: Same food. Different answer. Small label: NutriLens, two sample dogs. Pill: Misha: flagged, chicken allergy on her record."
+  ],
+  "first_comment": "Does your pet have a food allergy on record? Labels read differently for them.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.0 (fourth gate pass, independent, 29 Oct; earlier passes failed and were fixed)",
+  "hook": "Same food. Different answer.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-14-same-food-different-pet",
+  "made": "2026-10-29",
+  "format_note": null,
+  "waitlist_swap": {
+   "with": " The link is in our bio.",
+   "without": ""
+  }
  }
 ]
