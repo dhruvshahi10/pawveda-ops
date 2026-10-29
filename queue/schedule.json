@@ -589,6 +589,31 @@
   "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
  },
  {
+  "id": "2026-11-12-what-monitor-means-long",
+  "day": 24,
+  "slot": "2026-11-12T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-12-what-monitor-means-long/reel.mp4"
+  ],
+  "caption": "Monitor sounds like \"do nothing\". It isn't.\n\nPawVeda sorts what you describe into Emergency, Visit soon or Monitor. Monitor means watch at home: she's most likely fine. It comes with a watch list: symptoms not improving after 24 hours, new symptoms alongside the old ones, loss of appetite lasting more than 24 hours, and signs of pain or significant lethargy. See any of those? Call your vet.\n\nWhen PawVeda's rules engine and its AI disagree, the more cautious answer is the one you see.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If it's happening to your pet right now, a vet is the right call.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nThe dog in this film is AI-generated.\n\n#PetParentsIndia #DogHealth #CatParentsIndia #2AMDesk",
+  "alt": [],
+  "first_comment": "Save this for the night you get a Monitor answer and still feel unsure.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.0 (independent gate, 29 Oct, after three failed passes and fixes)",
+  "hook": "What does Monitor actually mean?",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-12-what-monitor-means-long",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)",
+  "waitlist_swap": {
+   "with": " The link is in our bio.",
+   "without": ""
+  }
+ },
+ {
   "id": "2026-11-13-cant-say-diagnosed",
   "day": 25,
   "slot": "2026-11-13T19:00:00+05:30",
