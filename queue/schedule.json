@@ -566,5 +566,30 @@
   "hook": "Diwali's over. Still jumpy?",
   "top5": false,
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/22-Tue-10-Nov-still-jumpy"
+ },
+ {
+  "id": "2026-11-13-cant-say-diagnosed",
+  "day": 25,
+  "slot": "2026-11-13T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-13-cant-say-diagnosed/reel.mp4"
+  ],
+  "caption": "PawVeda's AI is never allowed to tell you what it is.\n\nEvery answer it writes goes through a safety check before you see it. The check reads the answer, not just your question, and blocks diagnoses, doses, human medicine names (Crocin, Dolo and Combiflam among them) and anything that tells you to skip the vet. What reaches you is how urgent it is, Emergency, Visit soon or Monitor, and the reasons why.\n\nAt 2am that's the part you can act on. What it is, is your vet's call.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If something's off with your pet right now, a vet is the right call.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nThe dog in this film is AI-generated.\n\n#PetParentsIndia #DogsOfIndia #PetTech #2AMDesk",
+  "alt": [],
+  "first_comment": "Ask us what else the safety check blocks.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (gate passes 2 and 3, independent, 29 Oct; pass 1 failed and was fixed)",
+  "hook": "Its AI is never allowed to tell you what it is.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-13-cant-say-diagnosed",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)",
+  "waitlist_swap": {
+   "with": " The link is in our bio.",
+   "without": ""
+  }
  }
 ]
