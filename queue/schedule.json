@@ -239,11 +239,11 @@
   "media": [
    "media/2026-10-29-cant-find-your-dog/reel.mp4"
   ],
-  "caption": "Better you hear this now than on the 8th.\n\nPawVeda has no GPS. It works from the city you save and the addresses you type, behind consent you can take back. We built it that way on purpose. Which means that on Diwali night, if she gets out, PawVeda can't find her.\n\nSo we put the work where it can help: the ten days before. One room she already knows. One door that stays shut, with one person whose job it is. A little practice every evening. Two PawVeda Academy modules walk through it, Diwali fireworks calm and Diwali safe room for cats, both in the beta. The waitlist is in our bio.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If she's hurt or panicking right now, a vet is the right call.\n\nSave it for the 7th.\n\nThe presenter is AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #PetParentsIndia #IndieDogs #PetPrivacy",
+  "caption": "Better you hear this now than on the 8th.\n\nPawVeda has no GPS. It works from the city you save and the addresses you type, behind consent you can take back. We built it that way on purpose. Which means that on Diwali night, if she gets out, PawVeda can't find her.\n\nSo we put the work where it can help: the ten days before. One room she already knows. One door that stays shut, with one person whose job it is. A little practice every evening. Two PawVeda Academy modules walk through it, Diwali fireworks calm and Diwali safe room for cats, both in the beta.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If she's hurt or panicking right now, a vet is the right call.\n\nSave it for the 7th.\n\nThe presenter is AI-generated.\n\n#DiwaliWithPets #DogScaredOfCrackers #PetParentsIndia #IndieDogs #PetPrivacy",
   "alt": [],
   "first_comment": "Ask us anything about what PawVeda does and doesn't collect.",
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (two independent passes)",
   "hook": "PawVeda can't find your dog.",
@@ -252,7 +252,8 @@
   "waitlist_swap": {
    "with": " The waitlist is in our bio.",
    "without": ""
-  }
+  },
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-10-30-carrier-comfort",
