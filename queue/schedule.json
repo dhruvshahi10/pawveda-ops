@@ -596,7 +596,7 @@
   "media": [
    "media/2026-11-12-what-monitor-means-long/reel.mp4"
   ],
-  "caption": "Monitor sounds like \"do nothing\". It isn't.\n\nPawVeda sorts what you describe into Emergency, Visit soon or Monitor. Monitor means watch at home: she's most likely fine. It comes with a watch list: symptoms not improving after 24 hours, new symptoms alongside the old ones, loss of appetite lasting more than 24 hours, and signs of pain or significant lethargy. See any of those? Call your vet.\n\nWhen PawVeda's rules engine and its AI disagree, the more cautious answer is the one you see.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If it's happening to your pet right now, a vet is the right call.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nThe dog in this film is AI-generated.\n\n#PetParentsIndia #DogHealth #CatParentsIndia #2AMDesk",
+  "caption": "Monitor sounds like \"do nothing\". It isn't.\n\nPawVeda sorts what you describe into Emergency, Visit soon or Monitor. Monitor means watch at home: she's most likely fine. It comes with a watch list: symptoms not improving after 24 hours, new symptoms alongside the old ones, loss of appetite lasting more than 24 hours, and signs of pain or significant lethargy. See any of those? Call your vet.\n\nWhen PawVeda's rules engine and its AI disagree, the more cautious answer is the one you see.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If it's happening to your pet right now, a vet is the right call.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nThis film is AI-generated.\n\n#PetParentsIndia #DogHealth #CatParentsIndia #2AMDesk",
   "alt": [],
   "first_comment": "Save this for the night you get a Monitor answer and still feel unsure.",
   "trial": false,
@@ -664,6 +664,53 @@
    "with": " The link is in our bio.",
    "without": ""
   }
+ },
+ {
+  "id": "2026-11-15-first-cold-night-indie",
+  "day": 27,
+  "slot": "2026-11-15T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-15-first-cold-night-indie/reel.mp4"
+  ],
+  "caption": "The first cold night is coming. The indie outside your gate has already noticed.\n\nShe isn't yours, and she's still part of your street. In PawVeda, a community dog can go in My Pack and get a health record of her own: vaccinations, vet visits, her weight. And when she needs help, the Vet Brief turns that record into one dated page for whichever vet or rescue sees her.\n\nIf the cold gets to her, the vet sees when it started. Not a guess.\n\nIf she seems unwell, is limping or stops eating, a vet or a local rescue is the right call. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda is in beta: join the waitlist to add the indie on your street to My Pack. The link is in our bio.\n\nThe dog in this film is AI-generated.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "Is there an indie you look out for? Tell us her name.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.25 (independent gate, 29 Oct, after four failed passes and fixes)",
+  "hook": "The first cold night is coming. The indie outside your gate has already noticed.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-15-first-cold-night-indie",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)",
+  "waitlist_swap": {
+   "with": " The link is in our bio.",
+   "without": ""
+  },
+  "note": "Date check: if IMD has not forecast the season's first cold night for North India by 13 Nov, swap this slot with 17 Nov (slate 29)."
+ },
+ {
+  "id": "2026-11-16-what-monitor-means-short",
+  "day": 28,
+  "slot": "2026-11-16T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-16-what-monitor-means-short/reel.mp4"
+  ],
+  "caption": "PawVeda gives three answers: Emergency, Visit soon or Monitor. Monitor sounds like \"do nothing\". It means watch at home, with a list.\n\nSymptoms not improving after 24 hours. New symptoms alongside the old ones. Loss of appetite lasting more than 24 hours. Signs of pain or significant lethargy. Any of those? Call your vet.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one.\n\nThis film is AI-generated.\n\n#PetParentsIndia #DogHealth #2AMDesk",
+  "alt": [],
+  "first_comment": "Which of the four would you have missed?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.13 (independent gate, 29 Oct, after four failed passes and fixes)",
+  "hook": "What does Monitor actually mean?",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-16-what-monitor-means-short",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
  },
  {
   "id": "2026-11-17-litter-box-apartments",
