@@ -568,6 +568,27 @@
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/22-Tue-10-Nov-still-jumpy"
  },
  {
+  "id": "2026-11-11-aqi-should-you-walk",
+  "day": 23,
+  "slot": "2026-11-11T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-11-aqi-should-you-walk/reel.mp4"
+  ],
+  "caption": "This time last year, Delhi's air read 428 on the AQI. The walk is still the best part of the day, and on mornings like that it's also the hardest call.\n\nThe US EPA's advice for pets in smoky air: keep bathroom breaks short, skip the run, and keep them indoors as much as you can. It says older, younger and pregnant animals and pets with heart or lung disease are especially at risk, and that short-nosed dogs like pugs need extra care.\n\nWatch for coughing or gagging, trouble breathing, red or watery eyes, or fatigue after time outside. If you see them, call your vet. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda's SafeWalk weighs a walk against your own dog's risk factors. Live air-quality feeds are coming to PawVeda.\n\nSources: CPCB 24-hour AQI for Delhi on 11 Nov 2025, as reported by India TV; US EPA, \"Protect Your Pets from Wildfire Smoke\" (written for smoke, the closest official guidance we found). The dog in this film is AI-generated.\n\n#DelhiAQI #DogsOfIndia #PetParentsIndia #IndieDogs",
+  "alt": [],
+  "first_comment": "What does your city's AQI say this morning? Check it before the leash comes out.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.0 (independent gate, 29 Oct, after four failed passes and fixes)",
+  "hook": "Delhi, a year ago today: AQI 428. A walk, or a short bathroom break?",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-11-aqi-should-you-walk",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
+ },
+ {
   "id": "2026-11-13-cant-say-diagnosed",
   "day": 25,
   "slot": "2026-11-13T19:00:00+05:30",
@@ -618,5 +639,40 @@
    "with": " The link is in our bio.",
    "without": ""
   }
+ },
+ {
+  "id": "2026-11-17-litter-box-apartments",
+  "day": 29,
+  "slot": "2026-11-17T19:00:00+05:30",
+  "kind": "carousel",
+  "media": [
+   "media/2026-11-17-litter-box-apartments/01.jpg",
+   "media/2026-11-17-litter-box-apartments/02.jpg",
+   "media/2026-11-17-litter-box-apartments/03.jpg",
+   "media/2026-11-17-litter-box-apartments/04.jpg",
+   "media/2026-11-17-litter-box-apartments/05.jpg",
+   "media/2026-11-17-litter-box-apartments/06.jpg",
+   "media/2026-11-17-litter-box-apartments/07.jpg"
+  ],
+  "caption": "Is her box on the utility balcony, right beside the washing machine?\n\nThat spot is worth a second look. The AAFP and ISFM house-soiling guidelines name loud appliances as something that startles cats, and say a box shouldn't sit where a cat can be cornered. Their other rules: one box per cat plus one, food and water kept away from it, a box 1.5 times her length from nose to tail base, and soft unscented clumping litter.\n\nBut if she's stopped using her box, see the vet first. The same guidelines say every cat that starts going outside the box needs an exam and a urine test. Note the day she stopped: your vet will ask, and PawVeda's Vet Brief puts it on one dated page with her symptoms and meds. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSource: AAFP/ISFM Feline House-Soiling guidelines (2014). Photos are AI-generated.\n\n#CatsOfIndia #CatParentsIndia #IndianCats #LitterBox",
+  "alt": [
+   "A tabby cat sits beside a small grey litter tray squeezed next to a washing machine in a tiled utility balcony. Headline: Wrong spot for her box? Pill: Litter box mistakes, Indian flats.",
+   "Cream slide. A cat who skips her box isn't being naughty. Often it's the box. Sometimes it's her health.",
+   "Dark brown slide. If she's stopped using it: Vet first, then the box. Chip: Exam and urine test. The guidelines say every cat that starts going outside the box needs a physical exam and a urine test. PawVeda's Vet Brief puts the day she stopped on one dated page, with her symptoms and meds.",
+   "Cream slide headed Mistake one: the utility balcony. If her box sits right beside the washing machine, move it. Cat guidelines from the AAFP and ISFM name sudden noise from loud appliances as something that startles cats. Somewhere quiet, where she can't be cornered. Beside it, a photo of a tabby in a litter tray looking back at a spinning washing machine.",
+   "Cream list headed Four more, from the same guidelines: 1 food and water right next to it; keep them apart. 2 two cats, one box; it's one per cat, plus one. 3 a box shorter than her; make it 1.5 times her length, nose to tail base. 4 scented litter or a liner; most cats prefer soft, unscented clumping litter.",
+   "A large, low, uncovered litter box with soft pale litter in a quiet bedroom corner, a scoop beside it, food and water bowls far across the room. Caption: Scoop at least once a day. Wash the box every 1 to 4 weeks with soap and hot water.",
+   "Dark brown closing slide. Note the day she stopped. Your vet will ask. Save this for the day she skips it."
+  ],
+  "first_comment": "Where's your cat's box right now? Balcony, bathroom, somewhere else?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.1 (independent gate, 29 Oct, after three failed passes and fixes)",
+  "hook": "Wrong spot for her box?",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-17-litter-box-apartments",
+  "made": "2026-10-29",
+  "format_note": null
  }
 ]
