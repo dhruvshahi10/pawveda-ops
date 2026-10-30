@@ -269,7 +269,7 @@
   ],
   "first_comment": "No pinned comment needed for this post.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS",
   "hook": "The carrier only comes out for the vet.",
