@@ -772,5 +772,26 @@
    "with": " The link is in our bio.",
    "without": ""
   }
+ },
+ {
+  "id": "2026-11-19-blocked-by-name",
+  "day": 31,
+  "slot": "2026-11-19T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-19-blocked-by-name/reel.mp4"
+  ],
+  "caption": "Can you give a dog Crocin? If Pawzitiv ever writes the word, the answer is blocked before you see it. Here's why.\n\nThe tablet that works for you isn't pet medicine. Crocin and Dolo are paracetamol; Combiflam is paracetamol plus ibuprofen. The MSD Veterinary Manual covers both under poisoning from human painkillers in dogs and cats. Whether anything from that drawer is safe for her is your vet's call, never a guess.\n\nThat's why Pawzitiv, the AI inside PawVeda, checks every answer it writes and blocks human medicine names before you see them: Crocin, Dolo, Combiflam, Saridon, Meftal and Disprin, by name. It tells you how urgent it is and what to do next, never which medicine to give.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If she's not herself tonight, or she's already swallowed something from that drawer, call your vet now.\n\nSources: MSD Veterinary Manual, \"Toxicoses From Human Analgesics\"; the composition printed on Crocin, Dolo and Combiflam packs. This film is AI-generated.\n\n#PetParentsIndia #DogsOfIndia #CatParentsIndia #PetSafety",
+  "alt": [],
+  "first_comment": "Send this to whoever keeps the medicine drawer at home.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.0 (independent gate pass 7, 30 Oct; passes 1–6 failed: partial AI disclosure, unsourced brand facts, dose wording ×3, an app instruction, cat-only evidence, an unsupported absolute). Should-fixes 1, 2, 6 applied after the pass.",
+  "hook": "We block Crocin, Dolo and Combiflam by name.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-19-blocked-by-name",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
  }
 ]
