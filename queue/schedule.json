@@ -747,5 +747,30 @@
   "source_folder": "pawveda-content-factory/out/2026-11-17-litter-box-apartments",
   "made": "2026-10-29",
   "format_note": null
+ },
+ {
+  "id": "2026-11-18-simba-four-answers",
+  "day": 30,
+  "slot": "2026-11-18T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-18-simba-four-answers/reel.mp4"
+  ],
+  "caption": "Simba hasn't eaten since morning. Four neighbours, four answers, every one of them sure.\n\nWith nothing else going on, PawVeda's on-device rules put a few hours off food at Visit soon: not an emergency, a vet within 2 days. If he's still not eating tomorrow, that becomes Visit today. In between, it tells you what to watch for, like refusing water for more than 12 hours, or pain when he's touched.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If you're worried about yours right now, a vet is the right call.\n\nPawVeda is in beta and the waitlist is open. The link is in our bio.\n\nSimba and this film are AI-generated.\n\n#PetParentsIndia #DogsOfIndia #IndieDogs #2AMDesk",
+  "alt": [],
+  "first_comment": "Be honest. Which of the four answers is your building group?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.5 (independent gate pass 2, 30 Oct; pass 1 failed and was fixed)",
+  "hook": "Simba hasn't eaten since morning.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-18-simba-four-answers",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)",
+  "waitlist_swap": {
+   "with": " The link is in our bio.",
+   "without": ""
+  }
  }
 ]
