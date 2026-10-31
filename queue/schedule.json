@@ -289,12 +289,13 @@
   "alt": [],
   "first_comment": null,
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fix (vet line added)",
   "hook": "8 days. Who shuts the door?",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/12-Sat-31-Oct-who-shuts-the-door"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/12-Sat-31-Oct-who-shuts-the-door",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-01-roti-depends",
