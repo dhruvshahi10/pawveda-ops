@@ -327,7 +327,7 @@
   ],
   "first_comment": "If your dog has eaten onion or garlic, call your vet today. PawVeda helps you decide when to see a vet, it doesn't replace one.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS 4.1",
   "hook": "Roti? Depends on which dog.",
