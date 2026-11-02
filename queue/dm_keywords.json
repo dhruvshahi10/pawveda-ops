@@ -4,9 +4,10 @@
   "active": false,
   "from": "2026-11-06",
   "until": "2026-11-08",
-  "message": "The one-room plan for Diwali night, from PawVeda.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. So the plan is about the door.\n\n1. Pick one room now. Windows and curtains shut.\n2. Before the first rocket, count them. Every dog, every cat, inside. Doors and cat flaps closed too (Cats Protection's advice).\n3. One person whose only job on the night is the front door, and someone in the room with your dog.\n4. If she wants to hide, let her stay where she feels safe.\n\nIf your dog panics rather than startles, call your vet or the nearest emergency clinic. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda Academy has a Diwali fireworks calm module. It's in the beta, and the waitlist is here: https://join.pawveda.in",
+  "message": "The one-room plan for Diwali night, from PawVeda.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. So the plan is about the door.\n\n1. Pick one room now. Windows and curtains shut.\n2. Before the first rocket, count them. Every dog, every cat, inside. Doors and cat flaps closed too (Cats Protection's advice).\n3. One person whose only job on the night is the front door, and someone in the room with your dog.\n4. If your dog wants to hide, let them stay where they feel safe.\n\nIf your dog panics rather than startles, call your vet or the nearest emergency clinic. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda Academy has a Diwali fireworks calm module. It's in the beta, and the waitlist is here: https://join.pawveda.in",
   "public_reply": "Sent to your DMs.",
   "source": "gated 6, 7 and 8 Nov captions; DM gate pass 2 rewrite (2 Nov)",
-  "blocked_until": "join.pawveda.in resolves (NXDOMAIN on 2 Nov) and the messaging permission is granted"
+  "blocked_until": "join.pawveda.in resolves (NXDOMAIN on 2 Nov) and the messaging permission is granted",
+  "gate": "PASS 4.1 (pass 2 with its one fix applied, independent critic, 2 Nov)"
  }
 }
