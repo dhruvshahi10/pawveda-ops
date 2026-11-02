@@ -3,6 +3,11 @@ name: house
 on:
   schedule:
     - cron: "*/5 * * * *"
+    # Odd-minute hourly schedules as a backstop (added 2 Nov 2026): the 19:02 slot-nudge scheduled task
+    # has failed with access-denied since 30 Oct, and GitHub honours */5 only every 3-6 hours, which put
+    # two posts 5h20m and 5h38m late. Two extra runs an hour keeps any slot within about 30 minutes.
+    - cron: "31 * * * *"
+    - cron: "47 * * * *"
   # A push that touches nudge/ runs the publisher at once. The slot-nudge scheduled tasks use this,
   # because Claude sessions cannot dispatch workflows (no actions:write) and GitHub's 5-minute
   # schedule fires only every few hours. Approved by Dhruv, 24 Oct 2026.
