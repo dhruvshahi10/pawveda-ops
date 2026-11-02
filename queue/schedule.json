@@ -433,6 +433,27 @@
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/16-Wed-04-Nov-laddoo-just-one"
  },
  {
+  "id": "2026-11-05-c4b-walk-in-daylight",
+  "day": 17,
+  "slot": "2026-11-05T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-05-c4b-walk-in-daylight/reel.mp4"
+  ],
+  "caption": "If her walk is still after dinner, move it into daylight from today. Don't wait for the 8th.\n\nThe RSPCA's advice for fireworks season is to walk dogs during daylight hours and keep them indoors when fireworks are likely. Dr Kirti Dua at GADVASU in Ludhiana gives the same timing: walk and feed your pets during the daytime, before the celebrations begin.\n\nA daylight walk can still meet a cracker, so keep her on the lead this week. Blue Cross's advice is to keep your dog on-lead if you think fireworks will be let off.\n\nIf someone else in the house does the after-dinner walk, send them this.\n\nIf she panics rather than startles, call your vet this week, before the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nDown to the Diwali. The dog in this film is AI-generated.\n\nSources: RSPCA, Fireworks frighten animals (2025); GADVASU, Ludhiana; Blue Cross, Dogs and fireworks.\n\n#DiwaliWithPets #DogScaredOfCrackers #IndieDogs",
+  "alt": [],
+  "first_comment": null,
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS 4.0 (independent gate pass 3, 2 Nov; passes 1–2 failed: cracker-free promise, over-attribution, a vet line that read as 'not on the night').",
+  "hook": "3 days to Diwali. Move the after-dinner walk into daylight.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-05-c4b-walk-in-daylight",
+  "made": "2026-10-29",
+  "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
+ },
+ {
   "id": "2026-11-05-diwali-carousel",
   "day": 17,
   "slot": "2026-11-05T19:00:00+05:30",
