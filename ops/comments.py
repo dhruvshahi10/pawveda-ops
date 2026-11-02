@@ -70,6 +70,38 @@ def safe_reply(text):
     return emoji <= 1
 
 
+def dm_keyword(text):
+    """A comment that is just a keyword we advertised (e.g. "ROOM", "room please") gets a private reply.
+    Keywords, their message and their active dates live in queue/dm_keywords.json (sprint doc 32 §5).
+    Only short comments match, so a real question that happens to contain the word still goes to the model."""
+    words = re.sub(r"[^\w\s]", " ", text).upper().split()
+    if not words or len(words) > 3:
+        return None
+    today = now().date().isoformat()
+    for key, kw in (load("queue/dm_keywords.json", {}) or {}).items():
+        if kw.get("active") and kw.get("from", "") <= today <= kw.get("until", "9999") and key.upper() in words:
+            return dict(kw, key=key)
+    return None
+
+
+def send_keyword_dm(cid, kw, state, entry):
+    """Instagram private reply: one DM to the commenter, tied to their comment. Needs the
+    instagram_business_manage_messages permission on the token. Returns False if it could not send."""
+    try:
+        graph("POST", f"{IG_ID}/messages", json_body={"recipient": {"comment_id": cid}, "message": {"text": kw["message"]}})
+    except GraphError as e:
+        log("keyword DM failed", cid, e)
+        return False
+    state["seen"][cid] = "dm-sent"
+    state.setdefault("dms", {})[cid] = {"keyword": kw["key"], "at": now().isoformat(), "username": entry.get("username")}
+    try:
+        graph("POST", f"{cid}/replies", json_body={"message": kw.get("public_reply", "Sent to your DMs.")})
+    except GraphError as e:
+        log("public 'sent' reply failed (DM went out)", cid, e)
+    log("keyword DM sent", cid, kw["key"])
+    return True
+
+
 def send_outbox(state):
     outbox = load("queue/outbox.json", [])
     sent_any = False
@@ -123,6 +155,15 @@ def main():
                 continue
             if LINKY.search(text):
                 state["seen"][cid] = "ignored-link"
+                continue
+            kw = dm_keyword(text)
+            if kw and not HEALTH.search(text):
+                if send_keyword_dm(cid, kw, state, entry):
+                    continue
+                entry.update({"category": "dm-failed", "status": "held",
+                              "draft": "Asked for the " + kw["name"] + " by keyword; the private reply failed. Send it by hand."})
+                held.append(entry)
+                state["seen"][cid] = "held"
                 continue
             decision = ask_model(text, m.get("caption") or "")
             health = bool(HEALTH.search(text))
