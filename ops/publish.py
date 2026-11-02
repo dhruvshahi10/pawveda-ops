@@ -103,10 +103,23 @@ def bio_has_link():
     keep that line when this is true; otherwise the line is swapped back (06-BUILD-STATUS rule:
     never claim a link that does not exist)."""
     try:
-        return bool((graph("GET", IG_ID, {"fields": "website"}) or {}).get("website", "").strip())
+        site = (graph("GET", IG_ID, {"fields": "website"}) or {}).get("website", "").strip()
     except Exception as err:
         log("could not read bio website, posting without the bio line:", str(err)[:120])
         return False
+    if not site:
+        return False
+    # The link must also load (2 Nov 2026: the bio pointed at join.pawveda.in, which had no DNS record).
+    try:
+        import requests
+        url = site if site.startswith("http") else "https://" + site
+        r = requests.get(url, timeout=15, allow_redirects=True)
+        if r.status_code < 400:
+            return True
+        log("bio link does not load (HTTP %s), posting without the bio line:" % r.status_code, url)
+    except Exception as err:
+        log("bio link does not load, posting without the bio line:", site, str(err)[:120])
+    return False
 
 
 def apply_waitlist_swap(e):
