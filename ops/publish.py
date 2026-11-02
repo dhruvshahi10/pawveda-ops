@@ -74,6 +74,10 @@ def build(e):
             body["caption"] = e["caption"]
             if e.get("trial"):
                 body["trial_params"] = {"graduation_strategy": "SS_PERFORMANCE"}
+            # Collab invite (sprint doc 32 §1): only creators who agreed by email/DM with Dhruv are listed.
+            # The creator accepts in the Instagram app; until then the reel is ours alone.
+            if e.get("collaborators"):
+                body["collaborators"] = list(e["collaborators"])[:3]
         try:
             cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
         except GraphError as err:
@@ -81,6 +85,11 @@ def build(e):
                 log("trial reel refused, posting as a normal reel:", err)
                 body.pop("trial_params")
                 e["trial_fallback"] = str(err)[:200]
+                cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
+            elif "collaborators" in body:   # a bad handle or a refused invite must never stop the post
+                log("collaborator invite refused, posting without it:", err)
+                body.pop("collaborators")
+                e["collab_fallback"] = str(err)[:200]
                 cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
             else:
                 raise
