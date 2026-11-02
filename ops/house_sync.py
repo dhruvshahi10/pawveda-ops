@@ -34,10 +34,27 @@ def main(reviews_path, replies_path):
     t = now()
     changes = []
 
+    # A day can hold two feed posts (a 19:00 post and a companion at another time). The House page
+    # writes the 19:00 post's decision to "day-NN" and a companion's to "post-<id>", so a cut on one
+    # never cuts the other.
+    feed_by_day = {}
+    for e in queue:
+        if e["kind"] != "story_video":
+            feed_by_day.setdefault(e["slot"][:10], []).append(e)
+
+    def is_companion(e):
+        same = feed_by_day.get(e["slot"][:10], [])
+        return e["kind"] != "story_video" and len(same) > 1 and e["slot"][11:16] != "19:00"
+
     for e in queue:
         if e["id"] in pub or e["status"] in ("published", "failed"):
             continue
-        key = "stories" if e["kind"] == "story_video" else f"day-{int(e['day']):02d}"
+        if e["kind"] == "story_video":
+            key = "stories"
+        elif is_companion(e):
+            key = f"post-{e['id']}"
+        else:
+            key = f"day-{int(e['day']):02d}"
         r = reviews.get(key) or {}
         d, note = r.get("decision"), (r.get("note") or "").strip()
         if d == "cut" and e["status"] != "cut":
