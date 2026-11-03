@@ -405,7 +405,7 @@
   ],
   "first_comment": "If something he eats upsets his stomach, ask your vet. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS, source-checked 19 Oct (slide 4 corrected to digestibility)",
   "hook": "Dahi: yes, no, or depends?",
