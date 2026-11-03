@@ -369,7 +369,7 @@
   "alt": [],
   "first_comment": null,
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "critique": "PASS 4.1 -> moved to STORY",
   "hook": "The low table (story)",
   "top5": false,
