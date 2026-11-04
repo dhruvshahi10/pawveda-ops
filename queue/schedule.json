@@ -425,12 +425,13 @@
   "alt": [],
   "first_comment": "If your dog has eaten grapes, raisins or anything with kishmish in it, call your vet now. Don't wait for signs. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS 4.75",
   "hook": "Every Diwali, one guest feeds the dog a laddoo.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/16-Wed-04-Nov-laddoo-just-one"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/16-Wed-04-Nov-laddoo-just-one",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-05-c4b-walk-in-daylight",
