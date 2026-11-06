@@ -500,11 +500,11 @@
   "media": [
    "media/2026-11-06-hero-film/reel.mp4"
   ],
-  "caption": "Everyone will tell you to calm her down on Diwali. Hardly anyone tells you she might not be in the room to calm.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali.\n\nSo the work isn't on the night. It's the door: one room picked now, windows and curtains shut, one person whose only job on the 8th is the front door, and someone in the room with her.\n\nPawVeda Academy's Diwali fireworks calm module walks through the weeks before. It's in the beta, and the waitlist is in our bio.\n\nIf your dog panics rather than startles, call your vet before the 8th, not on the night. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it. Send it to the house that always has guests.\n\nSources: ThePrint, on street dogs missing in Delhi-NCR after Diwali; Dogs Trust. This film is AI-generated: every dog, room and person in it.\n\n#DiwaliWithPets #DogScaredOfCrackers #IndieDogs #PetParentsIndia #FireworkFear",
+  "caption": "Everyone will tell you to calm her down on Diwali. Hardly anyone tells you she might not be in the room to calm.\n\nSome frightened dogs don't hide behind the sofa. They go through the door that's open. ThePrint reported Delhi-NCR street dogs found 20 to 30 km from home after Diwali.\n\nSo the work isn't on the night. It's the door: one room picked now, windows and curtains shut, one person whose only job on the 8th is the front door, and someone in the room with her.\n\nPawVeda Academy's Diwali fireworks calm module walks through the weeks before. It's in the beta. If your dog panics rather than startles, call your vet before the 8th, not on the night. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nSave it. Send it to the house that always has guests.\n\nSources: ThePrint, on street dogs missing in Delhi-NCR after Diwali; Dogs Trust. This film is AI-generated: every dog, room and person in it.\n\n#DiwaliWithPets #DogScaredOfCrackers #IndieDogs #PetParentsIndia #FireworkFear",
   "alt": [],
   "first_comment": "If your dog panics rather than startles, call your vet before the 8th. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (two independent passes)",
   "hook": "The One Door",
@@ -513,7 +513,8 @@
   "waitlist_swap": {
    "with": ", and the waitlist is in our bio.\n\nIf your dog",
    "without": ". If your dog"
-  }
+  },
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-07-count-them",
