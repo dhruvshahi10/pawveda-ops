@@ -574,6 +574,29 @@
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/21-Mon-09-Nov-morning-after"
  },
  {
+  "id": "2026-11-10-four-names-1-kaali",
+  "day": 22,
+  "slot": "2026-11-10T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-10-four-names-1-kaali/reel.mp4"
+  ],
+  "caption": "Every gate in India has a dog with more than one name. This one has four.\n\nThe night guard calls her Kaali. In July he took her to a vet, and he's the only one at Gate No. 4 who knows why. Nobody wrote it down. In PawVeda, a community dog can have a health record of her own, and a field nobody knows says \"not recorded\" instead of guessing.\n\nThree more people know three more things about her. You'll meet them over the next nine days, starting with the milkman on Friday.\n\nWhat does your gate call its dog?\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "What does your gate call its dog? Tell us the name.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 3 — PASS 4.0 (independent critic, 7 Nov 2026)",
+  "hook": "She has four names.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-10-four-names-1-kaali",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 3600
+ },
+ {
   "id": "2026-11-10-still-jumpy",
   "day": 22,
   "slot": "2026-11-10T19:00:00+05:30",
@@ -766,6 +789,29 @@
   }
  },
  {
+  "id": "2026-11-15-four-names-3-rani",
+  "day": 27,
+  "slot": "2026-11-15T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-15-four-names-3-rani/reel.mp4"
+  ],
+  "caption": "To the aunty on the first floor, she's Rani. The jute sack by the gate is her doing.\n\nAunty is sure Rani is thinner than last winter. She might be right. Nobody has ever weighed her, so there's nothing to check it against. In PawVeda, a community dog can have a health record of her own, with a weight field that says \"not recorded\" until someone fills it in.\n\nWho at your gate would notice first if she got thinner?\n\nIf a dog you look out for seems to be losing weight, a vet or a local rescue is the right call. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "Who at your gate would notice first if she got thinner?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 3 — PASS 4.0 (independent critic, 7 Nov 2026)",
+  "hook": "She has four names.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-15-four-names-3-rani",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 2300
+ },
+ {
   "id": "2026-11-15-first-cold-night-indie",
   "day": 27,
   "slot": "2026-11-15T19:00:00+05:30",
@@ -892,6 +938,33 @@
   "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)",
   "waitlist_swap": {
    "with": " The link is in our bio.",
+   "without": ""
+  }
+ },
+ {
+  "id": "2026-11-19-four-names-5-one-page",
+  "day": 31,
+  "slot": "2026-11-19T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-19-four-names-5-one-page/reel.mp4"
+  ],
+  "caption": "Kaali, Biscuit, Rani, Tiger. Four people at Gate No. 4, four names for the same dog, and four things only one of them knew.\n\nTonight the newest neighbour asked the building group for all of it and put it in one place: the vet visit in July, the vaccine in March, the weight nobody took, the back leg since Sunday.\n\nIn PawVeda, a community dog can go in My Pack with a health record of her own. Where nobody knows, it says \"not recorded\" instead of guessing, so the blanks are as honest as the facts. When she needs help, the Vet Brief puts all of it on one dated page.\n\nThat back leg has been going since Sunday, so tomorrow a local rescue sees her, and the page goes with her. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nPawVeda is in beta, and the waitlist link is in our bio.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "Send this to your building group. Someone there knows something about your gate dog that nobody else does.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 3 — PASS 4.0 (independent critic, 7 Nov 2026)",
+  "hook": "Four names. One page.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-19-four-names-5-one-page",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 900,
+  "waitlist_swap": {
+   "with": "\n\nPawVeda is in beta, and the waitlist link is in our bio.",
    "without": ""
   }
  },
