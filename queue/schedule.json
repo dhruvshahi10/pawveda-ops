@@ -528,12 +528,13 @@
   "alt": [],
   "first_comment": null,
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS 4.5",
   "hook": "Choti Diwali. Count them before the first rocket.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/19-Sat-07-Nov-count-them"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/19-Sat-07-Nov-count-them",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-08-diwali-someone-in-the-room",
