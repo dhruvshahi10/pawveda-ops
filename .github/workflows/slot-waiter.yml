@@ -1,0 +1,36 @@
+name: slot-waiter
+# Wakes on GitHub's irregular schedule, and if a post is due within 5.5 hours, sleeps until its
+# slot and then dispatches the house workflow. The house run re-reads the queue, so Dhruv's cuts
+# and holds still apply. This workflow never posts and never writes to the repo. Added 7 Nov 2026
+# because 13:00 slots have no slot-nudge scheduled task (5 Nov's 13:00 post went out 193 min late).
+on:
+  schedule:
+    - cron: "13,43 * * * *"
+  workflow_dispatch:
+concurrency:
+  group: slot-waiter
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: write
+jobs:
+  wait:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Wait for the next slot, then start the publisher
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          read -r action a b < <(python ops/slot_waiter.py)
+          echo "waiter: $action $a $b"
+          if [ "$action" = "none" ]; then exit 0; fi
+          if [ "$action" = "wait" ]; then
+            echo "sleeping $a s for $b"; sleep "$a"
+          fi
+          gh workflow run house.yml -R "$GITHUB_REPOSITORY" --ref main
+          echo "dispatched house for ${b:-$a}"
