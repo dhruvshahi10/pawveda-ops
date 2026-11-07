@@ -78,6 +78,9 @@ def build(e):
             # The creator accepts in the Instagram app; until then the reel is ours alone.
             if e.get("collaborators"):
                 body["collaborators"] = list(e["collaborators"])[:3]
+            # Cover frame (lab track, doc 35, 6 Nov): ms into the reel. Optional; a refusal never stops the post.
+            if e.get("thumb_offset_ms") is not None:
+                body["thumb_offset"] = int(e["thumb_offset_ms"])
         try:
             cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
         except GraphError as err:
@@ -85,6 +88,10 @@ def build(e):
                 log("trial reel refused, posting as a normal reel:", err)
                 body.pop("trial_params")
                 e["trial_fallback"] = str(err)[:200]
+                cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
+            elif "thumb_offset" in body:    # a refused cover offset must never stop the post
+                log("thumb_offset refused, posting with the default cover:", err)
+                body.pop("thumb_offset")
                 cid = graph("POST", f"{IG_ID}/media", json_body=body)["id"]
             elif "collaborators" in body:   # a bad handle or a refused invite must never stop the post
                 log("collaborator invite refused, posting without it:", err)

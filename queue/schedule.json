@@ -593,6 +593,33 @@
   "source_folder": "1-POST-NEXT/_DIWALI-RUN/22-Tue-10-Nov-still-jumpy"
  },
  {
+  "id": "2026-11-11-wait-or-go-cough",
+  "day": 23,
+  "slot": "2026-11-11T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-11-wait-or-go-cough/reel.mp4"
+  ],
+  "caption": "Two coughs at the door after the morning walk, and she's still playing. Wait, or go?\n\nPawVeda's answer is watch at home. A cough on its own that started a few hours ago sorts as Monitor. If it isn't better in 24 hours, check again.\n\nThen, in the afternoon, the leash jingles and she barely lifts her head. Coughing with low energy is a fixed pair in PawVeda's rules. It sorts as Visit soon, today, however long the cough has been going.\n\nIn PawVeda's rules, a second sign can move the answer on its own.\n\nIf she can't stand or collapses, is struggling to breathe or breathing with her mouth open, her gums look pale or blue, or she has a seizure, that's an emergency: go now. PawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your dog right now, a vet is the right call.\n\nPawVeda is in beta, and the waitlist link is in our bio.\n\nThe dog and the hand in this film are AI-generated. The verdicts are PawVeda's triage rules, run on sample inputs.\n\n#DogHealthIndia #PetParentsIndia #IndieDogs",
+  "alt": [],
+  "first_comment": "Your guess first: wait or go? Then see where PawVeda's rules put it.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 2 — PASS 4.0 (independent critic, 6 Nov 2026)",
+  "hook": "Coughing since the morning walk.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-11-wait-or-go-cough",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 4400,
+  "waitlist_swap": {
+   "with": "\n\nPawVeda is in beta, and the waitlist link is in our bio.",
+   "without": ""
+  }
+ },
+ {
   "id": "2026-11-11-aqi-should-you-walk",
   "day": 23,
   "slot": "2026-11-11T19:00:00+05:30",
@@ -637,6 +664,29 @@
    "with": " The link is in our bio.",
    "without": ""
   }
+ },
+ {
+  "id": "2026-11-13-four-names-2-biscuit",
+  "day": 25,
+  "slot": "2026-11-13T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-13-four-names-2-biscuit/reel.mp4"
+  ],
+  "caption": "6 am at Gate No. 4. To the milkman, she's Biscuit.\n\nIn March he watched a vaccination drive give her a shot. Which vaccine it was, and when the next one is due, nobody knows. It was never written down, so it's a memory, not a record. In PawVeda, a community dog can have a health record of her own, and a field nobody knows says \"not recorded\" instead of guessing.\n\nShe has three other names at this gate. Episode 1, the night guard, is on our profile.\n\nHas a community dog near you been vaccinated? Do you know which vaccine?\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "Has the dog at your gate been vaccinated? Does anyone know which one?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 2 — PASS 4.0 (independent critic, 6 Nov 2026)",
+  "hook": "She has four names.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-13-four-names-2-biscuit",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 2300
  },
  {
   "id": "2026-11-13-cant-say-diagnosed",
@@ -761,6 +811,29 @@
   "source_folder": "pawveda-content-factory/out/2026-11-16-what-monitor-means-short",
   "made": "2026-10-29",
   "format_note": "reel with real motion and sound (24-QUALITY-BAR 2026-10-28)"
+ },
+ {
+  "id": "2026-11-17-four-names-4-tiger",
+  "day": 29,
+  "slot": "2026-11-17T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-17-four-names-4-tiger/reel.mp4"
+  ],
+  "caption": "The delivery rider calls her Tiger. He's sure she's a boy. She isn't.\n\nHe's also the only one who's noticed she's been favouring a back leg since Sunday. He sees her for thirty seconds a day, so he hasn't told anyone, and nobody at Gate No. 4 has asked.\n\nIf a dog you look out for has been favouring a leg for days, a vet or a local rescue is the right call. PawVeda helps you decide when to see a vet. It doesn't replace one.\n\nThursday, episode 5: someone puts all four on one page, the kind PawVeda's Vet Brief makes for whichever vet or rescue sees her.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #PetParentsIndia",
+  "alt": [],
+  "first_comment": "Be honest: what's the 'wrong' name your gate dog answers to?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "Pass 2 — PASS 4.0 (independent critic, 6 Nov 2026)",
+  "hook": "She has four names.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-17-four-names-4-tiger",
+  "made": "2026-11-06",
+  "format_note": "lab track (doc 35), 13:00 companion; reel with real motion and sound (24-QUALITY-BAR)",
+  "lab": true,
+  "thumb_offset_ms": 2200
  },
  {
   "id": "2026-11-17-litter-box-apartments",
