@@ -568,12 +568,13 @@
   "alt": [],
   "first_comment": null,
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (two independent passes)",
   "hook": "The morning after. Walk the lane before she does.",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/21-Mon-09-Nov-morning-after"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/21-Mon-09-Nov-morning-after",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-10-four-names-1-kaali",
