@@ -67,7 +67,8 @@ def main(reviews_path, replies_path):
         elif d == "edit" and e["status"] == "hold" and note and note != e.get("edit_note"):
             e["edit_note"] = note; e["hold_reason"] = f"Dhruv asked for an edit: {note}"
             changes.append(f"EDIT NOTE updated {e['id']}: {note}")
-        elif d in (None, "approve") and e["status"] == "cut" and parse(e["slot"]) > t:
+        elif d in (None, "approve") and e["status"] == "cut" and parse(e["slot"]) > t and e.get("cut_by") != "house":
+            # a cut the house made under the ownership rule (00, 8 Nov) is not undone by an empty review
             e["status"] = "scheduled"; e.pop("cut_at", None)
             changes.append(f"UN-CUT {e['id']}")
 

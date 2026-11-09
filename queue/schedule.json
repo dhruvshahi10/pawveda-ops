@@ -777,7 +777,7 @@
   ],
   "first_comment": "Does your pet have a food allergy on record? Labels read differently for them.",
   "trial": false,
-  "status": "scheduled",
+  "status": "cut",
   "hold_reason": null,
   "critique": "PASS 4.0 (fourth gate pass, independent, 29 Oct; earlier passes failed and were fixed)",
   "hook": "Same food. Different answer.",
@@ -788,7 +788,11 @@
   "waitlist_swap": {
    "with": " The link is in our bio.",
    "without": ""
-  }
+  },
+  "cut_reason": "feed-only post retired 8 Nov",
+  "cut_by": "house",
+  "cut_at": "2026-11-09T07:50:00+05:30",
+  "cut_note": "Ownership rule (00, 8 Nov): feed-only posts are converted to reels or cut. Conversion needs the factory, which this run could not reach."
  },
  {
   "id": "2026-11-15-four-names-3-rani",
@@ -909,14 +913,18 @@
   ],
   "first_comment": "Where's your cat's box right now? Balcony, bathroom, somewhere else?",
   "trial": false,
-  "status": "scheduled",
+  "status": "cut",
   "hold_reason": null,
   "critique": "PASS 4.1 (independent gate, 29 Oct, after three failed passes and fixes)",
   "hook": "Wrong spot for her box?",
   "top5": false,
   "source_folder": "pawveda-content-factory/out/2026-11-17-litter-box-apartments",
   "made": "2026-10-29",
-  "format_note": null
+  "format_note": null,
+  "cut_reason": "feed-only post retired 8 Nov",
+  "cut_by": "house",
+  "cut_at": "2026-11-09T07:50:00+05:30",
+  "cut_note": "Ownership rule (00, 8 Nov): feed-only posts are converted to reels or cut. Conversion needs the factory, which this run could not reach."
  },
  {
   "id": "2026-11-18-wait-or-go-limp",
