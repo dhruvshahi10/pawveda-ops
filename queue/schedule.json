@@ -611,12 +611,13 @@
   "alt": [],
   "first_comment": "Still jumpy, still hiding or still off food since Diwali? Worth a vet visit this week. PawVeda helps you decide when to see a vet. It doesn't replace one.",
   "trial": true,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS after fixes (one independent pass)",
   "hook": "Diwali's over. Still jumpy?",
   "top5": false,
-  "source_folder": "1-POST-NEXT/_DIWALI-RUN/22-Tue-10-Nov-still-jumpy"
+  "source_folder": "1-POST-NEXT/_DIWALI-RUN/22-Tue-10-Nov-still-jumpy",
+  "trial_fallback": "400 OAuthException 10: Application does not have permission for this action"
  },
  {
   "id": "2026-11-11-wait-or-go-cough",
