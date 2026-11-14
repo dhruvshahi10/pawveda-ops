@@ -748,11 +748,11 @@
   "media": [
    "media/2026-11-14-wait-or-go/reel.mp4"
   ],
-  "caption": "She threw up an hour ago, and now she won't touch her dinner. Wait for the morning, or go?\n\nPawVeda's answer is today. Vomiting on its own, just started, it sorts as Watch at home. Vomiting with not eating, it sorts as Visit soon, today, however long it's been.\n\nWatch at home still means watching. If she's still vomiting a few hours on, PawVeda sorts it as Visit soon. A new sign means a vet.\n\nPawVeda runs the same rule every time, so the answer doesn't depend on how worried you are at 11pm.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your dog right now, a vet is the right call.\n\nPawVeda is in beta, and the waitlist link is in our bio.\n\nThe dog in this film is AI-generated. The verdicts are PawVeda's triage rules, run on sample inputs.\n\n#DogHealthIndia #PetParentsIndia #IndieDogs",
+  "caption": "She threw up an hour ago, and now she won't touch her dinner. Wait for the morning, or go?\n\nPawVeda's answer is today. Vomiting on its own, just started, it sorts as Watch at home. Vomiting with not eating, it sorts as Visit soon, today, however long it's been.\n\nWatch at home still means watching. If she's still vomiting a few hours on, PawVeda sorts it as Visit soon. A new sign means a vet.\n\nPawVeda runs the same rule every time, so the answer doesn't depend on how worried you are at 11pm.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your dog right now, a vet is the right call.\n\nThe dog in this film is AI-generated. The verdicts are PawVeda's triage rules, run on sample inputs.\n\n#DogHealthIndia #PetParentsIndia #IndieDogs",
   "alt": [],
   "first_comment": "Your guess first: wait or go? Then see where PawVeda's rules put it.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS 4.0 (independent gate pass 2, 2 Nov; pass 1 failed 2.9 on two unsupported rule claims). Should-fixes applied.",
   "hook": "She threw up an hour ago. Now she won't touch dinner. Wait or go?",
