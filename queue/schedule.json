@@ -857,7 +857,7 @@
   "alt": [],
   "first_comment": "Which of the four would you have missed?",
   "trial": false,
-  "status": "scheduled",
+  "status": "failed",
   "hold_reason": null,
   "critique": "PASS 4.13 (independent gate, 29 Oct, after four failed passes and fixes)",
   "hook": "What does Monitor actually mean?",
