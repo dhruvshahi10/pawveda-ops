@@ -1019,7 +1019,7 @@
   "alt": [],
   "first_comment": "Send this to whoever keeps the medicine drawer at home.",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS 4.0 (independent gate pass 7, 30 Oct; passes 1–6 failed: partial AI disclosure, unsourced brand facts, dose wording ×3, an app instruction, cat-only evidence, an unsupported absolute). Should-fixes 1, 2, 6 applied after the pass.",
   "hook": "We block Crocin, Dolo and Combiflam by name.",
