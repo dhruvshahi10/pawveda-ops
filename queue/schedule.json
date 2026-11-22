@@ -1036,7 +1036,7 @@
   "media": [
    "media/2026-11-23-lofi-cooker-box/reel.mp4"
   ],
-  "caption": "The cooker's for the kitchen. The box is hers.\n\nPawVeda's own cat, made with AI.\n\n#CatsOfIndia #DesiPets #PawVeda",
+  "caption": "The cooker's for the kitchen. The box is hers.\n\nThe cat is AI-generated; it isn't a real pet.\n\n#CatsOfIndia #DesiPets #PawVeda",
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
@@ -1083,7 +1083,7 @@
   "media": [
    "media/2026-11-25-lofi-roti-supervisor/reel.mp4"
   ],
-  "caption": "Kitchen supervisor. Hasn't missed one being rolled.\n\nPawVeda's own cat, made with AI.\n\n#CatsOfIndia #DesiPets #PawVeda",
+  "caption": "Kitchen supervisor. Hasn't missed one being rolled.\n\nThe cat is AI-generated; it isn't a real pet.\n\n#CatsOfIndia #DesiPets #PawVeda",
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
@@ -1100,6 +1100,29 @@
   "test": "lofi"
  },
  {
+  "id": "2026-11-25-her-chair",
+  "day": 37,
+  "slot": "2026-11-25T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-25-her-chair/reel.mp4"
+  ],
+  "caption": "How do you keep a health record for a community dog?\n\nKaali spends the night at Gate No. 4 with the night guard. At 6 am his shift ends, and the plastic chair is hers until evening. Everyone in the building knows that. Nobody has written down a single thing about her health.\n\nPawVeda's My Pack can hold a community dog, so whoever looks out for her can keep her vet visits, vaccines and weight in one place, with \"not recorded\" wherever nobody knows.\n\nIf she seems hurt or unwell, a vet or a local rescue is the right call.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #DesiDogs #StreetDogsOfIndia",
+  "alt": [],
+  "first_comment": "Where does your gate dog sleep in the day? One word.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (re-check, independent critic, 22 Nov): no hard fails; all ten checks yes.",
+  "hook": "6 am. She's been waiting for this chair.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-25-her-chair",
+  "made": "2026-11-22",
+  "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
+  "predicted": "reach 300-1,000; comments with where their gate dog sleeps",
+  "thumb_offset_ms": 600
+ },
+ {
   "id": "2026-11-26-lofi-front-page",
   "day": 38,
   "slot": "2026-11-26T13:00:00+05:30",
@@ -1107,7 +1130,7 @@
   "media": [
    "media/2026-11-26-lofi-front-page/reel.mp4"
   ],
-  "caption": "Today's front page.\n\nPawVeda's own cat, made with AI.\n\n#CatsOfIndia #DesiPets #PawVeda",
+  "caption": "Today's front page.\n\nThe cat is AI-generated; it isn't a real pet.\n\n#CatsOfIndia #DesiPets #PawVeda",
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
@@ -1117,6 +1140,53 @@
   "hook": "Today's front page.",
   "top5": false,
   "source_folder": "pawveda-content-factory/out/2026-11-26-lofi-front-page",
+  "made": "2026-11-22",
+  "format_note": "lo-fi test (00, 8 Nov), light gate: hard lines only",
+  "predicted": "reach 100-400",
+  "thumb_offset_ms": 600,
+  "test": "lofi"
+ },
+ {
+  "id": "2026-11-26-milk-day-milkman",
+  "day": 38,
+  "slot": "2026-11-26T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-26-milk-day-milkman/reel.mp4"
+  ],
+  "caption": "What vaccines has a street dog had?\n\nUsually nobody knows. Biscuit's milkman saw a vaccination drive give her a shot in March; nobody wrote down which one. He stops at Gate No. 4 every morning, and she's there before his bell.\n\nPawVeda's My Pack can hold a community dog, so a vaccine like that goes on her record, with the type if someone knows it and \"not recorded\" if nobody does.\n\nIf she seems hurt or unwell, a vet or a local rescue is the right call.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #StreetDogsOfIndia #DesiDogs",
+  "alt": [],
+  "first_comment": "Who on your lane sees your gate dog first every morning? One word.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (re-check, independent critic, 22 Nov): no hard fails; all ten checks yes.",
+  "hook": "6:10 am. She's at the gate before his bell.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-26-milk-day-milkman",
+  "made": "2026-11-22",
+  "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
+  "predicted": "reach 300-1,000; saves; comments naming the morning person",
+  "thumb_offset_ms": 600
+ },
+ {
+  "id": "2026-11-27-lofi-follows-the-dhoop",
+  "day": 39,
+  "slot": "2026-11-27T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-27-lofi-follows-the-dhoop/reel.mp4"
+  ],
+  "caption": "Found the one square of dhoop.\n\nThe dog is AI-generated; it isn't a real pet.\n\n#IndieDogs #DesiPets #PawVeda",
+  "alt": [],
+  "first_comment": "Does yours do this too?",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (re-check, light gate, 22 Nov): no hard fails.",
+  "hook": "Found the one square of dhoop.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-27-lofi-follows-the-dhoop",
   "made": "2026-11-22",
   "format_note": "lo-fi test (00, 8 Nov), light gate: hard lines only",
   "predicted": "reach 100-400",
@@ -1154,7 +1224,7 @@
   "media": [
    "media/2026-11-28-lofi-istri-basket/reel.mp4"
   ],
-  "caption": "Back from the istriwala. Hers now.\n\nPawVeda's own cat, made with AI.\n\n#CatsOfIndia #DesiPets #PawVeda",
+  "caption": "Back from the istriwala. Hers now.\n\nThe cat is AI-generated; it isn't a real pet.\n\n#CatsOfIndia #DesiPets #PawVeda",
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
@@ -1171,6 +1241,29 @@
   "test": "lofi"
  },
  {
+  "id": "2026-11-28-new-in-the-building",
+  "day": 40,
+  "slot": "2026-11-28T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-28-new-in-the-building/reel.mp4"
+  ],
+  "caption": "Just moved in? Who looks after your building's dog?\n\nEvery gate dog meets the new person before the society does. She already has four names from four people: the night guard's, the milkman's, the aunty's and the delivery rider's. Each of them knows one thing about her health, and none of it is written down.\n\nPawVeda's My Pack can hold a community dog, so whoever looks out for her can keep her vet visits, vaccines and weight in one place, with \"not recorded\" wherever nobody knows.\n\nIf she seems hurt or unwell, a vet or a local rescue is the right call.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #CommunityDogs #NewNeighbours #DesiDogs",
+  "alt": [],
+  "first_comment": "Send this to whoever just moved in. What's your gate dog called? Name only.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (re-check, independent critic, 22 Nov): no hard fails; all ten checks yes.",
+  "hook": "New in the building? She's already checked you.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-28-new-in-the-building",
+  "made": "2026-11-22",
+  "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
+  "predicted": "reach 300-1,000; forwards to people who just moved",
+  "thumb_offset_ms": 600
+ },
+ {
   "id": "2026-11-29-lofi-milkman-bike",
   "day": 41,
   "slot": "2026-11-29T13:00:00+05:30",
@@ -1178,7 +1271,7 @@
   "media": [
    "media/2026-11-29-lofi-milkman-bike/reel.mp4"
   ],
-  "caption": "She hears the milkman's bike two lanes away.\n\nPawVeda's own dog, made with AI.\n\n#IndieDogs #DesiPets #PawVeda",
+  "caption": "She hears the milkman's bike two lanes away.\n\nThe dog is AI-generated; it isn't a real pet.\n\n#IndieDogs #DesiPets #PawVeda",
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
@@ -1193,5 +1286,28 @@
   "predicted": "reach 100-400",
   "thumb_offset_ms": 600,
   "test": "lofi"
+ },
+ {
+  "id": "2026-11-29-sunday-cricket",
+  "day": 41,
+  "slot": "2026-11-29T19:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-29-sunday-cricket/reel.mp4"
+  ],
+  "caption": "Does your lane have a street dog who plays cricket?\n\nOn this lane, she fields every Sunday from 7. Everyone knows her; nobody knows which vaccines she's had or when she last saw a vet.\n\nPawVeda's My Pack can hold a community dog, so whoever looks out for her can keep her vet visits, vaccines and weight in one place, with \"not recorded\" wherever nobody knows.\n\nIf she seems hurt or unwell, a vet or a local rescue is the right call.\n\nA story, made with AI. The dog and the people in it are AI-generated; it isn't a real case.\n\n#IndieDogs #GullyCricket #CommunityDogs #DesiDogs",
+  "alt": [],
+  "first_comment": "What does your lane's fielder answer to? One word.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (re-check, independent critic, 22 Nov): no hard fails; all ten checks yes.",
+  "hook": "Sunday cricket. She's been fielding since 7.",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-11-29-sunday-cricket",
+  "made": "2026-11-22",
+  "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
+  "predicted": "reach 400-1,500; shares to cricket groups; likes",
+  "thumb_offset_ms": 600
  }
 ]
