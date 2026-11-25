@@ -1087,7 +1087,7 @@
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS (pass 2, light gate, 22 Nov): no hard fails; recognisable in two seconds.",
   "hook": "Kitchen supervisor. Hasn't missed one being rolled.",
