@@ -1181,7 +1181,7 @@
   "alt": [],
   "first_comment": "Does yours do this too?",
   "trial": false,
-  "status": "scheduled",
+  "status": "published",
   "hold_reason": null,
   "critique": "PASS (re-check, light gate, 22 Nov): no hard fails.",
   "hook": "Found the one square of dhoop.",
