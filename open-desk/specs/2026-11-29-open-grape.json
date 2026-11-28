@@ -1,0 +1,39 @@
+{
+  "id": "2026-11-29-open-grape",
+  "series": "Can my dog eat this?",
+  "plate": "brand/photo/2026-10-19-campaign-bank/food/grapes-table-dog.jpg",
+  "focus": [
+    55,
+    42
+  ],
+  "duration": 12.5,
+  "beats": [
+    {
+      "t": 0,
+      "ground": "cream",
+      "headline": "Can my dog eat one grape?",
+      "size": "hero"
+    },
+    {
+      "t": 2.5,
+      "ground": "cocoa",
+      "badge": {
+        "band": "neutral",
+        "label": "The answer"
+      },
+      "headline": "Give none.",
+      "size": "hero"
+    },
+    {
+      "t": 5.9,
+      "ground": "cocoa",
+      "body": "Grapes and raisins can hurt some dogs' kidneys, and no one knows a safe amount."
+    },
+    {
+      "t": 9.2,
+      "ground": "cream",
+      "headline": "Ate some? Call your vet now.",
+      "body": "Don't wait for signs."
+    }
+  ]
+}

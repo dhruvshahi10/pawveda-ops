@@ -1,0 +1,39 @@
+{
+  "id": "2026-11-29-open-crocin",
+  "series": "Show the working",
+  "plate": "brand/photo/2026-10-19-campaign-bank/covers-L10/winter-sunbeam-dog.jpg",
+  "focus": [
+    30,
+    30
+  ],
+  "panel": 680,
+  "duration": 12.5,
+  "beats": [
+    {
+      "t": 0,
+      "ground": "cream",
+      "headline": "Can I give my dog half a Crocin?"
+    },
+    {
+      "t": 2.5,
+      "ground": "cocoa",
+      "badge": {
+        "band": "neutral",
+        "label": "PawVeda's answer"
+      },
+      "headline": "It blocks Crocin by name.",
+      "size": "hero"
+    },
+    {
+      "t": 5.9,
+      "ground": "cocoa",
+      "body": "Human medicine is your vet's call."
+    },
+    {
+      "t": 9.2,
+      "ground": "cream",
+      "headline": "Ask your vet before any human tablet.",
+      "body": "PawVeda helps you decide when to see a vet. It doesn't replace one."
+    }
+  ]
+}

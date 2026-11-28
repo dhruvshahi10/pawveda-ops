@@ -1264,6 +1264,35 @@
   "thumb_offset_ms": 600
  },
  {
+  "id": "2026-11-29-open-grape",
+  "day": 41,
+  "slot": "2026-11-29T09:30:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-29-open-grape/reel.mp4"
+  ],
+  "caption": "Can my dog eat grapes?\n\nBest to give none, and that goes for kishmish too. Grapes and raisins can cause sudden kidney injury in some dogs. Nobody knows how many is too many, and there's no way to tell which dogs will react. If yours has eaten some, call your vet now instead of waiting for signs.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If this is happening to your dog right now, a vet is the right call.\n\nPawVeda answers for your dog from her own record, not for a generic dog.\n\nSend this to whoever keeps the fruit bowl at home.\n\nSources: Cornell Riney Canine Health Center; Merck Veterinary Manual; VCA Animal Hospitals. The dog in this video is AI-generated; it isn't a real pet.\n\n#CanDogsEatGrapes #Kishmish #DogFoodIndia #PetParentsIndia",
+  "alt": [
+   "An AI-generated tan indie dog leans over a steel bowl of green grapes on a wooden table in an Indian living room. On-screen text: Can my dog eat one grape? Then, on a dark brown panel: The answer: Give none. Grapes and raisins can hurt some dogs' kidneys, and no one knows a safe amount. Then: Ate some? Call your vet now. Don't wait for signs."
+  ],
+  "first_comment": "Has yours ever stolen a grape? Yes or no.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS on pass 2 (independent critic, frames 0/1/3/7/11 s, 28 Nov): no hard fails; F1 F4 F5 F6 S1 S2 S3 B1 L all yes. Pass 1 failed F4 (eyebrow before the question) and legibility; rewritten once (grape not kishmish, to match the picture). Open Desk gate variant (24): F2, F3 waived.",
+  "hook": "Can my dog eat one grape?",
+  "top5": false,
+  "source_folder": "pawveda-ops/open-desk/specs/2026-11-29-open-grape.json",
+  "made": "2026-11-28",
+  "format_note": "Open Desk (doc 44): type panel over picture card, HyperFrames render, procedural sound, no credits",
+  "predicted": "reach 60-200; first frame: indie's face side-on over a bowl of grapes, indoors, question on a cream panel above",
+  "thumb_offset_ms": 600,
+  "desk": "open",
+  "series": "Can my dog eat this?",
+  "forward": "whoever keeps the fruit bowl at home",
+  "test": "open-desk"
+ },
+ {
   "id": "2026-11-29-lofi-milkman-bike",
   "day": 41,
   "slot": "2026-11-29T13:00:00+05:30",
@@ -1309,5 +1338,34 @@
   "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
   "predicted": "reach 400-1,500; shares to cricket groups; likes",
   "thumb_offset_ms": 600
+ },
+ {
+  "id": "2026-11-29-open-crocin",
+  "day": 41,
+  "slot": "2026-11-29T21:30:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-11-29-open-crocin/reel.mp4"
+  ],
+  "caption": "Can I give my dog half a Crocin?\n\nNot on PawVeda's say-so. PawVeda won't give a dose for human medicine, and it blocks Crocin, Dolo and Combiflam by name, along with Saridon, Meftal and Disprin. Whether any human tablet is right for your dog is your vet's call.\n\nPawVeda helps you decide when to see a vet. It doesn't replace one. If your dog is unwell right now, a vet is the right call.\n\nSend this to whoever keeps the medicine drawer at home.\n\nThe dog in this video is AI-generated; it isn't a real pet.\n\n#DogHealthIndia #PetParentsIndia #DogCare #PawVeda",
+  "alt": [
+   "An AI-generated tan indie dog lies curled on a folded blanket in a patch of winter sun on a red floor. On-screen text: Can I give my dog half a Crocin? Then, on a dark brown panel: PawVeda's answer: It blocks Crocin by name. Human medicine is your vet's call. Then: Ask your vet before any human tablet. PawVeda helps you decide when to see a vet. It doesn't replace one."
+  ],
+  "first_comment": "Is there a medicine drawer your dog can reach? Yes or no.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS on pass 2 (independent critic, frames 0/1/3/7/11 s, 28 Nov): no hard fails; all checks yes. Pass 1 failed F4, S2/B1 (block said twice), legibility and safe zone; rewritten once with a new plate. Critic note: resting dog under a painkiller question is close to H11 in reading; judged resting. Open Desk gate variant (24): F2, F3 waived.",
+  "hook": "Can I give my dog half a Crocin?",
+  "top5": false,
+  "source_folder": "pawveda-ops/open-desk/specs/2026-11-29-open-crocin.json",
+  "made": "2026-11-28",
+  "format_note": "Open Desk (doc 44): type panel over picture card, HyperFrames render, procedural sound, no credits",
+  "predicted": "reach 60-200; first frame: young indie's face resting on a blanket in sunlight, indoors, question on a cream panel above. Same fact as the house's blocked-by-name (19 Nov, reach 179, 1 share): a direct style comparison",
+  "thumb_offset_ms": 600,
+  "desk": "open",
+  "series": "Show the working",
+  "forward": "whoever keeps the medicine drawer at home",
+  "test": "open-desk"
  }
 ]

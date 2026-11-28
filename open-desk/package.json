@@ -1,0 +1,8 @@
+{
+  "name": "pawveda-open-desk",
+  "private": true,
+  "type": "module",
+  "description": "The Open Desk's render kit: reel spec JSON -> HyperFrames HTML -> MP4 with sound. Open source only, no credits.",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": { "hyperframes": "0.9.104", "gsap": "3.13.0" }
+}
