@@ -1485,6 +1485,30 @@
   "thumb_offset_ms": 600
  },
  {
+  "id": "2026-12-03-wait-or-go-gate",
+  "day": 45,
+  "slot": "2026-12-03T13:00:00+05:30",
+  "kind": "reel",
+  "media": [
+   "media/2026-12-03-wait-or-go-gate/reel.mp4"
+  ],
+  "caption": "Dog limping since morning: wait or go to the vet?\n\nPawVeda's triage sorts a symptom into Emergency, Visit soon or Monitor, and the emergency verdict can't be softened by the AI. PawVeda helps you decide when to see a vet; it doesn't replace one. If this is happening to your dog right now, a vet is the right call.\n\nThe dog is AI-generated; it isn't a real pet. The people are AI-generated too.\n\n#DogHealthIndia #IndieDogs #PawVeda",
+  "alt": [],
+  "first_comment": "Has yours ever limped after a walk? Yes or no.",
+  "trial": false,
+  "status": "scheduled",
+  "hold_reason": null,
+  "critique": "PASS (pass 2 re-gate after re-shoot, independent critic, frames 0/1/3 s + timeline + caption.txt + UPLOAD.md + reel.mp4 every 0.2 s (0.1 s for 2.3-3.7 s), 28 Nov): she now visibly favours her left foreleg. From 4.7 to 5.9 s she stands with that paw lifted and bent off the ground (more than a second on three legs) after a short walk, which reads as a limp, so the on-screen line matches. Same black-and-tan dog, no morph; no wound or distress; no hard fails; F4 broken as planned; F1-F3, F5, F6, S1-S3, B1 yes.",
+  "hook": "Limping since morning. Wait or go?",
+  "top5": false,
+  "source_folder": "pawveda-content-factory/out/2026-12-03-wait-or-go-gate",
+  "made": "2026-11-28",
+  "format_note": "Round 2 shape (00, 22 Nov): face at 0 s, street, her person, line about her",
+  "predicted": "reach 300-900; 5+ comments from people",
+  "thumb_offset_ms": 600,
+  "test": "breaks F4"
+ },
+ {
   "id": "2026-12-03-waiting-small",
   "day": 45,
   "slot": "2026-12-03T19:00:00+05:30",
